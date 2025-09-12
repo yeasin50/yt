@@ -1,0 +1,72 @@
+baseURL: "https://example.com/"
+languageCode: "en-us"
+title: "@yt.yeasin50"
+theme: "PaperMod"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# Outputs for search
+outputs:
+  home:
+    - HTML
+    - JSON
+
+# Menu (top-level)
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "C Programming"
+      url: "/course/c/"
+      weight: 2
+    - name: "About"
+      url: "/about"
+      weight: 3
+
+# Theme params
+params:
+  author: "Md. Yeasin Sheikh"
+  description: "A website showcasing my YouTube videos"
+  favicon: "images/favicon.png"
+
+  # Search settings
+  enableSearch: true
+  showSearchButton: true
+
+  # Homepage layout & main sections
+  mainSections: ["posts"]
+  showReadingTime: true
+  themeColor: "blue"
+  showTags: true
+
+  home_sections:
+    - section: "posts"
+      title: "Latest Videos"
+      weight: 1
+
+  # Social links
+  social:
+    github: "https://github.com/yeasin50"
+    youtube: "https://youtube.com/channel/yt.yeasin50"
+    stackOverflow: "https://stackoverflow.com/users/10157127/"
+    linkedin: "https://linkedin.com/in/md.yeasinsheikh"
+
+  # Fuse.js search options
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10
+    keys: ["title", "permalink", "summary", "content"]
+
+  # Optional features
+  enableComments: true
+  dateFormat: "Jan 2, 2006"
+  highlightStyle: "monokai"

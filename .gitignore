@@ -1,0 +1,39 @@
+
+# Hugo output
+/public/
+resources/_gen/
+
+/themes/PaperMod/
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*.swn
+*.sublime-workspace
+*.sublime-project
+.idea/
+.vscode/
+
+# Node / npm / hugo extended assets (if using SCSS or JS bundling)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+
+# Hugoversion-specific files
+hugo_stats.json
+
+# Ignore generated GitHub Pages folder
+/public/
