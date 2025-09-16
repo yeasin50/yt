@@ -59,7 +59,7 @@ params:
     github: "https://github.com/yeasin50"
     youtube: "https://youtube.com/channel/yt.yeasin50"
     stackOverflow: "https://stackoverflow.com/users/10157127/"
-    linkedin: "https://linkedin.com/in/md.yeasinsheikh"
+    linkedin: "https://linkedin.com/in/mdyeasinsheikh"
 
   # Fuse.js search options
   fuseOpts:
