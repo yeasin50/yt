@@ -31,7 +31,7 @@ menu:
 
 # Theme params
 params:
-  author: "Md. Yeasin Sheikh"
+  # author: "Md. Yeasin Sheikh"
   description: "A website showcasing my YouTube videos"
   favicon: "images/favicon.png"
 
@@ -41,7 +41,8 @@ params:
 
   # Homepage layout & main sections
   mainSections: ["posts"]
-  showReadingTime: true
+  showReadingTime: false
+  showAuthor: false
   themeColor: "blue"
   showTags: true
 
