@@ -21,9 +21,9 @@ menu:
       url: "/search"
       weight: 2
 
-    # - name: "Learn"
-    #   url: "/course"
-    #   weight: 3
+    - name: "Learn"
+      url: "/course"
+      weight: 3
 
     - name: "About"
       url: "/about"
@@ -52,7 +52,7 @@ params:
       weight: 1
 
   customCSSFiles:
-    - "css/cards.css"
+    - "css/category-card.css"
 
   # Social links
   social:
