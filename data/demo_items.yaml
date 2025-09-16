@@ -1,0 +1,7 @@
+- title: "Item One"
+  description: "This is the first demo item."
+  url: "/items/item_one/"
+
+- title: "Item Two"
+  description: "This is the second demo item."
+  url: "/items/item_two/"
