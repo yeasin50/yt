@@ -1,4 +1,3 @@
-
 # Makefile for Hugo
 
 HUGO = hugo
@@ -16,9 +15,11 @@ help:
 	@echo "  make clean     Remove generated site"
 
 serve:
-	$(HUGO) server -D $(HUGO_FLAGS)
+	# Override baseURL for local dev
+	$(HUGO) server -D -b http://localhost:1313/ $(HUGO_FLAGS)
 
 build:
+	# Use production baseURL from config.yaml
 	$(HUGO) $(HUGO_FLAGS)
 
 clean:
