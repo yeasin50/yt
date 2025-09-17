@@ -16,7 +16,7 @@ help:
 
 serve:
 	# Override baseURL for local dev
-	$(HUGO) server -D -b http://localhost:1313/ $(HUGO_FLAGS)
+	$(HUGO) server -D -b http://localhost:1313/ $(HUGO_FLAGS) --disableFastRender
 
 build:
 	# Use production baseURL from config.yaml

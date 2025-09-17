@@ -1,0 +1,16 @@
+/* Specific colors for each tag */
+.post-tags a[href*="/tags/c/"] {
+  background-color: #f44336; /* red */
+  color: white;
+}
+
+.post-tags a[href*="/tags/beginner/"] {
+  background-color: #4CAF50; /* green */
+  color: white;
+}
+
+.post-tags a[href*="/tags/bangla/"] {
+  background-color: #2196F3; /* blue */
+  color: white;
+}
+

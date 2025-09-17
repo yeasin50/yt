@@ -1,0 +1,54 @@
+.button {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  border-radius: var(--radius, 6px);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Soft Red / YouTube */
+.button.is-danger {
+  background-color: #D75A4A; /* muted red */
+  color: #fff;
+}
+.button.is-danger:hover {
+  background-color: #C04032;
+}
+
+/* Soft Gray / GitHub */
+.button.is-dark {
+  background-color: #555555; /* muted gray */
+  color: #fff;
+}
+.button.is-dark:hover {
+  background-color: #444444;
+}
+
+/* Soft Blue / LinkedIn */
+.button.is-link {
+  background-color: #5A9BD4; /* muted blue */
+  color: #fff;
+}
+.button.is-link:hover {
+  background-color: #4285B0;
+}
+
+/* Optional: Soft Green / for other links */
+.button.is-success {
+  background-color: #6FAF7B; /* muted green */
+  color: #fff;
+}
+.button.is-success:hover {
+  background-color: #558E60;
+}
+
+/* Optional: Soft Yellow / for highlights */
+.button.is-warning {
+  background-color: #D4A55A; /* muted gold */
+  color: #222;
+}
+.button.is-warning:hover {
+  background-color: #B88536;
+}
