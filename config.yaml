@@ -54,6 +54,7 @@ params:
 
   customCSSFiles:
     - "css/category-card.css"
+    - "css/playlist.css"
 
   # Social links
   social:
