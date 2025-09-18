@@ -1,0 +1,14 @@
+
+<!-- Single playlist view with videos  -->
+
+{{ $tag := .Get "tag" }}
+{{ $posts := where .Site.RegularPages "Params.tags" "intersect" (slice $tag) }}
+{{ $sorted := sort $posts "Date" "asc" }}
+
+<ul>
+  {{ range $sorted }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a> 
+    </li>
+  {{ end }}
+</ul>

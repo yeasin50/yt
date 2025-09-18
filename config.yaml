@@ -21,9 +21,9 @@ menu:
       url: "/search"
       weight: 2
 
-    # - name: "Learn"
-    #   url: "/course"
-    #   weight: 3
+    - name: "Learn"
+      url: "/course"
+      weight: 3
 
     - name: "About"
       url: "/about"
@@ -45,6 +45,7 @@ params:
   showAuthor: false
   themeColor: "blue"
   showTags: true
+  ShowPostNavLinks: true
 
   home_sections:
     - section: "posts"
@@ -52,14 +53,15 @@ params:
       weight: 1
 
   customCSSFiles:
-    - "css/cards.css"
+    - "css/category-card.css"
+    - "css/playlist.css"
 
   # Social links
   social:
     github: "https://github.com/yeasin50"
     youtube: "https://youtube.com/channel/yt.yeasin50"
     stackOverflow: "https://stackoverflow.com/users/10157127/"
-    linkedin: "https://linkedin.com/in/md.yeasinsheikh"
+    linkedin: "https://linkedin.com/in/mdyeasinsheikh"
 
   # Fuse.js search options
   fuseOpts:

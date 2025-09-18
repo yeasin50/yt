@@ -3,7 +3,7 @@ title: "Welcome to My YouTube Channel"
 draft: false
 ---
 
-Hi! I'm Md. Yeasin Sheikh, and I make programming tutorials on YouTube.  
+Hi! I'm Md. Yeasin Sheikh, and I make programming tutorials on YouTube.
 Check out my latest videos below:
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
@@ -16,13 +16,14 @@ Check out my latest videos below:
 <br>
 
 <p>
-  <a href="https://youtube.com/channel/yt.yeasin50" target="_blank" class="button is-danger">
-    Subscribe on YouTube
-  </a>
-  <a href="https://github.com/yeasin50" target="_blank" class="button is-dark">
-    GitHub
-  </a>
-  <a href="https://linkedin.com/in/md.yeasinsheikh" target="_blank" class="button is-link">
-    LinkedIn
-  </a>
+
+<a href="https://www.youtube.com/@yt.yeasin50" target="_blank" class="button is-danger">YouTube</a>
+</a>
+<a href="https://github.com/yeasin50" target="_blank" class="button is-dark">
+GitHub
+</a>
+<a href="https://www.linkedin.com/in/mdyeasinsheikh/" target="_blank" class="button is-link">
+LinkedIn
+</a>
+
 </p>
