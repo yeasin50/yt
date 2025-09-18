@@ -3,7 +3,7 @@ title: "Factorial - loop Part 4"
 date: 2025-09-18
 weight: 3
 draft: false
-tags: ["c", "beginner", "bangla"]
+tags: ["c", "beginner", "bangla", "Practice-code"]
 categories: ["C"]
 ---
 

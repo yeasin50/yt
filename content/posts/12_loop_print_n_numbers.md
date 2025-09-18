@@ -3,7 +3,8 @@ title: "Print N & sum of N number - loop Part(2,3)"
 date: 2025-09-18
 weight: 4
 draft: false
-tags: ["c", "beginner", "bangla"]
+tags: ["c", "beginner", "bangla", "Practice-code"]
+
 categories: ["C"]
 ---
 

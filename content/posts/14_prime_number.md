@@ -2,7 +2,7 @@
 title: "Prime number - loop part 5,6,7"
 date: 2025-09-17
 weight: 2
-tags: ["c", "beginner", "bangla"]
+tags: ["c", "beginner", "bangla", "Practice-code"]
 categories: ["C"]
 ---
 
