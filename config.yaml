@@ -45,6 +45,7 @@ params:
   showAuthor: false
   themeColor: "blue"
   showTags: true
+  ShowPostNavLinks: true
 
   home_sections:
     - section: "posts"
