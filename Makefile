@@ -15,8 +15,7 @@ help:
 	@echo "  make clean     Remove generated site"
 
 serve:
-	# Override baseURL for local dev
-	$(HUGO) server D -b http://localhost:1313/ $(HUGO_FLAGS) --disableFastRender  --noHTTPCache
+	$(HUGO) server D -b http://localhost:1313/ $(HUGO_FLAGS) --disableFastRender --noHTTPCache --buildFuture --buildDrafts
 
 build:
 	# Use production baseURL from config.yaml

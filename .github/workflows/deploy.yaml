@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - master
+  schedule:
+    - cron: '0 13 * * 2'  # Tuesday 7 PM BST
+    - cron: '0 13 * * 3'  # Wednesday 7 PM BST
+    - cron: '0 13 * * 4'  # Thursday 7 PM BST
+    - cron: '0 13 * * 5'  # Friday 7 PM BST
+
 permissions:
   contents: write
 
