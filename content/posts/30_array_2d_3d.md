@@ -20,4 +20,4 @@ categories: ["C"]
 
 ## 3D array
 
-![array 3](/yt/images/array1.svg)
+![array 3D](/yt/images/array3.svg)
