@@ -29,4 +29,4 @@ int factorial(int n){
 
 When n is 5,
 
-![steps](/images/factorial_steps.svg)
+![steps](/yt/images/factorial_steps.svg)

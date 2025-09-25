@@ -29,4 +29,4 @@ int fibonacci(int n){
 
 When n is 4,
 
-![steps](/images/19_fibonacci.svg)
+![steps](/yt/images/19_fibonacci.svg)
