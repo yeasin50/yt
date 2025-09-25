@@ -3,7 +3,7 @@ name: Auto PR for Post Branches
 on:
   push:
     branches:
-      - 'post/**'
+      - post
 
 jobs:
   create-pr:
