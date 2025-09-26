@@ -3,6 +3,13 @@
   url: "c"
   tags: ["c", "beginner"]
 
+
+- title: "Fluter"
+  description: "...."
+  url: "flutter"
+  tags: ["flutter"]
+
+
 - title: "Journey to Linux Mastery"
   description: "Start your Linux adventure with practical guidance, essential commands, and tips for navigating the Linux environment efficiently."
   url: "linux"
