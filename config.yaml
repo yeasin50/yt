@@ -17,13 +17,14 @@ menu:
     - name: "Home"
       url: "/"
       weight: 1
+    - name: "Learn"
+      url: "/course"
+      weight: 2
+
     - name: "Search"
       url: "/search"
       weight: 2
 
-    - name: "Learn"
-      url: "/course"
-      weight: 3
 
     - name: "About"
       url: "/about"
@@ -58,6 +59,7 @@ params:
 
   # Social links
   social:
+    website: "https://yeasin50.github.io/portfolio/"
     github: "https://github.com/yeasin50"
     youtube: "https://youtube.com/channel/yt.yeasin50"
     stackOverflow: "https://stackoverflow.com/users/10157127/"
