@@ -55,6 +55,7 @@ params:
 
   customCSSFiles:
     - "css/category-card.css"
+    - "css/course_overview.css"
     - "css/playlist.css"
 
   # Social links
