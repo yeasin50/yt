@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup GitHub CLI
-        uses: cli/cli-action@v2
+        uses: github/cli-action@v2
 
       - name: Merge PR
         env:

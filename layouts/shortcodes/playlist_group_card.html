@@ -1,0 +1,37 @@
+{{/* Get the tags from the shortcode parameter and split by comma */}}
+{{ $tags_param := split (.Get "tags") "," }}
+
+<div class="playlist_group_cards">
+  {{ range .Site.Data.playlist_groups }}
+    {{/* Check if any of the passed tags exist in the group */}}
+    {{ $match := false }}
+    {{ range $t := $tags_param }}
+      {{ if in .tags $t }}
+        {{ $match = true }}
+      {{ end }}
+    {{ end }}
+
+    {{ if $match }}
+      {{ $count := 0 }}
+      {{ range $.Site.Data.playlist_items }}
+        {{ if intersect .tags $.tags }}
+          {{ $count = add $count 1 }}
+        {{ end }}
+      {{ end }}
+      <div class="playlist_group_card">
+        {{ with .image }}
+          <img class="playlist_group_image" src="{{ . }}" alt="{{ $.title }}">
+        {{ end }}
+        <h2 class="playlist_group_title">{{ .title }}</h2>
+        <p class="playlist_group_desc">{{ .description }}</p>
+        <p class="playlist_group_counter">
+          {{ if .counter }}
+            {{ .counter }} videos
+          {{ else }}
+            {{ $count }} videos
+          {{ end }}
+        </p>
+      </div>
+    {{ end }}
+  {{ end }}
+</div>
