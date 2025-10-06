@@ -36,6 +36,10 @@ params:
   description: "A website showcasing my YouTube videos"
   favicon: "images/favicon.png"
 
+  defaultTheme: "dark"
+  showThemeToggle: true
+
+  ShowShareButtons: true
   # Enable search
   enableSearch: true
   showSearchButton: true

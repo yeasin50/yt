@@ -8,6 +8,7 @@
 
  <link rel="stylesheet" href="{{ "css/course_overview.css" | relURL }}">
 
+
   {{ if .Sections }}
   <div class="overview_items">
     {{ range sort .Sections ".File.Dir" "asc" }}
@@ -22,5 +23,13 @@
   {{ else }}
     <p>No subtopics found.</p>
   {{ end }}
+
+
+  <br>
+
+{{ if .Site.Params.ShowShareButtons }}
+  {{ partial "share_icons.html" . }}
+{{ end }}
+
 </main>
 {{ end }}
