@@ -1,11 +1,18 @@
 ---
-title: "Recursive Factorial Explained"
+title: Recursive Factorial Explained
 date: 2025-09-23T19:00:00+07:00
-weight: 1
+weight: 3
 draft: false
 future: true
-tags: ["c", "beginner", "bangla", "Practice-code", "function", "Recursion"]
-categories: ["C"]
+tags:
+  - c
+  - beginner
+  - bangla
+  - Practice-code
+  - function
+  - Recursion
+categories:
+  - C
 ---
 
 কীভাবে Factorial Function, এবং Recursive Approach ব্যবহার করে Factorial বের করা যায়।

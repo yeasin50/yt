@@ -1,11 +1,15 @@
 ---
-title: "Print N & sum of N number - loop Part(2,3)"
+title: Print N & sum of N number - loop Part(2,3)
 date: 2025-09-18
-weight: 4
+weight: 3
 draft: false
-tags: ["c", "beginner", "bangla", "Practice-code"]
-
-categories: ["C"]
+tags:
+  - c
+  - beginner
+  - bangla
+  - Practice-code
+categories:
+  - C
 ---
 
 এই ভিডিওতে আমি প্রোগ্রামিংয়ে লুপের বেসিক বিষয়গুলো সহজ কোড উদাহরণসহ বুঝিয়েছি।

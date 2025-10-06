@@ -2,8 +2,13 @@
 title: "Loop, Break & Continue Explained "
 date: 2025-09-11
 draft: false
-tags: ["c", "beginner", "bangla"]
-categories: ["C"]
+tags:
+  - c
+  - beginner
+  - bangla
+categories:
+  - C
+weight: 2
 ---
 
 এই ভিডিওতে আমরা শিখব C Programming-এ লুপ (for, while, do-while) এর কাজ, এবং কীভাবে break ও continue স্টেটমেন্ট কাজ করে

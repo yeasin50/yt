@@ -1,10 +1,15 @@
 ---
-title: "DataType Selection in C | ডেটা টাইপের মূল ধারণা"
+title: DataType Selection in C | ডেটা টাইপের মূল ধারণা
 date: 2025-08-24
 draft: false
-tags: ["c", "beginner", "bangla"]
-categories: ["C"]
-featuredImage: "images/codeblocks-thumb.jpg"
+tags:
+  - c
+  - beginner
+  - bangla
+categories:
+  - C
+featuredImage: images/codeblocks-thumb.jpg
+weight: 2
 ---
 
 কম্পিউটারের মেমোরিতে সব কিছু 0 ও 1 হিসেবে সংরক্ষিত থাকে, তবে আমাদের কেন ডেটা টাইপ নির্বাচন করতে হয়?

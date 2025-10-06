@@ -1,11 +1,15 @@
 ---
-title: "Prefix Postfix"
+title: Prefix Postfix
 date: 2025-09-27T19:00:00+08:00
-weight: 1
+weight: 2
 draft: false
 future: true
-tags: ["c", "beginner", "bangla"]
-categories: ["C"]
+tags:
+  - c
+  - beginner
+  - bangla
+categories:
+  - C
 ---
 
 Prefix & Postfix Operators in C | ++ & -- Explained

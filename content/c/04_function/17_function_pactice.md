@@ -1,11 +1,17 @@
 ---
-title: "Function Practice"
+title: Function Practice
 date: 2025-09-22T19:00:00+07:00
-weight: 1
+weight: 2
 draft: false
 future: true
-tags: ["c", "beginner", "bangla", "Practice-code", "function"]
-categories: ["C"]
+tags:
+  - c
+  - beginner
+  - bangla
+  - Practice-code
+  - function
+categories:
+  - C
 ---
 
 {{< youtube tEAAdDA3RSs >}}

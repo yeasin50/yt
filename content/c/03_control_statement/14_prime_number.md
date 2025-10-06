@@ -1,9 +1,14 @@
 ---
-title: "Prime number - loop part 5,6,7"
+title: Prime number - loop part 5,6,7
 date: 2025-09-17
-weight: 2
-tags: ["c", "beginner", "bangla", "Practice-code"]
-categories: ["C"]
+weight: 5
+tags:
+  - c
+  - beginner
+  - bangla
+  - Practice-code
+categories:
+  - C
 ---
 
 এই ভিডিওতে আমি দেখাচ্ছি কিভাবে **C প্রোগ্রামিং-এ For Loop ব্যবহার করে একটি সংখ্যা প্রাইম কিনা তা চেক করা যায়**।

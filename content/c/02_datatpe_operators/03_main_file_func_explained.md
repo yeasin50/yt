@@ -1,10 +1,15 @@
 ---
-title: "Main File & Main Function Explained"
+title: Main File & Main Function Explained
 date: 2025-08-20
 draft: false
-tags: ["c", "beginner", "bangla"]
-categories: ["C"]
-featuredImage: "images/codeblocks-thumb.jpg"
+tags:
+  - c
+  - beginner
+  - bangla
+categories:
+  - C
+featuredImage: images/codeblocks-thumb.jpg
+weight: 1
 ---
 
 This metaphor will help you understand programming concepts more easily and remember them better.

@@ -1,11 +1,17 @@
 ---
-title: "Array 2D & 3D"
+title: Array 2D & 3D
 date: 2025-09-26T19:00:00+08:00
-weight: 1
+weight: 2
 draft: false
 future: true
-tags: ["c", "beginner", "bangla", "Practice", "array"]
-categories: ["C"]
+tags:
+  - c
+  - beginner
+  - bangla
+  - Practice
+  - array
+categories:
+  - C
 ---
 
 2D array basics, index calculation, value assignment, এবং 3D array coding step by step।

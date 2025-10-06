@@ -1,10 +1,15 @@
 ---
-title: "Factorial - loop Part 4"
+title: Factorial - loop Part 4
 date: 2025-09-18
-weight: 3
+weight: 4
 draft: false
-tags: ["c", "beginner", "bangla", "Practice-code"]
-categories: ["C"]
+tags:
+  - c
+  - beginner
+  - bangla
+  - Practice-code
+categories:
+  - C
 ---
 
 এই ভিডিওতে আমি দেখাচ্ছি কিভাবে **C প্রোগ্রামিং-এ For Loop ব্যবহার করে একটি সংখ্যার factorial (N!) বের করা যায়**।

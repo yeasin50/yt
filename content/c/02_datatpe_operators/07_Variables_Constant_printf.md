@@ -1,10 +1,16 @@
 ---
-title: "Variables, Constants & printf Format Specifiers"
+title: Variables, Constants & printf Format Specifiers
 date: 2025-09-05
 draft: false
-tags: ["c", "beginner", "bangla", "practice-code"]
-categories: ["C"]
-featuredImage: "images/codeblocks-thumb.jpg"
+tags:
+  - c
+  - beginner
+  - bangla
+  - practice-code
+categories:
+  - C
+featuredImage: images/codeblocks-thumb.jpg
+weight: 4
 ---
 
 ভেরিয়েবল, কনস্ট্যান্ট এবং printf ফরম্যাট স্পেসিফায়ার নিয়ে। এই ভিডিওটি বিশেষভাবে বাংলা ভাষাভাষী শিক্ষার্থীদের জন্য তৈরি।

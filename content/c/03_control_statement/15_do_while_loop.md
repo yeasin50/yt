@@ -1,10 +1,15 @@
 ---
-title: "Do While - loop part 8"
+title: Do While - loop part 8
 date: 2025-09-18
-weight: 1
+weight: 6
 draft: false
-tags: ["c", "beginner", "bangla", "Practice-code"]
-categories: ["C"]
+tags:
+  - c
+  - beginner
+  - bangla
+  - Practice-code
+categories:
+  - C
 ---
 
 {{< youtube o_lT5c8nju0 >}}
