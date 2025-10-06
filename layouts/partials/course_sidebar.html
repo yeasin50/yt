@@ -1,0 +1,22 @@
+<div class="course_sidebar">
+  <h3>{{ .Section.Title }}</h3>
+  <ul>
+    {{ range .Section.Pages.ByWeight }}
+      <li {{ if eq .Permalink $.Permalink }}class="active"{{ end }}>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+    {{ range .Section.Sections }}
+      <li>
+        <strong>{{ .Title }}</strong>
+        <ul>
+          {{ range .Pages.ByWeight }}
+            <li {{ if eq .Permalink $.Permalink }}class="active"{{ end }}>
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </li>
+    {{ end }}
+  </ul>
+</div>

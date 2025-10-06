@@ -50,7 +50,14 @@ params:
   showAuthor: false
   themeColor: "blue"
   showTags: true
+
+  displayFullLangName: true
   ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: false
+  ShowPageNums: true
+  ShowToc: true
 
   home_sections:
     - section: "posts"
