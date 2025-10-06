@@ -4,7 +4,7 @@ date: 2025-11-27T19:00:00+08:00
 weight: 1
 draft: false
 future: true
-tags: ["c", "beginner", "bangla", "typedef", "enum"]
+tags: ["c", "file", "beginner", "bangla" ]
 categories: ["C"]
 ---
 
@@ -18,7 +18,7 @@ categories: ["C"]
 
 ---
 
-### File Append in C | Add Text to File
+### File Append 
 
 শিখুন **C Programming Bangla**-এ কিভাবে **File Append** ব্যবহার করে ফাইলের শেষে নতুন text add করা যায়। ভিডিওতে step by step code example, practical demonstration এবং beginner-friendly explanation দেখানো হয়েছে।
 
@@ -28,7 +28,7 @@ categories: ["C"]
 
 ---
 
-### File Seek in C | Get & Update Cursor Position
+### File Seek | Get & Update Cursor Position
 
 শিখুন **C Programming Bangla**-এ কিভাবে **File Seek** ব্যবহার করে cursor position পাওয়া এবং update করা যায়। ভিডিওতে দেখানো হয়েছে ftell এবং fseek ব্যবহার, cursor move, text replace, এবং practical examples step by step। Beginners এবং self-learners এর জন্য সহজ ব্যাখ্যা।
 
