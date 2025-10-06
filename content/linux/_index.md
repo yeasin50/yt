@@ -1,6 +1,7 @@
 ---
 title: "Linux is Love"
 draft: false
+layout: "course_overview"
 ---
 
-{{< playlist tag="linux" >}}
+<!-- `g{{< playlist tag="linux" >}} -->
