@@ -6,5 +6,3 @@ layout: "course_overview"
 ---
 
 
-
-
