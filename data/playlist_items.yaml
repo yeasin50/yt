@@ -1,7 +1,19 @@
-- title: "CSE 101: Introduction to C Programming"
-  description: "Learn the fundamentals of C programming, including syntax, variables, loops, and functions. Perfect for beginners starting their coding journey."
+- title: "Introduction to C Programming"
+  description: "CSE 101: Learn the fundamentals of C programming, including syntax, variables, loops, and functions. Perfect for beginners starting their coding journey."
   url: "c"
-  tags: ["c", "beginner"]
+  tags: ["C", "beginner"]
+
+
+# - title: "Data Structure & Algorithm"
+#   description: "...des.."
+#   url: "dsa"
+#   tags: ["dsa"]
+
+- title: "Fluter"
+  description: "...."
+  url: "flutter"
+  tags: ["flutter"]
+
 
 - title: "Journey to Linux Mastery"
   description: "Start your Linux adventure with practical guidance, essential commands, and tips for navigating the Linux environment efficiently."

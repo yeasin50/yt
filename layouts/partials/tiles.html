@@ -1,0 +1,12 @@
+{{/* Partial to render tiles for a section's subfolders */}}
+<div class="tiles-container">
+  {{ range .Sections.ByWeight }}
+    <div class="tile">
+        <p> something </p>
+      <h2>{{ .Title }}</h2>
+      {{ with .Params.description }}
+        <p>{{ . }}</p>
+      {{ end }}
+    </div>
+  {{ end }}
+</div>
