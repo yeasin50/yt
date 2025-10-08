@@ -1,9 +1,56 @@
-<div class="course_sidebar">
-  <h3>Course Sidebar</h3>
-  <ul>
-    <li><a href="#">Lesson 1</a></li>
-    <li><a href="#">Lesson 2</a></li>
-    <li><a href="#">Lesson 3</a></li>
+<div class="course-sidebar">
+  <div class="sidebar-header">
+    <h3>Course Menu</h3>
+    <button class="close-btn" onclick="closeSidebar()">✕</button>
+  </div>
+
+  <ul class="sidebar-list">
+    {{ $current := . }}
+    {{ $section := $current.CurrentSection }}
+    {{ $root := $section.Parent | default $section }}
+
+    
+    {{ range sort $root.Sections "Title" }}
+      {{ $isActive := in $current.RelPermalink .RelPermalink }}
+      <li class="sidebar-folder">
+        <button class="folder-toggle" data-title="{{ .Title }}" onclick="toggleFolder(this)">
+          {{ if $isActive }}▼{{ else }}▶{{ end }} {{ .Title }}
+        </button>
+
+        <ul class="sidebar-sublist" style="display:{{ if $isActive }}block{{ else }}none{{ end }};">
+          {{ range sort .Pages "File.BaseFileName" }}
+            <li>
+              <a href="{{ .RelPermalink }}" {{ if eq .Permalink $current.Permalink }}class="active"{{ end }}>
+                {{ .Title }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </li>
+    {{ end }}
   </ul>
-  <p>Some dummy text here for your sidebar.</p>
 </div>
+
+<script>
+function toggleFolder(btn) {
+  const sublist = btn.nextElementSibling;
+  if (!sublist) return;
+
+  const isVisible = sublist.style.display !== "none";
+  const title = btn.dataset.title; // always use the clean title stored in data-title
+
+  // Update arrow
+  btn.textContent = (isVisible ? "▶ " : "▼ ") + title;
+
+  // Toggle sublist visibility
+  sublist.style.display = isVisible ? "none" : "block";
+}
+
+// Initialize arrows on page load to prevent double arrows
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".folder-toggle").forEach(btn => {
+    const title = btn.dataset.title;
+    btn.textContent = "▶ " + title;
+  });
+});
+</script>

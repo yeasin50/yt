@@ -1,0 +1,37 @@
+{{- if (.Param "ShowBreadCrumbs") -}}
+<div class="breadcrumbs">
+  <!-- Menu icon -->
+  <button class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle sidebar">☰</button>
+
+  {{- $url := replace .Parent.Permalink (printf "%s" site.Home.Permalink) "" }}
+  {{- $lang_url := strings.TrimPrefix (printf "%s/" .Lang) $url -}}
+
+  {{- $scratch := newScratch }}
+  {{- range $index, $element := split $lang_url "/" }}
+    {{- $scratch.Add "path" (printf "%s/" $element )}}
+    {{- $bc_pg := site.GetPage ($scratch.Get "path") -}}
+    {{- if (and ($bc_pg) (gt (len . ) 0))}}
+      {{- print "&nbsp;»&nbsp;" | safeHTML -}}
+      <a href="{{ $bc_pg.Permalink }}">{{ $bc_pg.Name }}</a>
+    {{- end }}
+  {{- end -}}
+</div>
+
+<!-- Sidebar and overlay -->
+<div class="sidebar-overlay" onclick="closeSidebar()"></div>
+{{ partial "course_sidebar.html" . }}
+
+<script>
+function toggleSidebar() {
+  document.querySelector('.course-sidebar')?.classList.toggle('open');
+  document.querySelector('.sidebar-overlay')?.classList.toggle('visible');
+}
+function closeSidebar() {
+  document.querySelector('.course-sidebar')?.classList.remove('open');
+  document.querySelector('.sidebar-overlay')?.classList.remove('visible');
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeSidebar();
+});
+</script>
+{{- end -}}
