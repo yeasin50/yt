@@ -26,20 +26,39 @@
 
 <!-- Sidebar and overlay -->
 {{- if and (eq .Kind "page") $showSidebar -}}
-  <div class="sidebar-overlay" onclick="closeSidebar()"></div>
-  {{ partial "course_sidebar.html" . }}
 
-  <script>
-  function toggleSidebar() {
-    document.querySelector('.course-sidebar')?.classList.toggle('open');
-    document.querySelector('.sidebar-overlay')?.classList.toggle('visible');
+<div class="sidebar-overlay"></div>
+{{ partial "course_sidebar.html" . }}
+
+<script>
+function toggleSidebar() {
+  document.querySelector('.course-sidebar')?.classList.toggle('open');
+  document.querySelector('.sidebar-overlay')?.classList.toggle('visible');
+}
+
+function closeSidebar() {
+  document.querySelector('.course-sidebar')?.classList.remove('open');
+  document.querySelector('.sidebar-overlay')?.classList.remove('visible');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const isDesktop = window.matchMedia("(min-width: 1024px)").matches; // desktop breakpoint
+  const sidebar = document.querySelector('.course-sidebar');
+  const overlay = document.querySelector('.sidebar-overlay');
+
+  if (isDesktop) {
+    // Show sidebar by default on desktop
+    sidebar?.classList.add('open');
+    overlay?.classList.remove('visible'); // hide overlay on desktop
+  } else {
+    // Show overlay click behavior on mobile only
+    overlay?.addEventListener('click', closeSidebar);
   }
-  function closeSidebar() {
-    document.querySelector('.course-sidebar')?.classList.remove('open');
-    document.querySelector('.sidebar-overlay')?.classList.remove('visible');
-  }
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeSidebar();
-  });
-  </script>
+});
+
+// Close on Escape key (both mobile and desktop)
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeSidebar();
+});
+</script>
 {{- end -}}
