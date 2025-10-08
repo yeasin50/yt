@@ -35,6 +35,8 @@ params:
   # author: "Md. Yeasin Sheikh"
   description: "A website showcasing my YouTube videos"
   favicon: "images/favicon.png"
+  
+  params.show_course_sidebar: true
 
   defaultTheme: "dark"
   showThemeToggle: true
