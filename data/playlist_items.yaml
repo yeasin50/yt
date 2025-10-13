@@ -1,22 +1,25 @@
-- title: "Introduction to C Programming"
+- title: "C Programming"
   description: "CSE 101: Learn the fundamentals of C programming, including syntax, variables, loops, and functions. Perfect for beginners starting their coding journey."
   url: "c"
   tags: ["C", "beginner"]
 
-
-# - title: "Data Structure & Algorithm"
-#   description: "...des.."
+# - title: "DSA"
+#   description: "Master data structures and algorithms with clear explanations and practical examples. Perfect for interview prep and problem-solving skills."
 #   url: "dsa"
-#   tags: ["dsa"]
+#   tags: ["DSA", "beginner"]
 
-- title: "Fluter"
-  description: "...."
-  url: "flutter"
-  tags: ["flutter"]
-
-
-- title: "Journey to Linux Mastery"
-  description: "Start your Linux adventure with practical guidance, essential commands, and tips for navigating the Linux environment efficiently."
+- title: "Linux Basics"
+  description: "Step into Linux with essential commands, file management, shell scripting, and practical tips to boost your productivity."
   url: "linux"
-  tags: ["linux", "beginner"]
+  tags: ["Linux", "beginner"]
 
+- title: "Flutter"
+  description: "Learn Flutter to build cross-platform mobile and web applications using Dart. Covers widgets, state management, and UI design patterns."
+  url: "flutter"
+  tags: ["Flutter", "mobile"]
+
+
+# - title: "Productivity"
+#   description: "Boost your daily workflow with CLI tools, automation tips, README practices, and simple hacks to organize and optimize your work."
+#   url: "productivity"
+#   tags: ["Productivity", "tools"]

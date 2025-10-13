@@ -1,0 +1,95 @@
+{{ $cards := site.Data.home_card_items }}
+<div class="home_card_grid">
+  {{ range $cards }}
+    <div class="home_card_grid_item {{ if .upcoming }}upcoming{{ end }}">
+      {{ if .upcoming }}
+        <div class="home_card_content">
+          <h3 class="home_card_title">{{ .title }}</h3>
+          <p class="home_card_desc">{{ .desc }}</p>
+          <span class="home_card_badge">Coming Soon</span>
+        </div>
+      {{ else }}
+        <a href="{{ .link | relURL }}" class="home_card_link">
+          <div class="home_card_content">
+            <h3 class="home_card_title">{{ .title }}</h3>
+            <p class="home_card_desc">{{ .desc }}</p>
+          </div>
+        </a>
+      {{ end }}
+    </div>
+  {{ end }}
+</div>
+
+
+
+<style>
+.home_card_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+  align-items: stretch; 
+}
+
+.home_card_grid_item {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  display: flex; 
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Hover effect */
+.home_card_grid_item:hover:not(.upcoming) {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+/* Card content wrapper */
+.home_card_link,
+.home_card_content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem; /* compact padding */
+  height: 100%;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+/* Title */
+.home_card_title {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* Description */
+.home_card_desc {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--secondary);
+  flex-grow: 1; 
+}
+
+/* Optional: Coming Soon style */
+.home_card_grid_item.upcoming {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Coming Soon badge */
+.home_card_badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  background: var(--border);
+  color: var(--secondary);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  align-self: flex-start; 
+}
+</style>

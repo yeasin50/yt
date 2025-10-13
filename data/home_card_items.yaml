@@ -1,0 +1,22 @@
+- title: "C Programming"
+  desc: "C fundamentals, loops, functions, and more."
+  link: "c/"
+  upcoming: false
+
+- title: "Linux Basics"
+  desc: "Easy & rational steps to become productive with Linux tools."
+  link: "linux/"
+  upcoming: false
+
+- title: "DSA"
+  desc: "(Coming soon) Master data structures and algorithms."
+  upcoming: true
+
+- title: "Flutter"
+  desc: "Learn Flutter with Dart and cross-platform apps."
+  upcoming: false
+  link: "flutter/"
+
+- title: "Productivity"
+  desc: "(Coming soon) Improve daily life with README habits, CLI tools, and automation."
+  upcoming: true
