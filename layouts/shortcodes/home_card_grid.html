@@ -1,4 +1,7 @@
-{{ $cards := site.Data.home_card_items }}
+
+{{ $lang := .Site.Language.Lang }}        
+{{ $cards := index site.Data.home_card_items $lang }}  
+
 <div class="home_card_grid">
   {{ range $cards }}
     <div class="home_card_grid_item {{ if .upcoming }}upcoming{{ end }}">
@@ -6,7 +9,9 @@
         <div class="home_card_content">
           <h3 class="home_card_title">{{ .title }}</h3>
           <p class="home_card_desc">{{ .desc }}</p>
-          <span class="home_card_badge">Coming Soon</span>
+          <span class="home_card_badge">
+            {{ if eq $lang "bn" }}শীঘ্রই আসছে{{ else }}Coming Soon{{ end }}
+          </span>
         </div>
       {{ else }}
         <a href="{{ .link | relURL }}" class="home_card_link">
@@ -19,6 +24,7 @@
     </div>
   {{ end }}
 </div>
+
 
 
 

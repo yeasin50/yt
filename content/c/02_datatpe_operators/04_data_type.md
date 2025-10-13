@@ -12,9 +12,18 @@ featuredImage: images/codeblocks-thumb.jpg
 weight: 2
 ---
 
-কম্পিউটারের মেমোরিতে সব কিছু 0 ও 1 হিসেবে সংরক্ষিত থাকে, তবে আমাদের কেন ডেটা টাইপ নির্বাচন করতে হয়?
+Everything in a computer’s memory is stored as 0s and 1s, but why do we need to choose a data type?
 
 {{< youtube Sw_mNpmpZjU >}}
+
+## C Data Types
+
+In the C language, the basic data types are:
+
+- `char` → a single character or a small number
+- `int` → a whole number (integer)
+- `float` → a decimal number with small precision
+- `double` → a decimal number with higher precision
 
 ### What you’ll learn in this video:
 
