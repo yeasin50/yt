@@ -20,16 +20,17 @@
 
 <!-- handle section navigation  -->
 <nav class="paginav">
-  {{- with .PrevInSection}}
+  {{- with .NextInSection }}
   <a class="prev" href="{{ .Permalink }}">
-    <span class="title">« {{ i18n "prev_page" }}</span>
+    <span class="title">{{ i18n "prev_page" }} »</span>
     <br>
     <span>{{- .Name -}}</span>
   </a>
   {{- end }}
-  {{- with .NextInSection }}
+
+  {{- with .PrevInSection}}
   <a class="next" href="{{ .Permalink }}">
-    <span class="title">{{ i18n "next_page" }} »</span>
+    <span class="title">« {{ i18n "next_page" }}</span>
     <br>
     <span>{{- .Name -}}</span>
   </a>
