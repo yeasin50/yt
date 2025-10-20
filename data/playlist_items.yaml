@@ -19,10 +19,10 @@ en:
     url: "flutter"
     tags: ["Flutter", "mobile"]
 
-  # - title: "Productivity"
-  #   description: "Boost your daily workflow with CLI tools, automation tips, README practices, and simple hacks to organize and optimize your work."
-  #   url: "productivity"
-  #   tags: ["Productivity", "tools"]
+  - title: "Productivity"
+    description: "Boost your daily workflow with CLI tools, automation tips, README practices, and simple hacks to organize and optimize your work."
+    url: "/tools"
+    tags: ["productivity", "tools"]
 
 bn:
   - title: "সি প্রোগ্রামিং"

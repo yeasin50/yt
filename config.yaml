@@ -79,7 +79,7 @@ params:
 
   defaultTheme: "dark"
   showThemeToggle: true
-
+  ShowCodeCopyButtons: true
   ShowShareButtons: true
   # Enable search
   enableSearch: true

@@ -19,8 +19,9 @@ en:
     upcoming: false
 
   - title: "Productivity"
-    desc: "(Coming soon) Improve daily life with README habits, CLI tools, and automation."
-    upcoming: true
+    desc: "Improve daily life with README habits, CLI tools, and automation."
+    upcoming: false
+    link: "tools/"
 
 bn:
   - title: "C প্রোগ্রামিং"
@@ -43,5 +44,6 @@ bn:
     upcoming: false
 
   - title: "Productivity"
-    desc: "(শীঘ্রই আসছে) README , CLI টুল এবং অটোমেশন দিয়ে দৈনন্দিন জীবন আরও ফলপ্রসূ করুন।"
-    upcoming: true
+    desc: "EADME , CLI টুল এবং অটোমেশন দিয়ে দৈনন্দিন জীবন আরও ফলপ্রসূ করুন।"
+    upcoming: false
+    link: "tools/"
