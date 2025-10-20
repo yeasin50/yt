@@ -4,6 +4,7 @@ date: 2025-08-16
 draft: false
 tags: ["c", "beginner", "codeblocks", "windows"]
 categories: ["C"]
+weight: 1
 ---
 
 

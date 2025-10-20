@@ -1,9 +1,15 @@
 ---
-title: "Operators"
+title: Operators
 date: 2025-09-07
 draft: false
-tags: ["c", "beginner", "bangla", "Practice-code"]
-categories: ["C"]
+tags:
+  - c
+  - beginner
+  - bangla
+  - Practice-code
+categories:
+  - C
+weight: 6
 ---
 
 এই ছোট ভিডিওতে আমরা C প্রোগ্রামিং এর Operators এর একটি সংক্ষিপ্ত পরিচিতি দেখব।

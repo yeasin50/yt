@@ -3,6 +3,7 @@
 /public/
 resources/_gen/
 
+content/**/.obsidian/
 # /themes/PaperMod/
 # OS files
 .DS_Store

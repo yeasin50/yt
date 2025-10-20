@@ -1,9 +1,6 @@
 ---
-title: "Controll statement"
-description: "Conditions(if, else, else if), 
-                loop(for, while, do while), 
-                increment(++), decrement(--),
-                prefix, postfox"
+title: Pointers
+description: "Learn pointers in C: memory address, pointer operations, and how to efficiently handle data."
 draft: false
 ---
 

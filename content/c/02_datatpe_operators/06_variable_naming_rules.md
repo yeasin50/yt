@@ -1,10 +1,15 @@
 ---
-title: "C Variable Define & Naming Rules"
+title: C Variable Define & Naming Rules
 date: 2025-08-24
 draft: false
-tags: ["c", "beginner", "bangla"]
-categories: ["C"]
-featuredImage: "images/codeblocks-thumb.jpg"
+tags:
+  - c
+  - beginner
+  - bangla
+categories:
+  - C
+featuredImage: images/codeblocks-thumb.jpg
+weight: 3
 ---
 
 এই ভিডিওতে আমরা শিখব C Programming এ কিভাবে Variable Define করতে হয় এবং Naming Rules বা ভ্যারিয়েবলের নামকরণের নিয়মগুলো।

@@ -12,11 +12,11 @@
 
   {{ if .Sections }}
   <div class="overview_items">
-    {{ range sort .Sections ".File.Dir" "asc" }}
-      {{ if .Title }}             <!-- only render if title exists -->
+    {{ range $i, $section := sort .Sections ".File.Dir" "asc" }}
+         {{ if $section.Title }}
         <a href="{{ .RelPermalink }}" class="overview_card">
-          <h2>{{ .Title }}</h2>
-          {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
+            <h2>{{ add $i 1}}. {{ $section.Title }}</h2>
+          {{ with $section.Params.description }}<p>{{ . }}</p>{{ end }}
         </a>
       {{ end }}
     {{ end }}

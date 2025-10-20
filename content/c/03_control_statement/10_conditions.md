@@ -1,9 +1,15 @@
 ---
-title: "Conditions"
+title: Conditions
 date: 2025-09-11
 draft: false
-tags: ["c", "beginner", "bangla", "Practice-code"]
-categories: ["C"]
+tags:
+  - c
+  - beginner
+  - bangla
+  - Practice-code
+categories:
+  - C
+weight: 1
 ---
 
 > if, if-else, else-if & Nested Conditions, switch, break, continue

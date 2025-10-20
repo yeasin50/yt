@@ -1,11 +1,18 @@
 ---
-title: "Recursive Fibonacci Explained"
+title: Recursive Fibonacci Explained
 date: 2025-09-24T19:00:00+07:30
-weight: 1
+weight: 4
 draft: false
 future: true
-tags: ["c", "beginner", "bangla", "Practice-code", "function", "Recursion"]
-categories: ["C"]
+tags:
+  - c
+  - beginner
+  - bangla
+  - Practice-code
+  - function
+  - Recursion
+categories:
+  - C
 ---
 
 কীভাবে Nth Fibonacci বের করা, recursion কাজ করার প্রক্রিয়া, এবং পুরো Fibonacci series তৈরি করা step by step।
