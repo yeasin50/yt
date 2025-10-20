@@ -10,6 +10,8 @@ categories: ["C"]
 
 ## Create
 
+{{< youtube 3XQFVTTToy8 >}}
+
 Lets create an integer array of 3 elements.
 
 > Dynamic Memory behaves like an array, and its dataType specified by the type of pointer.

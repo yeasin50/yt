@@ -8,7 +8,7 @@ tags: ["c", "Dynamic Memory", "beginner", "bangla"]
 categories: ["C"]
 ---
 
-{{< youtube ------- >}}
+{{< youtube jo-5T2JfkUg >}}
 
 ## Why do we need dynamic memory
 

@@ -1,11 +1,16 @@
 ---
-title: "Memor leaks"
+title: Memor leaks
 date: 2025-10-15T19:00:00+08:00
-weight: 3
+weight: 7
 draft: false
 future: true
-tags: ["c", "Dynamic Memory", "beginner", "bangla"]
-categories: ["C"]
+tags:
+  - c
+  - Dynamic Memory
+  - beginner
+  - bangla
+categories:
+  - C
 ---
 
 Memory leak happens when create dynamic Memory but doesn't release :)
