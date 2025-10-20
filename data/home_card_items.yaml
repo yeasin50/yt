@@ -1,0 +1,49 @@
+en:
+  - title: "C Programming"
+    desc: "C fundamentals, loops, functions, and more."
+    link: "c/"
+    upcoming: false
+
+  - title: "Linux Basics"
+    desc: "Easy & rational steps to become productive with Linux tools."
+    link: "linux/"
+    upcoming: false
+
+  - title: "DSA"
+    desc: "(Coming soon) Master data structures and algorithms."
+    upcoming: true
+
+  - title: "Flutter"
+    desc: "Learn Flutter with Dart and cross-platform apps."
+    link: "flutter/"
+    upcoming: false
+
+  - title: "Productivity"
+    desc: "Improve daily life with README habits, CLI tools, and automation."
+    upcoming: false
+    link: "tools/"
+
+bn:
+  - title: "C প্রোগ্রামিং"
+    desc: "C-এর মূল ধারণা, লুপ, ফাংশন এবং আরও অনেক কিছু।"
+    link: "c/"
+    upcoming: false
+
+  - title: "লিনাক্স বেসিকস"
+    desc: "লিনাক্স টুল দিয়ে সহজ এবং কার্যকরভাবে কাজ করার ধাপে ধাপে গাইড।"
+    link: "linux/"
+    upcoming: false
+
+  - title: "ডাটা স্ট্রাকচার ও অ্যালগরিদম (DSA)"
+    desc: "(শীঘ্রই আসছে) ডাটা স্ট্রাকচার এবং অ্যালগরিদমে দক্ষ হোন।"
+    upcoming: true
+
+  - title: "Flutter"
+    desc: "Dart এবং cross-platform অ্যাপ দিয়ে Flutter শিখুন।"
+    link: "flutter/"
+    upcoming: false
+
+  - title: "Productivity"
+    desc: "EADME , CLI টুল এবং অটোমেশন দিয়ে দৈনন্দিন জীবন আরও ফলপ্রসূ করুন।"
+    upcoming: false
+    link: "tools/"

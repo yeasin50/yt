@@ -3,12 +3,18 @@ title: "Welcome to My YouTube Channel"
 draft: false
 ---
 
-Hi! I'm Md. Yeasin Sheikh, and I make programming tutorials on YouTube.
-Check out my latest videos below:
+<pre class="poetic">
+Amid the chaos of this ever-expanding world,
+    I explore, learn, and craft — trying to grasp fleeting truths
+and share them with anyone ready to wander
+    these infinite dimensions with me.
+</pre>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
-  <iframe src="https://www.youtube.com/embed/6XVDFe5Fdbc"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+<br>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px;">
+  <iframe src="https://www.youtube.com/embed/MRHHn-vybjo"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"
     frameborder="0" allowfullscreen>
   </iframe>
 </div>
@@ -27,3 +33,16 @@ LinkedIn
 </a>
 
 </p>
+
+{{< home_card_grid >}}
+
+<style>
+pre.poetic {
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+    color: var(--secondary);
+    white-space: pre-wrap; /* preserves line breaks and wraps long lines */
+}
+</style>
