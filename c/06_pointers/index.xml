@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Pointers on @yt.yeasin50</title><link>https://yeasin50.github.io/yt/c/06_pointers/</link><description>Recent content in Pointers on @yt.yeasin50</description><generator>Hugo -- 0.150.0</generator><language>en</language><lastBuildDate>Sat, 27 Sep 2025 19:00:00 +0800</lastBuildDate><atom:link href="https://yeasin50.github.io/yt/c/06_pointers/index.xml" rel="self" type="application/rss+xml"/><item><title>Pointer</title><link>https://yeasin50.github.io/yt/c/06_pointers/33_pointer/</link><pubDate>Sat, 27 Sep 2025 19:00:00 +0800</pubDate><guid>https://yeasin50.github.io/yt/c/06_pointers/33_pointer/</guid><description>&lt;h2 id="pointer-ক"&gt;pointer কী&lt;/h2&gt;
+&lt;p&gt;আমরা আলোচনা করব pointer কী, pointer দিয়ে variable update করা, এবং memory address কিভাবে কাজ করে। সহজ উদাহরণ ও code explanation সহ। Beginners এর জন্য একদম clear guide।&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/eMrUYEAcUPk?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;!-- thumb Pointers in C | Easy Explanation with Examples (Bangla) --&gt;
+&lt;hr&gt;
+&lt;h2 id="pointer-vs-address"&gt;Pointer vs Address&lt;/h2&gt;
+&lt;p&gt;এই ভিডিওতে আমরা memory address, pointer ব্যবহার এবং মান অদলবদল করার পদ্ধতি সহজ উদাহরণসহ দেখিয়েছি। Beginners এর জন্য একদম সহজ ও পরিষ্কার ব্যাখ্যা।&lt;/p&gt;</description></item></channel></rss>
