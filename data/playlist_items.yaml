@@ -45,7 +45,7 @@ bn:
     url: "flutter"
     tags: ["Flutter", "মোবাইল"]
 
-  # - title: "Productivity"
-  #   description: "আপনার দৈনন্দিন কাজের ধারা উন্নত করুন CLI টুলস, অটোমেশন, README অভ্যাস এবং সহজ হ্যাকের মাধ্যমে যা কাজকে আরও কার্যকর করবে।"
-  #   url: "productivity"
-  #   tags: ["Productivity", "টুলস"]
+  - title: "Productivity"
+    description: "আপনার দৈনন্দিন কাজের ধারা উন্নত করুন CLI টুলস, অটোমেশন, README অভ্যাস এবং সহজ হ্যাকের মাধ্যমে যা কাজকে আরও কার্যকর করবে।"
+    url: "/tools"
+    tags: ["productivity", "tools"]
