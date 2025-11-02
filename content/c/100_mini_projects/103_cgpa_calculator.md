@@ -24,7 +24,12 @@ float cgpa(float mark){
     else if(mark >= 80) return 4.0;
     else if(mark >= 75) return 3.75;
     else if(mark >= 70) return 3.50;
-    /// ....
+    else if(mark >= 65) return 3.25;
+    else if(mark >= 60) return 3.00;
+    else if(mark >= 55) return 2.75;
+    else if(mark >= 50) return 2.50;
+    else if(mark >= 45) return 2.25;
+    else if(mark >= 40) return 2.00;
     else return 0.0;
 }
 
@@ -35,17 +40,27 @@ char* cgpaToGrade(float cgpa) {
     else if(cgpa >= 4.0) return "A+";
     else if(cgpa >= 3.75) return "A";
     else if(cgpa >= 3.5) return "A-";
-    /// ....
+    else if(cgpa >= 3.25) return "B+";
+    else if(cgpa >= 3.0) return "B";
+    else if(cgpa >= 2.75) return "B-";
+    else if(cgpa >= 2.5) return "C+";
+    else if(cgpa >= 2.25) return "C";
+    else if(cgpa >= 2.0) return "D";
     else return "F";
 }
 
-
 ///  [avg] is the mark between 0 - 100
 char* calculateGrade(float avg){
-    if(avg >= 80) return "A+";
+    if (avg>100) return "invalid number";
+    else if(avg >= 80) return "A+";
     else if(avg >= 75) return "A";
     else if(avg >= 70) return "A-";
-    /// ....
+    else if(avg >= 65) return "B+";
+    else if(avg >= 60) return "B";
+    else if(avg >= 55) return "B-";
+    else if(avg >= 50) return "C+";
+    else if(avg >= 45) return "C";
+    else if(avg >= 40) return "D";
     else return "F";
 }
 

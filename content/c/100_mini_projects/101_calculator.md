@@ -1,5 +1,5 @@
 ---
-title: "Calculator Project"
+title: "Calculator"
 date: 2025-10-25T20:00:00+06:00
 weight: 1
 draft: false
@@ -7,8 +7,6 @@ future: false
 tags: ["c", "project", "beginner", "bangla"]
 categories: ["C"]
 ---
-
-## Simple Calculator using Switch in C
 
 A beginner-friendly **C project** where you’ll learn to build a **Calculator** using `switch` and `functions`.
 
@@ -21,7 +19,7 @@ Covers input handling, operator-based execution, and error fixing - everything e
 #### First example code
 
 <details>
- <summary> initial code </summary>
+ <summary> without while </summary>
 
 ```c
 #include <stdio.h>

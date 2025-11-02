@@ -55,41 +55,6 @@ You’ll generate random numbers with `rand()`, use conditions to check guesses,
 
 {{< youtube kh92_yFqkX0 >}}
 
-#### initial code
-
-```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-int main() {
-    int target, guess;
-
-    // Initialize random number generator
-    srand(time(NULL));
-    target = rand() % 100 + 1; // random number between 1 and 100
-
-    printf("Welcome to the Number Guessing Game!\n");
-    printf("I have picked a number between 1 and 100.\n");
-
-    while (1) {
-        printf("Enter your guess: ");
-        scanf("%d", &guess);
-
-        if (guess == target) {
-            printf("Congratulations! You guessed the number %d correctly.\n", target);
-            break;
-        } else if (guess < target) {
-            printf("Too low! Try again.\n");
-        } else {
-            printf("Too high! Try again.\n");
-        }
-    }
-
-    return 0;
-}
-```
-
 ## Final code
 
 ```c

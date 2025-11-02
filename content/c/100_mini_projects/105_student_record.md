@@ -1,7 +1,7 @@
 ---
 title: "Student Mark Record Project in C"
-date: 2025-10-16T20:00:00+06:00
-weight: 8
+date: 2025-10-29T20:00:00+06:00
+weight: 5
 draft: false
 future: true
 tags: ["c", "project", "bangla", "beginner"]
