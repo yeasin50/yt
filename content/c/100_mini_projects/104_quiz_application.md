@@ -1,6 +1,6 @@
 ---
 title: "Quiz Game in C (File-Based)"
-date: 2025-10-28:00:00+06:00
+date: 2025-10-28T20:00:00+06:00
 weight: 4
 draft: false
 future: true
