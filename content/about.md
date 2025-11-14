@@ -23,7 +23,7 @@ and more, with visuals and coding examples to make learning easier
 ## 🔗 Connect with Me
 
 <p>
-  <a href="yeasin50.github.io/portfolio/" target="_blank" class="button is-dark">Portfolio</a>
+  <a href="https://yeasin50.github.io/portfolio/" target="_blank" class="button is-dark">Portfolio</a>
   <a href="https://www.youtube.com/@yt.yeasin50" target="_blank" class="button is-danger">YouTube</a>
   <a href="https://github.com/yeasin50" target="_blank" class="button is-dark">GitHub</a>
   <a href="https://linkedin.com/in/md.yeasinsheikh" target="_blank" class="button is-link">LinkedIn</a>
