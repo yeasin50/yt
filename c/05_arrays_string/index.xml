@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Array &amp; String Explained on @yt.yeasin50</title><link>https://yeasin50.github.io/yt/c/05_arrays_string/</link><description>Recent content in Array &amp; String Explained on @yt.yeasin50</description><generator>Hugo -- 0.150.0</generator><language>en</language><lastBuildDate>Sat, 27 Sep 2025 19:00:00 +0800</lastBuildDate><atom:link href="https://yeasin50.github.io/yt/c/05_arrays_string/index.xml" rel="self" type="application/rss+xml"/><item><title>Array [part 1]</title><link>https://yeasin50.github.io/yt/c/05_arrays_string/29_array/</link><pubDate>Thu, 25 Sep 2025 19:00:00 +0800</pubDate><guid>https://yeasin50.github.io/yt/c/05_arrays_string/29_array/</guid><description>&lt;p&gt;Array define করা, value input নেওয়া, dynamic array এবং index vs length step by step।&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ahqUAU18Yzw?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img alt="array 1" loading="lazy" src="https://yeasin50.github.io/yt/images/array.svg"&gt;&lt;/p&gt;
+&lt;br&gt;</description></item><item><title>Array 2D &amp; 3D</title><link>https://yeasin50.github.io/yt/c/05_arrays_string/30_array_2d_3d/</link><pubDate>Fri, 26 Sep 2025 19:00:00 +0800</pubDate><guid>https://yeasin50.github.io/yt/c/05_arrays_string/30_array_2d_3d/</guid><description>&lt;p&gt;2D array basics, index calculation, value assignment, এবং 3D array coding step by step।&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ahqUAU18Yzw?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;h2 id="2d-array"&gt;2D array&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="array 2D" loading="lazy" src="https://yeasin50.github.io/yt/images/array2.svg"&gt;&lt;/p&gt;
+&lt;h2 id="3d-array"&gt;3D array&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="array 3D" loading="lazy" src="https://yeasin50.github.io/yt/images/array3.svg"&gt;&lt;/p&gt;</description></item><item><title>String in C</title><link>https://yeasin50.github.io/yt/c/05_arrays_string/31_string/</link><pubDate>Sat, 27 Sep 2025 19:00:00 +0800</pubDate><guid>https://yeasin50.github.io/yt/c/05_arrays_string/31_string/</guid><description>&lt;p&gt;আমরা দেখাবো printf, multi-line print, char define করার N উপায়, pointer vs array, এবং puts function।&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_aEDuWlP820?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; str[] &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;World&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;store like&lt;/p&gt;
+&lt;p&gt;&lt;img alt="world svg" loading="lazy" src="https://yeasin50.github.io/yt/images/strings/world_index.svg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="strings-এর-user-input"&gt;Strings-এর User Input&lt;/h2&gt;
+&lt;p&gt;scanf, gets, fgets, getchar/putchar — ত্রুটি ও অপটিমাইজেশন।&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/5H9am8H-HhQ?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;printf&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;10.4s&amp;#34;&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;will show like
+&lt;img alt="hell svg" loading="lazy" src="https://yeasin50.github.io/yt/images/strings/hell.svg"&gt;&lt;/p&gt;</description></item></channel></rss>
