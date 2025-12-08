@@ -4,6 +4,7 @@ en:
     url: "c"
     tags: ["C", "beginner"]
 
+
   # - title: "DSA"
   #   description: "Master data structures and algorithms with clear explanations and practical examples. Perfect for interview prep and problem-solving skills."
   #   url: "dsa"
@@ -23,6 +24,11 @@ en:
     description: "Boost your daily workflow with CLI tools, automation tips, README practices, and simple hacks to organize and optimize your work."
     url: "/tools"
     tags: ["productivity", "tools"]
+
+  - title: "Scratch Programming"
+    description: "A beginner-friendly playlist teaching kids how to create games and animations in Scratch, covering coding basics, loops, events, and interactive projects."
+    url: "/scratch"
+    tags: ["Scratch", "kids"]
 
 bn:
   - title: "সি প্রোগ্রামিং"
@@ -49,3 +55,8 @@ bn:
     description: "আপনার দৈনন্দিন কাজের ধারা উন্নত করুন CLI টুলস, অটোমেশন, README অভ্যাস এবং সহজ হ্যাকের মাধ্যমে যা কাজকে আরও কার্যকর করবে।"
     url: "/tools"
     tags: ["productivity", "tools"]
+
+  - title: "Scratch প্রোগ্রামিং"
+    description: "শিশুদের জন্য একটি শুরু-বান্ধব প্লেলিস্ট যেখানে Scratch দিয়ে গেম এবং অ্যানিমেশন তৈরি শেখানো হয়, কডিং বেসিকস, লুপ, ইভেন্ট এবং ইন্টারেক্টিভ প্রজেক্ট অন্তর্ভুক্ত।"
+    url: "/scratch"
+    tags: ["Scratch", "kids"]
