@@ -8,7 +8,6 @@ categories: ["linux", "terminal"]
 ---
 
 এই ভিডিওতে আমরা দেখাবো FZF এবং Zeoxide ব্যবহার করে ফাইল খোলা ও নেভিগেট করা।
-Step by step Bangla explanation, beginner-friendly।
 
 {{< youtube ofJNBsDPvk4 >}}
 

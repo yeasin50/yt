@@ -1,6 +1,6 @@
 ---
-title: "Scratch Draw & Design"
-description: "Scratch Draw & Design সিরিজের আমরা custom design তৈরি করা"
+title: "Scratch Custom Drawing & Design (Bangla)"
+description: "Scratch Draw & Design সিরিজে আমরা custom design তৈরি করার বেসিক ধারণা শিখেছি।"
 date: 2025-12-24T20:00:00+06:00
 weight: 3
 draft: false

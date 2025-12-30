@@ -2,7 +2,7 @@
 title: "Obsidian"
 date: 2025-11-09T20:00:00+06:00
 description: "Note-Taking App Setup, Tags, Links & Graph View Explained"
-draft: true
+draft: false
 weight: 2
 tags: ["productivity", "tools", "markdown"]
 ---
