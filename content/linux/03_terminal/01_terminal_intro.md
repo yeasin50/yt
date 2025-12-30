@@ -1,7 +1,7 @@
 ---
 title: "Linux Terminal Basics"
 date: 2025-12-06T20:00:00+06:00
-weight: 2
+weight: 1
 draft: true
 tags: ["linux", "terminal", "beginner"]
 categories: ["linux", "terminal"]
