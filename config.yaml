@@ -24,23 +24,23 @@ languages:
           url: "/about"
           weight: 99
 
-  bn:
-    languageName: "বাংলা"
-    weight: 2
-    menu:
-      main:
-        - name: "হোম"
-          url: "/bn/"
-          weight: 1
-        - name: "শিখুন"
-          url: "/bn/course"
-          weight: 2
-        - name: "অনুসন্ধান"
-          url: "/bn/search"
-          weight: 3
-        - name: "আমাদের সম্পর্কে"
-          url: "/bn/about"
-          weight: 99
+  # bn:
+  #   languageName: "বাংলা"
+  #   weight: 2
+  #   menu:
+  #     main:
+  #       - name: "হোম"
+  #         url: "/bn/"
+  #         weight: 1
+  #       - name: "শিখুন"
+  #         url: "/bn/course"
+  #         weight: 2
+  #       - name: "অনুসন্ধান"
+  #         url: "/bn/search"
+  #         weight: 3
+  #       - name: "আমাদের সম্পর্কে"
+  #         url: "/bn/about"
+  #         weight: 99
 
 outputs:
   home: ["HTML", "JSON"]
