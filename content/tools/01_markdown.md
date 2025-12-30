@@ -1,7 +1,9 @@
 ---
 title: "Markdown"
+date: 2025-11-18T20:00:00+06:00
 description: "Minimalist text formatting language"
 draft: true
+weight: 1
 tags: ["productivity", "tools", "markdown"]
 ---
 
