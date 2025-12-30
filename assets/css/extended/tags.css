@@ -14,6 +14,27 @@
   color: white;
 }
 
+.post-tags a[href*="/tags/linux/"] {
+  background-color: #FF9800; /* orange */
+  color: white;
+}
+
+.post-tags a[href*="/tags/terminal/"] {
+  background-color: #9C27B0; /* purple */
+  color: white;
+}
+
+.post-tags a[href*="/tags/scratch/"] {
+  background-color: #FFEB3B; /* yellow */
+  color: #111;
+}
+
+.post-tags a[href*="/tags/kids/"] {
+  background-color: #00BCD4; /* cyan */
+  color: white;
+}
+
+/* Meta and tag styling */
 .post-meta-wrapper {
   display: inline-flex;
   align-items: center;
@@ -30,21 +51,25 @@
 .post-tag {
   font-size: 0.75rem;
   font-weight: 600;
-  padding: 2px 6px;               /* tiny padding for better readability */
+  padding: 2px 6px; /* tiny padding for better readability */
   border-radius: 3px;
   background-color: rgba(255,255,255,0.05); /* subtle background */
   text-decoration: none;
 }
 
-/* Colored text for each tag */
+/* Colored text for each tag (class-based) */
 .tags-card .tag-c {
   color: #111;
   background-color: #f0c040;
   padding: 2px 8px;
   border-radius: 3px;
   font-weight: 600;
-   /* font-size: 0.85rem;             */
   text-transform: uppercase;
 }
+
 .tags-card .tag-beginner { color: #4CAF50; }
 .tags-card .tag-bangla { color: #2196F3; }
+.tags-card .tag-linux { color: #FF9800; }
+.tags-card .tag-terminal { color: #9C27B0; }
+.tags-card .tag-scratch { color: #FFEB3B; }
+.tags-card .tag-kids { color: #00BCD4; }

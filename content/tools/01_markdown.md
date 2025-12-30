@@ -1,8 +1,10 @@
 ---
 title: "Markdown"
+date: 2025-11-18T20:00:00+06:00
 description: "Minimalist text formatting language"
-draft: true
-tags: ["productivity", "tools", "markdown"]
+draft: false
+weight: 1
+tags: ["productivity", "markdown"]
 ---
 
 আজকে আমরা শিখব **Markdown** – এটা হলো একটা লাইটওয়েট মার্কআপ ল্যাঙ্গুয়েজ,  
