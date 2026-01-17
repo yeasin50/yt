@@ -4,8 +4,8 @@ en:
     link: "c/"
     upcoming: false
 
-  - title: "Linux Basics"
-    desc: "Easy & rational steps to become productive with Linux tools."
+  - title: "Linux & Terminal"
+    desc: "Easy & rational steps to become productive with Terminal & Linux tools."
     link: "linux/"
     upcoming: false
 
