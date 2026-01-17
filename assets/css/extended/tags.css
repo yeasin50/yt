@@ -86,6 +86,8 @@
   text-transform: uppercase;
 }
 
+.tags-card .tag-thoughts { color: #ffd54f; }
+
 /* Brighter colors for readability on dark background */
 .tags-card .tag-beginner { color: #a5d6a7; }      
 .tags-card .tag-intermediate { color: #80cbc4; }  

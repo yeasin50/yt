@@ -1,4 +1,9 @@
 en:
+  - title: "Abyss"
+    desc: "Overcoming noise and our own biases. Why awareness matters."
+    upcoming: false
+    link: "abyss/"
+
   - title: "C Programming"
     desc: "C fundamentals, loops, functions, and more."
     link: "c/"
