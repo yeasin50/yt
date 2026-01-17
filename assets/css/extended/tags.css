@@ -1,4 +1,4 @@
-/* Specific colors for each tag */
+
 .post-tags a[href*="/tags/c/"] {
   background-color: #f44336; /* red */
   color: white;
@@ -9,6 +9,11 @@
   color: white;
 }
 
+.post-tags a[href*="/tags/intermediate/"] {
+  background-color: #009688; /* teal */
+  color: white;
+}
+
 .post-tags a[href*="/tags/bangla/"] {
   background-color: #2196F3; /* blue */
   color: white;
@@ -16,6 +21,11 @@
 
 .post-tags a[href*="/tags/linux/"] {
   background-color: #FF9800; /* orange */
+  color: white;
+}
+
+.post-tags a[href*="/tags/tmux/"] {
+  background-color: #4682B4; /* steel blue */
   color: white;
 }
 
@@ -34,7 +44,11 @@
   color: white;
 }
 
-/* Meta and tag styling */
+
+/* =========================================
+   2. META AND TAG STYLING (Layout)
+   ========================================= */
+
 .post-meta-wrapper {
   display: inline-flex;
   align-items: center;
@@ -57,7 +71,12 @@
   text-decoration: none;
 }
 
-/* Colored text for each tag (class-based) */
+
+/* =========================================
+   3. COLORED TEXT FOR CARD VIEW (Brighter for Dark Mode)
+   ========================================= */
+
+/* Special style for C */
 .tags-card .tag-c {
   color: #111;
   background-color: #f0c040;
@@ -67,9 +86,16 @@
   text-transform: uppercase;
 }
 
-.tags-card .tag-beginner { color: #4CAF50; }
-.tags-card .tag-bangla { color: #2196F3; }
-.tags-card .tag-linux { color: #FF9800; }
-.tags-card .tag-terminal { color: #9C27B0; }
-.tags-card .tag-scratch { color: #FFEB3B; }
-.tags-card .tag-kids { color: #00BCD4; }
+/* Brighter colors for readability on dark background */
+.tags-card .tag-beginner { color: #a5d6a7; }      
+.tags-card .tag-intermediate { color: #80cbc4; }  
+
+.tags-card .tag-bangla { color: #90caf9; }        
+.tags-card .tag-linux { color: #ffcc80; }         
+.tags-card .tag-bash { color: #f48fb1; }          
+
+.tags-card .tag-tmux { color: #64b5f6; }          
+
+.tags-card .tag-terminal { color: #b2ff59; }      
+.tags-card .tag-scratch { color: #fff59d; }       
+.tags-card .tag-kids { color: #80deea; }          
