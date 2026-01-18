@@ -4,7 +4,7 @@ date: 2025-10-15T19:00:00+08:00
 weight: 3
 draft: false
 future: true
-tags: ["c", "Dynamic Memory", "beginner", "bangla"]
+tags: ["c", "beginner", "bangla"]
 categories: ["C"]
 ---
 
@@ -12,9 +12,7 @@ We will learn how to store student struct with Dynamic memory.
 
 {{< youtube yMXVHLa9JoM >}}
 
-
-
-## Dynamic Memory  Struct 
+## Dynamic Memory Struct
 
 ```c
 #include <stdio.h>
@@ -33,10 +31,10 @@ int main(void) {
         perror("allocation failed");
         return 1;
     }
-    
+
     scanf("%d", &s->id);
 
-    
+
     char temp[100];
     scanf("%99s",temp);
 
@@ -59,9 +57,7 @@ int main(void) {
 }
 ```
 
-
 ## Student array
-
 
 ```c
 #include <stdio.h>
@@ -114,7 +110,6 @@ int main(void) {
 
 ```
 
-
 ### Simplify with function
 
 ```c
@@ -165,3 +160,4 @@ int main(void) {
     return 0;
 }
 ```
+

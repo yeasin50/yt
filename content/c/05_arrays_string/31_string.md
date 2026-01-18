@@ -8,8 +8,6 @@ tags:
   - c
   - beginner
   - bangla
-  - Practice
-  - string
 categories:
   - C
 ---
@@ -31,6 +29,7 @@ store like
 ---
 
 ## Strings-এর User Input
+
 scanf, gets, fgets, getchar/putchar — ত্রুটি ও অপটিমাইজেশন।
 
 {{< youtube  5H9am8H-HhQ >}}
@@ -51,6 +50,7 @@ will show like
 ---
 
 ## String Functions
+
 strcpy, strncpy, strlen, strcat, strcmp
 
 {{< youtube  nPM1EK1Ntnc >}}
@@ -58,6 +58,7 @@ strcpy, strncpy, strlen, strcat, strcmp
 ---
 
 ## Strings Reverse
+
 Reverse printing & Storing in reverse
 
 {{< youtube  _wQmepYCAzM >}}

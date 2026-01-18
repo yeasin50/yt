@@ -8,9 +8,6 @@ tags:
   - c
   - beginner
   - bangla
-  - Practice-code
-  - function
-  - Recursion
 categories:
   - C
 ---

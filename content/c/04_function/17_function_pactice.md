@@ -8,8 +8,6 @@ tags:
   - c
   - beginner
   - bangla
-  - Practice-code
-  - function
 categories:
   - C
 ---
