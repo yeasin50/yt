@@ -3,6 +3,45 @@ languageCode: "en-us"
 title: "@yt.yeasin50"
 theme: "PaperMod"
 
+
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    menu:
+      main:
+        - name: "Home"
+          url: "/"
+          weight: 1
+        - name: "Learn"
+          url: "/course"
+          weight: 2
+        - name: "Search"
+          url: "/search"
+          weight: 3
+        - name: "About"
+          url: "/about"
+          weight: 99
+
+  # bn:
+  #   languageName: "বাংলা"
+  #   weight: 2
+  #   menu:
+  #     main:
+  #       - name: "হোম"
+  #         url: "/bn/"
+  #         weight: 1
+  #       - name: "শিখুন"
+  #         url: "/bn/course"
+  #         weight: 2
+  #       - name: "অনুসন্ধান"
+  #         url: "/bn/search"
+  #         weight: 3
+  #       - name: "আমাদের সম্পর্কে"
+  #         url: "/bn/about"
+  #         weight: 99
+
 outputs:
   home: ["HTML", "JSON"]
 
@@ -17,13 +56,14 @@ menu:
     - name: "Home"
       url: "/"
       weight: 1
+    - name: "Learn"
+      url: "/course"
+      weight: 2
+
     - name: "Search"
       url: "/search"
       weight: 2
 
-    - name: "Learn"
-      url: "/course"
-      weight: 3
 
     - name: "About"
       url: "/about"
@@ -35,6 +75,12 @@ params:
   description: "A website showcasing my YouTube videos"
   favicon: "images/favicon.png"
 
+  params.show_course_sidebar: true
+
+  defaultTheme: "dark"
+  showThemeToggle: true
+  ShowCodeCopyButtons: true
+  ShowShareButtons: true
   # Enable search
   enableSearch: true
   showSearchButton: true
@@ -45,7 +91,14 @@ params:
   showAuthor: false
   themeColor: "blue"
   showTags: true
+
+  displayFullLangName: true
   ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: false
+  ShowPageNums: true
+  ShowToc: true
 
   home_sections:
     - section: "posts"
@@ -54,10 +107,12 @@ params:
 
   customCSSFiles:
     - "css/category-card.css"
+    - "css/course_overview.css"
     - "css/playlist.css"
 
   # Social links
   social:
+    website: "https://yeasin50.github.io/portfolio/"
     github: "https://github.com/yeasin50"
     youtube: "https://youtube.com/channel/yt.yeasin50"
     stackOverflow: "https://stackoverflow.com/users/10157127/"
@@ -76,4 +131,4 @@ params:
   # Optional features
   enableComments: true
   dateFormat: "Jan 2, 2006"
-  highlightStyle: "monokai"
+  highlightStyle: "tokyonight-storm"

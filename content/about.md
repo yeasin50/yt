@@ -1,10 +1,15 @@
 ---
-title: "About Me"
+title: "Me!"
 draft: false
-description: "Md. Yeasin Sheikh – Flutter developer, open-source enthusiast, and content creator."
+description: ""
 subtitle: "Flutter Developer | Open-Source Enthusiast | Learner"
+ShowToc: false
+disableShare: true
+ShowPostNavLinks: false
+hideDate: true # hides the date in meta
 ---
 
+Md. Yeasin Sheikh – Flutter developer, open-source enthusiast, and content creator.
 As a software engineer, I have been working with **Flutter** since 2019 in remote positions.
 
 I am used to be a bug hunter in flutter, assisting others, and you can often find me on **Stack Overflow** answering Flutter-related questions.
@@ -14,7 +19,7 @@ Since mid-2025, I've taken a career break to explore and share on my YouTube cha
 I love open-source contributions.
 
 If you're a **CSE student**, this channel can be beneficial.
-I provide **videos and materials** on programming, mathematics, human bias,
+I provide **videos and materials** on programming, human bias,
 and more, with visuals and coding examples to make learning easier
 — even for beginners.
 
@@ -23,7 +28,7 @@ and more, with visuals and coding examples to make learning easier
 ## 🔗 Connect with Me
 
 <p>
-  <a href="yeasin50.github.io/portfolio/" target="_blank" class="button is-dark">Portfolio</a>
+  <a href="https://yeasin50.github.io/portfolio/" target="_blank" class="button is-dark">Portfolio</a>
   <a href="https://www.youtube.com/@yt.yeasin50" target="_blank" class="button is-danger">YouTube</a>
   <a href="https://github.com/yeasin50" target="_blank" class="button is-dark">GitHub</a>
   <a href="https://linkedin.com/in/md.yeasinsheikh" target="_blank" class="button is-link">LinkedIn</a>

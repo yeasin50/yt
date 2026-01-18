@@ -1,17 +1,62 @@
-- title: "CSE 101: Introduction to C Programming"
-  description: "Learn the fundamentals of C programming, including syntax, variables, loops, and functions. Perfect for beginners starting their coding journey."
-  url: "c"
-  tags: ["c", "beginner"]
+en:
+  - title: "C Programming"
+    description: "CSE 101: Learn the fundamentals of C programming, including syntax, variables, loops, and functions. Perfect for beginners starting their coding journey."
+    url: "c"
+    tags: ["C", "beginner"]
 
 
-- title: "Fluter"
-  description: "...."
-  url: "flutter"
-  tags: ["flutter"]
+  # - title: "DSA"
+  #   description: "Master data structures and algorithms with clear explanations and practical examples. Perfect for interview prep and problem-solving skills."
+  #   url: "dsa"
+  #   tags: ["DSA", "beginner"]
 
+  - title: "Linux &  Terminal"
+    description: "Step into Terminal and Linux with essential commands, file management, shell scripting, and practical tips to boost your productivity."
+    url: "linux"
+    tags: ["Linux", "beginner"]
 
-- title: "Journey to Linux Mastery"
-  description: "Start your Linux adventure with practical guidance, essential commands, and tips for navigating the Linux environment efficiently."
-  url: "linux"
-  tags: ["linux", "beginner"]
+  - title: "Flutter"
+    description: "Learn Flutter to build cross-platform mobile and web applications using Dart. Covers widgets, state management, and UI design patterns."
+    url: "flutter"
+    tags: ["Flutter", "mobile"]
 
+  - title: "Productivity"
+    description: "Boost your daily workflow with CLI tools, automation tips, README practices, and simple hacks to organize and optimize your work."
+    url: "tools"
+    tags: ["productivity", "tools"]
+
+  - title: "Scratch Programming"
+    description: "A beginner-friendly playlist teaching kids how to create games and animations in Scratch, covering coding basics, loops, events, and interactive projects."
+    url: "scratch"
+    tags: ["Scratch", "kids"]
+
+bn:
+  - title: "সি প্রোগ্রামিং"
+    description: "CSE 101: C প্রোগ্রামিংয়ের মূল ধারণা শিখুন — সিনট্যাক্স, ভেরিয়েবল, লুপ এবং ফাংশনসহ। যারা নতুন কোডিং শুরু করছেন তাদের জন্য একদম উপযুক্ত।"
+    url: "c"
+    tags: ["C", "শুরুর জন্য"]
+
+  # - title: "ডাটা স্ট্রাকচার ও অ্যালগরিদম (DSA)"
+  #   description: "ডাটা স্ট্রাকচার এবং অ্যালগরিদম শিখুন সহজভাবে উদাহরণ ও বাস্তব প্রয়োগের মাধ্যমে। ইন্টারভিউ প্রস্তুতি এবং সমস্যা সমাধানের জন্য আদর্শ।"
+  #   url: "dsa"
+  #   tags: ["DSA", "শুরুর জন্য"]
+
+  - title: "লিনাক্স বেসিকস"
+    description: "লিনাক্সে প্রবেশ করুন মূল কমান্ড, ফাইল ম্যানেজমেন্ট, শেল স্ক্রিপ্ট এবং কার্যকর টিপসের মাধ্যমে যা আপনার প্রোডাক্টিভিটি বাড়াবে।"
+    url: "linux"
+    tags: ["Linux", "শুরুর জন্য"]
+
+  - title: "Flutter"
+    description: "Flutter শিখুন এবং Dart ব্যবহার করে ক্রস-প্ল্যাটফর্ম মোবাইল ও ওয়েব অ্যাপ বানান। এতে কভার করা হবে উইজেট, স্টেট ম্যানেজমেন্ট এবং UI ডিজাইন প্যাটার্ন।"
+    url: "flutter"
+    tags: ["Flutter", "মোবাইল"]
+
+  - title: "Productivity"
+    description: "আপনার দৈনন্দিন কাজের ধারা উন্নত করুন CLI টুলস, অটোমেশন, README অভ্যাস এবং সহজ হ্যাকের মাধ্যমে যা কাজকে আরও কার্যকর করবে।"
+    url: "tools"
+    tags: ["productivity", "tools"]
+
+  - title: "Scratch প্রোগ্রামিং"
+    description: "শিশুদের জন্য একটি শুরু-বান্ধব প্লেলিস্ট যেখানে Scratch দিয়ে গেম এবং অ্যানিমেশন তৈরি শেখানো হয়, কডিং বেসিকস, লুপ, ইভেন্ট এবং ইন্টারেক্টিভ প্রজেক্ট অন্তর্ভুক্ত।"
+    url: "scratch"
+    tags: ["Scratch", "kids"]

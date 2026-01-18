@@ -1,5 +1,10 @@
+{{/* layouts/partials/playlist.html */}}
+<link rel="stylesheet" href="{{ "css/playlist.css" | relURL }}">
+
 <div class="playlist-cards">
-  {{ range .Site.Data.playlist_items }}
+  {{ $lang := .Site.Language.Lang }}
+  {{ $items := index .Site.Data.playlist_items $lang }}  <!-- Pick current language array -->
+  {{ range $items }}
     <div class="playlist-card">
       <a href="{{ .url | relURL }}" class="playlist-card-link">
         <div class="playlist-card-body">

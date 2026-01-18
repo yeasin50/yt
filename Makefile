@@ -15,7 +15,7 @@ help:
 	@echo "  make clean     Remove generated site"
 
 serve:
-	$(HUGO) server D -b http://localhost:1313/ $(HUGO_FLAGS) --disableFastRender --noHTTPCache --buildFuture --buildDrafts
+	$(HUGO) server -D -b http://localhost:1313/ -p 1313 $(HUGO_FLAGS) --disableFastRender --noHTTPCache --buildFuture
 
 build:
 	# Use production baseURL from config.yaml

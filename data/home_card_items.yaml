@@ -1,0 +1,30 @@
+en:
+  - title: "Abyss"
+    desc: "Overcoming noise and our own biases. Why awareness matters."
+    upcoming: false
+    link: "abyss/"
+
+  - title: "C Programming"
+    desc: "C fundamentals, loops, functions, and more."
+    link: "c/"
+    upcoming: false
+
+  - title: "Linux & Terminal"
+    desc: "Easy & rational steps to become productive with Terminal & Linux tools."
+    link: "linux/"
+    upcoming: false
+
+  - title: "DSA"
+    desc: "(Coming soon) Master data structures and algorithms."
+    upcoming: true
+
+  - title: "Flutter"
+    desc: "Learn Flutter with Dart and cross-platform apps."
+    link: "flutter/"
+    upcoming: false
+
+  - title: "Productivity"
+    desc: "Improve daily life with README habits, CLI tools, and automation."
+    upcoming: false
+    link: "tools/"
+

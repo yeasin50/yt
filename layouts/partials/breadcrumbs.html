@@ -1,0 +1,64 @@
+{{/* Determine if sidebar should show */}}
+{{- $pageParam := default false (.Params.show_course_sidebar) -}}
+{{- $sectionPage := site.GetPage .Section -}}
+{{- $sectionParam := default false ($sectionPage.Params.show_course_sidebar) -}}
+{{- $globalParam := default false site.Params.show_course_sidebar -}}
+{{- $showSidebar := or $pageParam $sectionParam $globalParam -}}
+
+<div class="breadcrumbs">
+  <!-- Menu button, conditional -->
+  {{- if and (eq .Kind "page") $showSidebar -}}
+    <button class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle sidebar">☰</button>
+  {{- end }}
+
+  <!-- Breadcrumb links always visible -->
+  {{- $url := replace .Parent.Permalink (printf "%s" site.Home.Permalink) "" }}
+  {{- $lang_url := strings.TrimPrefix (printf "%s/" .Lang) $url -}}
+  {{- $scratch := newScratch }}
+  {{- range $index, $element := split $lang_url "/" }}
+    {{- $scratch.Add "path" (printf "%s/" $element )}}
+    {{- $bc_pg := site.GetPage ($scratch.Get "path") -}}
+    {{- if (and ($bc_pg) (gt (len . ) 0))}}
+      &nbsp;»&nbsp;<a href="{{ $bc_pg.Permalink }}">{{ $bc_pg.Name }}</a>
+    {{- end }}
+  {{- end }}
+</div>
+
+<!-- Sidebar and overlay -->
+{{- if and (eq .Kind "page") $showSidebar -}}
+
+<div class="sidebar-overlay"></div>
+{{ partial "course_sidebar.html" . }}
+
+<script>
+function toggleSidebar() {
+  document.querySelector('.course-sidebar')?.classList.toggle('open');
+  document.querySelector('.sidebar-overlay')?.classList.toggle('visible');
+}
+
+function closeSidebar() {
+  document.querySelector('.course-sidebar')?.classList.remove('open');
+  document.querySelector('.sidebar-overlay')?.classList.remove('visible');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const isDesktop = window.matchMedia("(min-width: 1024px)").matches; // desktop breakpoint
+  const sidebar = document.querySelector('.course-sidebar');
+  const overlay = document.querySelector('.sidebar-overlay');
+
+  if (isDesktop) {
+    // Show sidebar by default on desktop
+    sidebar?.classList.add('open');
+    overlay?.classList.remove('visible'); // hide overlay on desktop
+  } else {
+    // Show overlay click behavior on mobile only
+    overlay?.addEventListener('click', closeSidebar);
+  }
+});
+
+// Close on Escape key (both mobile and desktop)
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeSidebar();
+});
+</script>
+{{- end -}}

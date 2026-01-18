@@ -1,4 +1,4 @@
-/* Specific colors for each tag */
+
 .post-tags a[href*="/tags/c/"] {
   background-color: #f44336; /* red */
   color: white;
@@ -9,10 +9,45 @@
   color: white;
 }
 
+.post-tags a[href*="/tags/intermediate/"] {
+  background-color: #009688; /* teal */
+  color: white;
+}
+
 .post-tags a[href*="/tags/bangla/"] {
   background-color: #2196F3; /* blue */
   color: white;
 }
+
+.post-tags a[href*="/tags/linux/"] {
+  background-color: #FF9800; /* orange */
+  color: white;
+}
+
+.post-tags a[href*="/tags/tmux/"] {
+  background-color: #4682B4; /* steel blue */
+  color: white;
+}
+
+.post-tags a[href*="/tags/terminal/"] {
+  background-color: #9C27B0; /* purple */
+  color: white;
+}
+
+.post-tags a[href*="/tags/scratch/"] {
+  background-color: #FFEB3B; /* yellow */
+  color: #111;
+}
+
+.post-tags a[href*="/tags/kids/"] {
+  background-color: #00BCD4; /* cyan */
+  color: white;
+}
+
+
+/* =========================================
+   2. META AND TAG STYLING (Layout)
+   ========================================= */
 
 .post-meta-wrapper {
   display: inline-flex;
@@ -30,21 +65,39 @@
 .post-tag {
   font-size: 0.75rem;
   font-weight: 600;
-  padding: 2px 6px;               /* tiny padding for better readability */
+  padding: 2px 6px; /* tiny padding for better readability */
   border-radius: 3px;
   background-color: rgba(255,255,255,0.05); /* subtle background */
   text-decoration: none;
 }
 
-/* Colored text for each tag */
+
+/* =========================================
+   3. COLORED TEXT FOR CARD VIEW (Brighter for Dark Mode)
+   ========================================= */
+
+/* Special style for C */
 .tags-card .tag-c {
   color: #111;
   background-color: #f0c040;
   padding: 2px 8px;
   border-radius: 3px;
   font-weight: 600;
-   /* font-size: 0.85rem;             */
   text-transform: uppercase;
 }
-.tags-card .tag-beginner { color: #4CAF50; }
-.tags-card .tag-bangla { color: #2196F3; }
+
+.tags-card .tag-thoughts { color: #ffd54f; }
+
+/* Brighter colors for readability on dark background */
+.tags-card .tag-beginner { color: #a5d6a7; }      
+.tags-card .tag-intermediate { color: #80cbc4; }  
+
+.tags-card .tag-bangla { color: #90caf9; }        
+.tags-card .tag-linux { color: #ffcc80; }         
+.tags-card .tag-bash { color: #f48fb1; }          
+
+.tags-card .tag-tmux { color: #64b5f6; }          
+
+.tags-card .tag-terminal { color: #b2ff59; }      
+.tags-card .tag-scratch { color: #fff59d; }       
+.tags-card .tag-kids { color: #80deea; }          
