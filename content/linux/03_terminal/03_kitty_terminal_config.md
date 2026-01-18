@@ -3,8 +3,8 @@ title: "Kitty Terminal Configuration"
 date: 2025-12-11T20:00:00+06:00
 weight: 3
 draft: true
-tags: ["linux", "terminal", "beginner"]
-categories: ["linux", "terminal"]
+tags: ["terminal", "beginner"]
+categories: ["terminal"]
 ---
 
 In this video, we configure **Kitty terminal** step by step in a simple Bangla-friendly way.  

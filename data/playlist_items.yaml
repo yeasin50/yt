@@ -10,8 +10,8 @@ en:
   #   url: "dsa"
   #   tags: ["DSA", "beginner"]
 
-  - title: "Linux Basics"
-    description: "Step into Linux with essential commands, file management, shell scripting, and practical tips to boost your productivity."
+  - title: "Linux &  Terminal"
+    description: "Step into Terminal and Linux with essential commands, file management, shell scripting, and practical tips to boost your productivity."
     url: "linux"
     tags: ["Linux", "beginner"]
 

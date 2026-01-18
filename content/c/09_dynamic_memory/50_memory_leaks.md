@@ -3,10 +3,9 @@ title: Memor leaks
 date: 2025-10-15T19:00:00+08:00
 weight: 7
 draft: false
-future: true
+future: false
 tags:
   - c
-  - Dynamic Memory
   - beginner
   - bangla
 categories:
