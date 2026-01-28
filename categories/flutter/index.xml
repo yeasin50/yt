@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Flutter on @yt.yeasin50</title><link>https://yeasin50.github.io/yt/categories/flutter/</link><description>Recent content in Flutter on @yt.yeasin50</description><generator>Hugo -- 0.150.0</generator><language>en</language><lastBuildDate>Sat, 27 Sep 2025 19:00:00 +0800</lastBuildDate><atom:link href="https://yeasin50.github.io/yt/categories/flutter/index.xml" rel="self" type="application/rss+xml"/><item><title>How to start flutter</title><link>https://yeasin50.github.io/yt/flutter/0-guideline/</link><pubDate>Sat, 27 Sep 2025 19:00:00 +0800</pubDate><guid>https://yeasin50.github.io/yt/flutter/0-guideline/</guid><description>&lt;p&gt;This is the very first question asked by many after they start their Flutter journey.
+Here I have included necessary stuff from my knowledge, not strictly limited to Flutter but including the related things as well.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I can point to a single direction from where they can start their journey as a Flutter developer.&lt;/li&gt;
+&lt;li&gt;Also, you can share to save your time as well.&lt;/li&gt;
+&lt;li&gt;Suggestions are welcome, make an issue and then PR.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="documentation"&gt;Documentation&lt;/h2&gt;
+&lt;p&gt;Yes, there is no better option than &lt;a href="https://docs.flutter.dev/get-started/learn-flutter"&gt;official Flutter documentation&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Terminal on @yt.yeasin50</title><link>https://yeasin50.github.io/yt/linux/03_terminal/</link><description>Recent content in Terminal on @yt.yeasin50</description><generator>Hugo -- 0.150.0</generator><language>en</language><lastBuildDate>Thu, 18 Dec 2025 20:00:00 +0600</lastBuildDate><atom:link href="https://yeasin50.github.io/yt/linux/03_terminal/index.xml" rel="self" type="application/rss+xml"/><item><title>Fast File Navigation | FZF &amp; Zeoxide</title><link>https://yeasin50.github.io/yt/linux/03_terminal/05_fzf_zeoxide/</link><pubDate>Thu, 18 Dec 2025 20:00:00 +0600</pubDate><guid>https://yeasin50.github.io/yt/linux/03_terminal/05_fzf_zeoxide/</guid><description>&lt;p&gt;এই ভিডিওতে আমরা দেখাবো &lt;a href="https://github.com/junegunn/fzf"&gt;FZF&lt;/a&gt; এবং &lt;a href="https://github.com/ajeetdsouza/zoxide"&gt;Zeoxide&lt;/a&gt; ব্যবহার করে ফাইল খোলা ও নেভিগেট করা।&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ofJNBsDPvk4?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Covered topics:&lt;/li&gt;
+&lt;li&gt;Combine fzf command to open files&lt;/li&gt;
+&lt;li&gt;Using &lt;a href="https://github.com/BurntSushi/ripgrep"&gt;&lt;code&gt;ripgrep&lt;/code&gt;&lt;/a&gt; for search&lt;/li&gt;
+&lt;li&gt;Zeoxide introduction&lt;/li&gt;
+&lt;li&gt;Configuring z for faster navigation&lt;/li&gt;
+&lt;li&gt;Using z=CD and cd=z&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

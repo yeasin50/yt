@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Function on @yt.yeasin50</title><link>https://yeasin50.github.io/yt/c/04_function/</link><description>Recent content in Function on @yt.yeasin50</description><generator>Hugo -- 0.150.0</generator><language>en</language><lastBuildDate>Wed, 24 Sep 2025 19:00:00 +0730</lastBuildDate><atom:link href="https://yeasin50.github.io/yt/c/04_function/index.xml" rel="self" type="application/rss+xml"/><item><title>Function</title><link>https://yeasin50.github.io/yt/c/04_function/16_function/</link><pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate><guid>https://yeasin50.github.io/yt/c/04_function/16_function/</guid><description>&lt;p&gt;Functions কে &lt;strong&gt;animatedভাবে&lt;/strong&gt; দেখিয়েছি, যা beginners-এর জন্য খুবই সহজে বুঝতে সাহায্য করে।&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/__S_vaCeTH4?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h3 id="ভডওত-আপন-শখবন"&gt;ভিডিওতে আপনি শিখবেন:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Function define করা&lt;/li&gt;
+&lt;li&gt;Function ব্যবহার করা (Use)&lt;/li&gt;
+&lt;li&gt;Return value বোঝা&lt;/li&gt;
+&lt;li&gt;Pass value / Argument passing&lt;/li&gt;
+&lt;li&gt;Sum calculation উদাহরণ&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Function Practice</title><link>https://yeasin50.github.io/yt/c/04_function/17_function_pactice/</link><pubDate>Mon, 22 Sep 2025 19:00:00 +0700</pubDate><guid>https://yeasin50.github.io/yt/c/04_function/17_function_pactice/</guid><description>&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/tEAAdDA3RSs?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h3 id="ভডওত-আপন-শখবন"&gt;ভিডিওতে আপনি শিখবেন:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Function define করা&lt;/li&gt;
+&lt;li&gt;Function ব্যবহার করা (Use)&lt;/li&gt;
+&lt;li&gt;Return value বোঝা&lt;/li&gt;
+&lt;li&gt;Pass value / Argument passing&lt;/li&gt;
+&lt;li&gt;Sum calculation উদাহরণ&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Recursive Factorial Explained</title><link>https://yeasin50.github.io/yt/c/04_function/18_factorial_recursive/</link><pubDate>Tue, 23 Sep 2025 19:00:00 +0700</pubDate><guid>https://yeasin50.github.io/yt/c/04_function/18_factorial_recursive/</guid><description>&lt;p&gt;কীভাবে Factorial Function, এবং Recursive Approach ব্যবহার করে Factorial বের করা যায়।&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/xspZsZNQOqw?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;p&gt;Recursive Factorial&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;factorial&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; n){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (n&lt;span style="color:#f92672"&gt;==&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;) &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; n &lt;span style="color:#f92672"&gt;*&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;factorial&lt;/span&gt;(n&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="how-it-works"&gt;How it works&lt;/h4&gt;
+&lt;p&gt;When n is 5,&lt;/p&gt;
+&lt;p&gt;&lt;img alt="steps" loading="lazy" src="https://yeasin50.github.io/yt/images/factorial_steps.svg"&gt;&lt;/p&gt;</description></item><item><title>Recursive Fibonacci Explained</title><link>https://yeasin50.github.io/yt/c/04_function/19_fibonacci_recursive/</link><pubDate>Wed, 24 Sep 2025 19:00:00 +0730</pubDate><guid>https://yeasin50.github.io/yt/c/04_function/19_fibonacci_recursive/</guid><description>&lt;p&gt;কীভাবে Nth Fibonacci বের করা, recursion কাজ করার প্রক্রিয়া, এবং পুরো Fibonacci series তৈরি করা step by step।&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/4aV4AxLqhAY?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;p&gt;Recursive Factorial&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fibonacci&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; n){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (n&lt;span style="color:#f92672"&gt;==&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt; &lt;span style="color:#f92672"&gt;||&lt;/span&gt; n &lt;span style="color:#f92672"&gt;==&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; ) &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; n;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fibonacci&lt;/span&gt;(n&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;) &lt;span style="color:#f92672"&gt;+&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;fibonacci&lt;/span&gt;(n&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id="how-it-works"&gt;How it works&lt;/h4&gt;
+&lt;p&gt;When n is 4,&lt;/p&gt;
+&lt;p&gt;&lt;img alt="steps" loading="lazy" src="https://yeasin50.github.io/yt/images/19_fibonacci.svg"&gt;&lt;/p&gt;</description></item></channel></rss>

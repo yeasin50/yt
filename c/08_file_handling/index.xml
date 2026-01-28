@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>File Handling on @yt.yeasin50</title><link>https://yeasin50.github.io/yt/c/08_file_handling/</link><description>Recent content in File Handling on @yt.yeasin50</description><generator>Hugo -- 0.150.0</generator><language>en</language><lastBuildDate>Thu, 27 Nov 2025 19:00:00 +0800</lastBuildDate><atom:link href="https://yeasin50.github.io/yt/c/08_file_handling/index.xml" rel="self" type="application/rss+xml"/><item><title>Read &amp; Write file</title><link>https://yeasin50.github.io/yt/c/08_file_handling/36_file_read_write/</link><pubDate>Thu, 27 Nov 2025 19:00:00 +0800</pubDate><guid>https://yeasin50.github.io/yt/c/08_file_handling/36_file_read_write/</guid><description>&lt;h3 id="write-files"&gt;Write Files&lt;/h3&gt;
+&lt;p&gt;আমরা জানব &lt;code&gt;fopen()&lt;/code&gt;, &lt;code&gt;fclose()&lt;/code&gt;, &lt;code&gt;fscanf()&lt;/code&gt;, এবং &lt;code&gt;fprintf()&lt;/code&gt; ফাংশনগুলো কীভাবে ব্যবহার করতে হয়।&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/SF8ePZ76Es8?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h5 id="ফইল-ওপন-এব-কলজ"&gt;ফাইল ওপেন এবং ক্লোজ&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;fopen()&lt;/code&gt; ফাইল ওপেন করার জন্য।&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fclose()&lt;/code&gt; ফাইল ক্লোজ করার জন্য।&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fopen()&lt;/code&gt; এর সিঙ্কট্যাক্স:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;FILE &lt;span style="color:#f92672"&gt;*&lt;/span&gt;fp &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fopen&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;filename.txt&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;mode&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mode&lt;/code&gt; হতে পারে:&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;r&lt;/code&gt; - পড়ার জন্য&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;w&lt;/code&gt; - লেখার জন্য (ফাইল থাকলে ওভাররাইট হবে)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;a&lt;/code&gt; - যোগ করার জন্য (append)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ফাইল থেকে পড়া: fscanf()
+fscanf() ব্যবহার করে ফাইল থেকে ফরম্যাটেড ডেটা পড়া যায়।&lt;/p&gt;</description></item><item><title>File append</title><link>https://yeasin50.github.io/yt/c/08_file_handling/37_file_append/</link><pubDate>Thu, 27 Nov 2025 19:00:00 +0800</pubDate><guid>https://yeasin50.github.io/yt/c/08_file_handling/37_file_append/</guid><description>&lt;h3 id="extend-text-file"&gt;Extend text file&lt;/h3&gt;
+&lt;p&gt;কিভাবে &lt;strong&gt;File Append&lt;/strong&gt; ব্যবহার করে ফাইলের শেষে নতুন text add করা যায়। ভিডিওতে step by step code example, practical demonstration এবং beginner-friendly explanation দেখানো হয়েছে।&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/uRTl8RpivKM?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;h4 id="code"&gt;Code&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;#include&lt;/span&gt; &lt;span style="color:#75715e"&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;main&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; FILE &lt;span style="color:#f92672"&gt;*&lt;/span&gt;newFile &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fopen&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;my_file.txt&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;a+&amp;#34;&lt;/span&gt;); &lt;span style="color:#75715e"&gt;// append + read
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (newFile &lt;span style="color:#f92672"&gt;==&lt;/span&gt; NULL) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;printf&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;failed to open the file.&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;\n&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// Write 10 lines
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; i &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; i &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;10&lt;/span&gt;; i&lt;span style="color:#f92672"&gt;++&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;fputs&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;something&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;\n&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;, newFile);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// Rewind to start of file before reading
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;rewind&lt;/span&gt;(newFile);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt; str[&lt;span style="color:#ae81ff"&gt;100&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;while&lt;/span&gt; (&lt;span style="color:#a6e22e"&gt;fgets&lt;/span&gt;(str, &lt;span style="color:#66d9ef"&gt;sizeof&lt;/span&gt;(str), newFile) &lt;span style="color:#f92672"&gt;!=&lt;/span&gt; NULL) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;puts&lt;/span&gt;(str);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;fclose&lt;/span&gt;(newFile);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>File SEEK</title><link>https://yeasin50.github.io/yt/c/08_file_handling/47_file_seek/</link><pubDate>Thu, 27 Nov 2025 19:00:00 +0800</pubDate><guid>https://yeasin50.github.io/yt/c/08_file_handling/47_file_seek/</guid><description>&lt;h2 id="get--update-cursor-position"&gt;Get &amp;amp; Update Cursor Position&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;File Seek&lt;/strong&gt; ব্যবহার করে cursor position পাওয়া এবং update করা যায়। ভিডিওতে দেখানো হয়েছে ftell এবং fseek ব্যবহার, cursor move, text replace, এবং practical examples step by step। Beginners এবং self-learners এর জন্য সহজ ব্যাখ্যা।&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/cFiMC3mYEHQ?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h2 id="fseek-ক"&gt;fseek() কী?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;fseek()&lt;/code&gt; দিয়ে ফাইল পয়েন্টারকে ফাইলের যেকোনো স্থানে সরানো যায়।&lt;/li&gt;
+&lt;li&gt;Syntax:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-c" data-lang="c"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fseek&lt;/span&gt;(FILE &lt;span style="color:#f92672"&gt;*&lt;/span&gt;stream, &lt;span style="color:#66d9ef"&gt;long&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; offset, &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; whence);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;offset&lt;/em&gt; হলো কত দূরে সরাতে হবে। &lt;em&gt;whence&lt;/em&gt; হলো কোন পয়েন্ট থেকে শুরু হবে:&lt;/p&gt;</description></item></channel></rss>
