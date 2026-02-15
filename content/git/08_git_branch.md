@@ -1,9 +1,9 @@
 ---
 title: "Git Branching Basics"
-description: "Git branch তৈরি, switch এবং delete করা step by step।"
+description: "Git branch তৈরি, switch এবং delete"
 date: 2026-02-14T19:00:00+08:00
 weight: 7
-draft: true
+draft: false
 tags: ["git", "beginner"]
 ShowToc: false
 categories: ["git"]

@@ -1,9 +1,9 @@
 ---
 title: "Restore & Reset"
-description: "Git restore এবং reset commands step by step, workspace এবং commit history manage করার জন্য।"
+description: "Git restore এবং reset commands, workspace এবং commit history manage করার জন্য।"
 date: 2025-09-27T19:00:00+08:00
 weight: 5
-draft: true
+draft: false
 tags: ["git", "beginner"]
 categories: ["git"]
 ---

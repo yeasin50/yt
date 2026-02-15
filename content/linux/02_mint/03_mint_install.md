@@ -1,8 +1,8 @@
 ---
 title: "Linux Mint install"
 description: "No installation is needed, Live OS"
-draft: true
-weight: 2
+draft: false
+weight: 3
 ---
 
 এই ভিডিওতে দেখানো হয়েছে কিভাবে Linux Mint সঠিকভাবে install করতে হয় 💻

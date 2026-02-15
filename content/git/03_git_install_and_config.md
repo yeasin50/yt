@@ -1,9 +1,9 @@
 ---
 title: "Git Install & Global Config"
-description: "Windows ও Linux এ Git install এবং global configuration সেট করা।"
+description: "Windows ও Linux এ Git install এবং global configuration"
 date: 2026-01-30T19:00:00+08:00
 weight: 3
-draft: true
+draft: false
 tags: ["git", "beginner"]
 categories: ["git"]
 ---

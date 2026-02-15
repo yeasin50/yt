@@ -3,7 +3,7 @@ title: "Using .gitignore"
 description: "কীভাবে `.gitignore` ফাইল দিয়ে নির্দিষ্ট ফাইল ও ফোল্ডার ignore করা যায়।"
 date: 2026-02-10T19:00:00+08:00
 weight: 6
-draft: true
+draft: false
 tags: ["git", "beginner"]
 categories: ["git"]
 ---

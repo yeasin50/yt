@@ -2,7 +2,7 @@
 title: "GitHub Account Create & Setup"
 date: 2026-01-25T19:00:00+08:00
 weight: 2
-draft: true
+draft: false
 tags: ["git", "beginner"]
 categories: ["git"]
 ---

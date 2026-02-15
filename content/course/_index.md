@@ -2,6 +2,6 @@
 draft: false
 ---
 
-<!-- all the courses/topics are here,  main group -->
+Choose a topic to explore
 
 {{< playlist_items >}}

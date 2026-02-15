@@ -1,9 +1,9 @@
 ---
 title: "Basic & Essential Commands"
-description: "Git workflow এর গুরুত্বপূর্ণ command গুলো step by step আলোচনা।"
+description: "Git workflow এর গুরুত্বপূর্ণ commands"
 date: 2026-02-02T19:00:00+08:00
 weight: 4
-draft: true
+draft: false
 tags: ["git", "beginner"]
 categories: ["git"]
 ---

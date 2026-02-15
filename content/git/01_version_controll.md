@@ -1,9 +1,9 @@
 ---
 title: "What is Version Control?"
-description: "Version Control System কী এবং Git কী — সহজভাবে ব্যাখ্যা।"
+description: "Version Control System কী এবং Git কী?"
 date: 2026-01-28T19:00:00+08:00
 weight: 1
-draft: true
+draft: false
 tags: ["git", "beginner"]
 categories: ["git"]
 ---
