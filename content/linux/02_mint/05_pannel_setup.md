@@ -1,8 +1,8 @@
 ---
 title: "Top Panel Setup + Window Effects"
 description: "Make your Linux Mint desktop look clean, modern, and fun!"
-draft: true
-weight: 3
+draft: false
+weight: 5
 ---
 
 Make your Linux Mint desktop look clean, modern, and fun!

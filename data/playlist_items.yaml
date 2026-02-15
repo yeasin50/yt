@@ -10,10 +10,16 @@ en:
   #   url: "dsa"
   #   tags: ["DSA", "beginner"]
 
-  - title: "Linux &  Terminal"
-    description: "Step into Terminal and Linux with essential commands, file management, shell scripting, and practical tips to boost your productivity."
+  - title: "Linux & Terminal"
+    description: "Learn basic Linux and Terminal commands, manage files, and write simple scripts."
     url: "linux"
     tags: ["Linux", "beginner"]
+
+  - title: "Git & GitHub"
+    description: "Learn the basics of Git and GitHub for version control."
+    url: "git"
+    tags: ["Git", "beginner"]
+
 
   - title: "Flutter"
     description: "Learn Flutter to build cross-platform mobile and web applications using Dart. Covers widgets, state management, and UI design patterns."

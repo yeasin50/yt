@@ -1,8 +1,8 @@
 ---
 title: "Things To Do After Installing Linux Mint"
 description: "No installation is needed, Live OS"
-draft: true
-weight: 3
+draft: false
+weight: 4
 ---
 
 Linux Mint install করার পর এখন কী করবেন? 💡

@@ -1,7 +1,7 @@
 ---
 title: "Ventoy"
 description: "All in one pendrive"
-draft: true
+draft: false
 weight: 1
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Tour in Linux Mint"
 description: "No installation is needed, Live OS"
-draft: true
+draft: false
 weight: 2
 ---
 
