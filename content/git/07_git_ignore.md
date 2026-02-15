@@ -34,7 +34,7 @@ categories: ["git"]
 #### BEST PRACTICES
 
 - Add .gitignore at repo start
-- Be explicit, not lazy (\* is dangerous)
+- Be explicit, not lazy (`*` is dangerous)
 - Keep project-specific rules in repo
 - Review before every first commit
 
