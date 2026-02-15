@@ -10,7 +10,6 @@ en:
   #   url: "dsa"
   #   tags: ["DSA", "beginner"]
 
-
   - title: "Linux & Terminal"
     description: "Learn basic Linux and Terminal commands, manage files, and write simple scripts."
     url: "linux"

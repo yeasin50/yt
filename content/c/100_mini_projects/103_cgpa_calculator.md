@@ -3,7 +3,7 @@ title: "CGPA & Grade Calculator in C"
 date: 2025-10-27T20:00:00+06:00
 weight: 3
 draft: false
-future: true
+future: false
 tags: ["c", "project", "bangla", "beginner"]
 categories: ["C"]
 ---

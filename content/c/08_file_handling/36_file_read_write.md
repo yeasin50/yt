@@ -4,7 +4,7 @@ date: 2025-11-27T19:00:00+08:00
 weight: 1
 draft: false
 future: true
-tags: ["c", "file", "beginner", "bangla"]
+tags: ["c", "beginner", "bangla"]
 categories: ["C"]
 ---
 

@@ -4,7 +4,7 @@ date: 2025-10-15T19:00:00+08:00
 weight: 2
 draft: false
 future: true
-tags: ["c", "Dynamic Memory", "beginner", "bangla"]
+tags: ["c", "beginner", "bangla"]
 categories: ["C"]
 ---
 

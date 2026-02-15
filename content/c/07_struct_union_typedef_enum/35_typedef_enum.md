@@ -4,7 +4,7 @@ date: 2025-10-27T19:00:00+08:00
 weight: 4
 draft: false
 future: true
-tags: ["c", "beginner", "bangla", "typedef", "enum"]
+tags: ["c", "beginner", "bangla"]
 categories: ["C"]
 ---
 

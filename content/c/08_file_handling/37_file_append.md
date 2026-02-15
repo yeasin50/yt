@@ -6,7 +6,6 @@ draft: false
 future: true
 tags:
   - c
-  - file
   - beginner
   - bangla
 categories:

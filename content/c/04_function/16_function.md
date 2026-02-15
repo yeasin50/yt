@@ -3,7 +3,7 @@ title: "Function"
 date: 2025-09-20
 weight: 1
 draft: false
-tags: ["c", "beginner", "bangla", "Practice-code", "function"]
+tags: ["c", "beginner", "bangla"]
 categories: ["C"]
 ---
 

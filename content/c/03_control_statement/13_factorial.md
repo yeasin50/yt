@@ -7,7 +7,6 @@ tags:
   - c
   - beginner
   - bangla
-  - Practice-code
 categories:
   - C
 ---

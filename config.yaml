@@ -131,4 +131,4 @@ params:
   # Optional features
   enableComments: true
   dateFormat: "Jan 2, 2006"
-  highlightStyle: "monokai"
+  highlightStyle: "tokyonight-storm"
