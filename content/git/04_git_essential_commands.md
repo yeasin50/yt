@@ -14,9 +14,10 @@ categories: ["git"]
 
 মূল commands:
 
-- **git init** – initialize a Git repository (run only the first time)
-- **git add** – stage files for the next commit
-- **git commit -m "msg"** – save staged changes with a message
-- **git log** – view commit history
-- **git diff** – see changes since the last commit
-- **git status** – view local changes
+- `git init` – initialize a Git repository (run only the first time)
+- `git add` – stage files for the next commit
+- `git commit -m "msg"` – save staged changes with a message
+- `git log` – view commit history
+- `git log --oneline�` – single line(short) log
+- `git diff` – see changes since the last commit
+- `git status` – view local changes
