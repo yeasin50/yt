@@ -2,8 +2,8 @@
 
 with my contents in randomness.
 
-- [ ] show code copy buttons
-- [ ] fully bn suppport
+- [x] show code copy buttons
+- [-] fully bn suppport
 - [ ] local checkbox on complete
 
 ---
