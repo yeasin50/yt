@@ -1,5 +1,5 @@
 ---
-title: "GitHub Collaboration: Issues, Collaborators & Fork"
+title: "GitHub Issues, Collaborators & Fork"
 description: "How to create issues, add collaborators, and fork a GitHub repository"
 date: 2026-03-13T13:01:40+06:00
 weight: 15
