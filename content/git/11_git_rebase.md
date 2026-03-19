@@ -2,7 +2,7 @@
 title: "Git Merge & Rebase with visual"
 description: ""
 date: 2026-03-07T13:00:04+06:00
-weight: 10
+weight: 11
 draft: false
 tags: ["git", "beginner"]
 ShowToc: false
