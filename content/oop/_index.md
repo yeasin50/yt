@@ -3,4 +3,4 @@ title: "OOP"
 draft: false 
 ---
 
-Think like real world object
+Code organized like real-world objects.
