@@ -4,7 +4,7 @@ description: "Install neovim in Windows/Linux"
 date: 2026-04-03T06:00:22+08:00
 weight: 1
 draft: false
-tags: ["vim","neovim", "windows"]
+tags: ["vim", "neovim", "windows"]
 categories: ["vim"]
 ---
 
@@ -20,3 +20,4 @@ Install Neovim on Windows and do basic setup, including terminal config and plug
 
 ## Config LazyVim
 
+> WIP
