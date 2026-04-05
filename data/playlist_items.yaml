@@ -5,7 +5,7 @@ en:
     tags: ["C", "beginner"]
 
   - title: "OOP"
-    description: "Lets think in ObjectOriented way"
+    description: "Stop writing messy code. Organize it like real-world objects."
     url: "oop"
     tags: ["OOP", "beginner"]
 
