@@ -4,6 +4,10 @@ en:
     url: "c"
     tags: ["C", "beginner"]
 
+  - title: "OOP"
+    description: "Lets think in ObjectOriented way"
+    url: "oop"
+    tags: ["OOP", "beginner"]
 
   # - title: "DSA"
   #   description: "Master data structures and algorithms with clear explanations and practical examples. Perfect for interview prep and problem-solving skills."
