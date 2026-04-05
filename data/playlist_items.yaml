@@ -25,7 +25,7 @@ en:
     tags: ["Git", "beginner"]
 
   - title: "Vim Motion"
-    description: "Let's learn about vim/neovim motion and become a keyboard wizard xd"
+    description: "Master the keyboard and edit code faster without ever touching your mouse."
     url: "vim"
     tags: ["vim", "productivity"]
 
