@@ -4,6 +4,10 @@ en:
     url: "c"
     tags: ["C", "beginner"]
 
+  - title: "OOP"
+    description: "Stop writing messy code. Organize it like real-world objects."
+    url: "oop"
+    tags: ["OOP", "beginner"]
 
   # - title: "DSA"
   #   description: "Master data structures and algorithms with clear explanations and practical examples. Perfect for interview prep and problem-solving skills."
@@ -20,6 +24,10 @@ en:
     url: "git"
     tags: ["Git", "beginner"]
 
+  - title: "Vim Motion"
+    description: "Master the keyboard and edit code faster without ever touching your mouse."
+    url: "vim"
+    tags: ["vim", "productivity"]
 
   - title: "Flutter"
     description: "Learn Flutter to build cross-platform mobile and web applications using Dart. Covers widgets, state management, and UI design patterns."
