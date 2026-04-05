@@ -24,6 +24,10 @@ en:
     url: "git"
     tags: ["Git", "beginner"]
 
+  - title: "Vim Motion"
+    description: "Let's learn about vim/neovim motion and become a keyboard wizard xd"
+    url: "vim"
+    tags: ["vim", "productivity"]
 
   - title: "Flutter"
     description: "Learn Flutter to build cross-platform mobile and web applications using Dart. Covers widgets, state management, and UI design patterns."
