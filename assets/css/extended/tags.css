@@ -44,6 +44,18 @@
   color: white;
 }
 
+.tags-card .tag-vim,
+.post-tags a[href*="/tags/vim/"] {
+    background-color: #8e44ad !important; /* rich purple */
+    color: #ffffff !important;            /* white text */
+}
+ 
+.tags-card .tag-OOP,
+.post-tags a[href*="/tags/OOP/"] {
+    background-color: #e67e22 !important; /* vibrant orange */
+    color: #ffffff !important;            /* white text */
+}
+
 
 /* =========================================
    2. META AND TAG STYLING (Layout)
