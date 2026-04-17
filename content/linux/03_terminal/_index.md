@@ -1,5 +1,5 @@
 ---
 title: "Terminal"
-description: "Essential Bash commands for Linux beginners."
+description: "Essential Bash commands & cli tools."
 draft: false
 ---
