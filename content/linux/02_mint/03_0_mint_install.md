@@ -1,7 +1,7 @@
 ---
 title: "Linux Mint install"
 description: "No installation is needed, Live OS"
-draft: true
+draft: false
 weight: 2
 ---
 

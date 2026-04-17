@@ -2,7 +2,7 @@
 title: "BashIt-Make it beautiful"
 date: 2025-12-12T20:00:00+06:00
 weight: 4
-draft: true
+draft: false
 tags: ["terminal", "bash", "beginner"]
 categories: ["terminal"]
 ---

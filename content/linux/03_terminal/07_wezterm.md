@@ -2,7 +2,7 @@
 title: "Wezterm"
 date: 2026-04-17T20:00:00+06:00
 weight: 7
-draft: true
+draft: false
 tags: ["terminal"]
 categories: ["terminal"]
 ---

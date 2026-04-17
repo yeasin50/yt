@@ -2,7 +2,7 @@
 title: "Kitty Terminal Configuration"
 date: 2025-12-11T20:00:00+06:00
 weight: 3
-draft: true
+draft: false
 tags: ["terminal", "beginner"]
 categories: ["terminal"]
 ---

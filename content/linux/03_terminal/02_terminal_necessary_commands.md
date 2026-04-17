@@ -2,7 +2,7 @@
 title: "Terminal Useful Tools & Commands"
 date: 2025-12-09T20:00:00+06:00
 weight: 2
-draft: true
+draft: false
 tags: ["bash", "terminal", "beginner"]
 categories: ["linux", "terminal"]
 ---

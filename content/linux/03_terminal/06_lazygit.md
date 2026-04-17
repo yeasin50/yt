@@ -2,7 +2,7 @@
 title: "Lazygit | Git Made Easy"
 date: 2025-12-21T20:00:00+06:00
 weight: 6
-draft: true
+draft: false
 tags: ["terminal", "beginner"]
 categories: ["terminal"]
 ---

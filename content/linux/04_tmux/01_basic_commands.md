@@ -2,7 +2,7 @@
 title: "Tmux essential commands"
 date: 2025-12-31T20:00:00+06:00
 weight: 1
-draft: true
+draft: false
 tags: ["tmux", "terminal", "intermediate"]
 categories: ["tmux", "terminal"]
 ---

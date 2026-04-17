@@ -1,7 +1,7 @@
 ---
 title: "Replace windows with Linux"
 description: "Only format C drive"
-draft: true
+draft: false
 weight: 3
 ---
 
