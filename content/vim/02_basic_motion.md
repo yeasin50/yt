@@ -2,7 +2,7 @@
 title: "Vim Motion 101"
 description: "Let's edit the file"
 date: 2026-04-05T06:00:22+08:00
-weight: 2
+weight: 100
 draft: false
 tags: ["vim", "neovim"]
 categories: ["vim"]
@@ -61,4 +61,3 @@ Vim has 4 main modes:
 | `:q`       | Command | Quit                    |
 | `:wq`      | Command | Save and quit           |
 | `:q!`      | Command | Quit without saving     |
-
