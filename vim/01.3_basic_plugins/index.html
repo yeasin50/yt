@@ -1,0 +1,321 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Essential Neovim Plugins | @yt.yeasin50</title><meta name=keywords content="vim,neovim,nvim-plugins"><meta name=description content="Configure Neo-tree, Tokyo Night ....more in Neovim"><meta name=author content><link rel=canonical href=https://yeasin50.github.io/yt/vim/01.3_basic_plugins/><link crossorigin=anonymous href=/yt/assets/css/stylesheet.592b5e718f9006eeb50de00ddaf6f20b1318cc1e741f0d6aa41aa52a5c4bd3c4.css integrity="sha256-WStecY+QBu61DeAN2vbyCxMYzB50Hw1qpBqlKlxL08Q=" rel="preload stylesheet" as=style><link rel=icon href=https://yeasin50.github.io/yt/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://yeasin50.github.io/yt/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://yeasin50.github.io/yt/favicon-32x32.png><link rel=apple-touch-icon href=https://yeasin50.github.io/yt/apple-touch-icon.png><link rel=mask-icon href=https://yeasin50.github.io/yt/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://yeasin50.github.io/yt/vim/01.3_basic_plugins/><noscript><style>#theme-toggle,.top-link{display:none}</style></noscript><meta property="og:url" content="https://yeasin50.github.io/yt/vim/01.3_basic_plugins/"><meta property="og:site_name" content="@yt.yeasin50"><meta property="og:title" content="Essential Neovim Plugins"><meta property="og:description" content="Configure Neo-tree, Tokyo Night ....more in Neovim"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="vim"><meta property="article:published_time" content="2026-04-23T04:00:22+06:00"><meta property="article:modified_time" content="2026-04-23T04:00:22+06:00"><meta property="article:tag" content="Vim"><meta property="article:tag" content="Neovim"><meta property="article:tag" content="Nvim-Plugins"><meta name=twitter:card content="summary"><meta name=twitter:title content="Essential Neovim Plugins"><meta name=twitter:description content="Configure Neo-tree, Tokyo Night ....more in Neovim"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Vim motion","item":"https://yeasin50.github.io/yt/vim/"},{"@type":"ListItem","position":2,"name":"Essential Neovim Plugins","item":"https://yeasin50.github.io/yt/vim/01.3_basic_plugins/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Essential Neovim Plugins","name":"Essential Neovim Plugins","description":"Configure Neo-tree, Tokyo Night ....more in Neovim","keywords":["vim","neovim","nvim-plugins"],"articleBody":"My Dotfile Tip: I highly recommend checking out my first video, Vim for Absolute Beginners, before diving into the setup!\nAt this point you have already setup lazy.nvim. You can check windows setup or for Linux.\nAnd Your folder structure will look like this\nyeasin@Workstation ~/.config/nvim . ├── init.lua ├── lua │ └── config │ ├── lazy.lua -- setup early video │ ├── plugins -- we gonna put plugins here | Neo-tree File Explorer Setup Set up Neo-tree to browse your project files visually right inside Neovim. (Requirements: You must have a Nerd Font active for the icons to display properly).\nIf you are on windows, you can check fix-terminal-fonts-windows-with-nerd-fonts .\nConfigure code .config/nvim/lua/config/plugins/neo_tree.lua\nreturn { { \"nvim-neo-tree/neo-tree.nvim\", branch = \"v3.x\", dependencies = { \"nvim-lua/plenary.nvim\", \"MunifTanjim/nui.nvim\", \"nvim-tree/nvim-web-devicons\", }, cmd = \"Neotree\", keys = { { \"e\", \":Neotree toggle\", desc = \"Toggle File Explorer\" }, }, config = function() require(\"neo-tree\").setup({ sources = { \"filesystem\", \"buffers\", \"git_status\", \"diagnostics\" }, filesystem = { follow_current_file = true, use_libuv_file_watcher = true, }, window = { width = 35 }, diagnostics = { enable = true, show_on_dirs = true, }, }) -- auto-refresh diagnostics in Neo-tree vim.api.nvim_create_autocmd({ \"DiagnosticChanged\" }, { callback = function() pcall(function() require(\"neo-tree.sources.diagnostics\").refresh() end) end, }) end, }, { \"antosha417/nvim-lsp-file-operations\", dependencies = { \"nvim-lua/plenary.nvim\", \"nvim-neo-tree/neo-tree.nvim\", -- loads after Neo-tree }, config = function() require(\"lsp-file-operations\").setup() end, }, { \"s1n7ax/nvim-window-picker\", version = \"2.*\", config = function() require(\"window-picker\").setup({ autoselect_one = true, filter_rules = { include_current_win = false, bo = { filetype = { \"neo-tree\", \"neo-tree-popup\", \"notify\" }, buftype = { \"terminal\", \"quickfix\" }, }, }, }) end, }, } Neovim Status Line \u0026 Theme Setup (Tokyo Night) Give your editor a clean, modern look with the Tokyo Night theme and a custom status line.\nstatusline code .config/nvim/lua/config/plugins/status_line.lua\nreturn { \"echasnovski/mini.statusline\", version = \"*\", opts = {}, } themes code .config/nvim/lua/config/plugins/themes.lua\nlocal M = {} -- 🔹 Theme selector: 1 = Tokyo Night, 2 = One Dark local theme_index = 1 M[1] = { \"folke/tokyonight.nvim\", enabled = theme_index == 1, lazy = false, priority = 1000, opts = { style = \"storm\", -- Theme variant: \"storm\", \"night\", \"moon\", \"day\" transparent = false, styles = { sidebars = \"transparent\", floats = \"transparent\" }, }, config = function() vim.cmd(\"colorscheme tokyonight\") end, } M[2] = { \"joshdick/onedark.vim\", enabled = theme_index == 2, config = function() vim.cmd(\"colorscheme onedark\") vim.g.onedark_style = \"dark\" vim.g.onedark_terminal_italics = 1 end, } return M Toggleterm (Floating terminal) Configure code .config/nvim/lua/config/plugins/terminal.lua\nreturn { { \"akinsho/toggleterm.nvim\", version = \"*\", opts = { open_mapping = [[]], direction = \"float\", shade_terminals = true, shading_factor = 50, float_opts = { border = \"rounded\", width = function() return math.floor(vim.o.columns * 0.8) end, height = function() return math.floor(vim.o.lines * 0.8) end, }, }, }, } buffer Nvim Buffers Made Easy: Tabs, Open Files \u0026 Fast Switching\nconfig buffer.nvim .config/nvim/lua/config/plugins/buffer.lua\nreturn { \"akinsho/bufferline.nvim\", opts = { options = { numbers = \"ordinal\", -- Show buffer numbers (1, 2, 3, …) }, }, } .config/nvim/lua/config/keymap.lua\n--- switch to buffer function _G.goto_buffer(n) local buffers = {} for _, buf in ipairs(vim.fn.getbufinfo({ buflisted = 1 })) do if vim.api.nvim_buf_is_loaded(buf.bufnr) then table.insert(buffers, buf.bufnr) end end if n \u003c= #buffers then vim.api.nvim_set_current_buf(buffers[n]) end end -- mappings for i = 1, 9 do vim.api.nvim_set_keymap( \"n\", \"","wordCount":"877","inLanguage":"en","datePublished":"2026-04-23T04:00:22+06:00","dateModified":"2026-04-23T04:00:22+06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://yeasin50.github.io/yt/vim/01.3_basic_plugins/"},"publisher":{"@type":"Organization","name":"@yt.yeasin50","logo":{"@type":"ImageObject","url":"https://yeasin50.github.io/yt/favicon.ico"}}}</script></head><body class=dark id=top><script>localStorage.getItem("pref-theme")==="light"&&document.body.classList.remove("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://yeasin50.github.io/yt/ accesskey=h title="@yt.yeasin50 (Alt + H)">@yt.yeasin50</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://yeasin50.github.io/yt/ title=Home><span>Home</span></a></li><li><a href=https://yeasin50.github.io/yt/course title=Learn><span>Learn</span></a></li><li><a href=https://yeasin50.github.io/yt/search title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://yeasin50.github.io/yt/about title=About><span>About</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs>&nbsp;»&nbsp;<a href=https://yeasin50.github.io/yt/vim/>Vim motion</a></div><h1 class="post-title entry-hint-parent">Essential Neovim Plugins</h1><div class=post-description>Configure Neo-tree, Tokyo Night ....more in Neovim</div><div class=post-meta><div class=post-meta-wrapper><div class=post-meta-left><span title='2026-04-23 04:00:22 +0600 +0600'>Apr 23, 2026</span></div><div class="post-meta-right tags-card"><span class="post-tag tag-vim">vim</span>
+<span class="post-tag tag-neovim">neovim</span>
+<span class="post-tag tag-nvim-plugins">nvim-plugins</span></div></div></div></header><div class=toc><details><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><ul><li><a href=#neo-tree-file-explorer-setup aria-label="Neo-tree File Explorer Setup">Neo-tree File Explorer Setup</a></li><li><a href=#neovim-status-line--theme-setup-tokyo-night aria-label="Neovim Status Line & Theme Setup (Tokyo Night)">Neovim Status Line & Theme Setup (Tokyo Night)</a></li><li><a href=#toggleterm-floating-terminal aria-label="Toggleterm (Floating terminal)">Toggleterm (Floating terminal)</a></li><li><a href=#buffer aria-label=buffer>buffer</a></li><li><a href=#fzfnvim aria-label=fzf.nvim>fzf.nvim</a></li></ul></div></details></div><div class=post-content><p><a href=https://github.com/yeasin50/.dotfiles/blob/master/nvim/.config/nvim/init.lua#L1>My Dotfile</a></p><blockquote><p><strong>Tip:</strong> I highly recommend checking out my first video, <a href=/yt/vim/02_basic_motion/>Vim for Absolute Beginners</a>, before diving into the setup!</p></blockquote><p>At this point you have already setup <em>lazy.nvim</em>.
+You can check <a href=/yt/vim/01.0_installation_windows/>windows setup</a> or <a href=/yt/vim/01.2_installation_linux/>for Linux</a>.</p><p>And Your folder structure will look like this</p><pre tabindex=0><code class=language-terminal data-lang=terminal>yeasin@Workstation ~/.config/nvim
+.
+├── init.lua
+├── lua
+│   └── config
+│       ├── lazy.lua  -- setup early video
+│       ├── plugins   -- we gonna put plugins here
+|
+</code></pre><h3 id=neo-tree-file-explorer-setup>Neo-tree File Explorer Setup<a hidden class=anchor aria-hidden=true href=#neo-tree-file-explorer-setup>#</a></h3><p>Set up <a href=https://github.com/nvim-neo-tree/neo-tree.nvim>Neo-tree</a> to browse your project files visually right inside Neovim. <em>(Requirements: You must have a Nerd Font active for the icons to display properly).</em></p><p>If you are on windows, you can check <a href=/yt/vim/01.0_installation_windows/#fix-terminal-fonts-windows-with-nerd-fonts>fix-terminal-fonts-windows-with-nerd-fonts</a> .</p><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading=eager referrerpolicy=strict-origin-when-cross-origin src="https://www.youtube.com/embed/wlhzmu-xvaE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 title="YouTube video"></iframe></div><br><details><summary>Configure code</summary><blockquote><p>.config/nvim/lua/config/plugins/neo_tree.lua</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>return</span> {
+</span></span><span style=display:flex><span>	{
+</span></span><span style=display:flex><span>		<span style=color:#e6db74>&#34;nvim-neo-tree/neo-tree.nvim&#34;</span>,
+</span></span><span style=display:flex><span>		branch <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;v3.x&#34;</span>,
+</span></span><span style=display:flex><span>		dependencies <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>			<span style=color:#e6db74>&#34;nvim-lua/plenary.nvim&#34;</span>,
+</span></span><span style=display:flex><span>			<span style=color:#e6db74>&#34;MunifTanjim/nui.nvim&#34;</span>,
+</span></span><span style=display:flex><span>			<span style=color:#e6db74>&#34;nvim-tree/nvim-web-devicons&#34;</span>,
+</span></span><span style=display:flex><span>		},
+</span></span><span style=display:flex><span>		cmd <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Neotree&#34;</span>,
+</span></span><span style=display:flex><span>		keys <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>			{ <span style=color:#e6db74>&#34;&lt;leader&gt;e&#34;</span>, <span style=color:#e6db74>&#34;:Neotree toggle&lt;CR&gt;&#34;</span>, desc <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Toggle File Explorer&#34;</span> },
+</span></span><span style=display:flex><span>		},
+</span></span><span style=display:flex><span>		config <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>			require(<span style=color:#e6db74>&#34;neo-tree&#34;</span>).setup({
+</span></span><span style=display:flex><span>				sources <span style=color:#f92672>=</span> { <span style=color:#e6db74>&#34;filesystem&#34;</span>, <span style=color:#e6db74>&#34;buffers&#34;</span>, <span style=color:#e6db74>&#34;git_status&#34;</span>, <span style=color:#e6db74>&#34;diagnostics&#34;</span> },
+</span></span><span style=display:flex><span>				filesystem <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>					follow_current_file <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>					use_libuv_file_watcher <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>				},
+</span></span><span style=display:flex><span>				window <span style=color:#f92672>=</span> { width <span style=color:#f92672>=</span> <span style=color:#ae81ff>35</span> },
+</span></span><span style=display:flex><span>				diagnostics <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>					enable <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>					show_on_dirs <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>				},
+</span></span><span style=display:flex><span>			})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>			<span style=color:#75715e>-- auto-refresh diagnostics in Neo-tree</span>
+</span></span><span style=display:flex><span>			vim.api.nvim_create_autocmd({ <span style=color:#e6db74>&#34;DiagnosticChanged&#34;</span> }, {
+</span></span><span style=display:flex><span>				callback <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>					pcall(<span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>						require(<span style=color:#e6db74>&#34;neo-tree.sources.diagnostics&#34;</span>).refresh()
+</span></span><span style=display:flex><span>					<span style=color:#66d9ef>end</span>)
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>			})
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>	},
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	{
+</span></span><span style=display:flex><span>		<span style=color:#e6db74>&#34;antosha417/nvim-lsp-file-operations&#34;</span>,
+</span></span><span style=display:flex><span>		dependencies <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>			<span style=color:#e6db74>&#34;nvim-lua/plenary.nvim&#34;</span>,
+</span></span><span style=display:flex><span>			<span style=color:#e6db74>&#34;nvim-neo-tree/neo-tree.nvim&#34;</span>, <span style=color:#75715e>-- loads after Neo-tree</span>
+</span></span><span style=display:flex><span>		},
+</span></span><span style=display:flex><span>		config <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>			require(<span style=color:#e6db74>&#34;lsp-file-operations&#34;</span>).setup()
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>	},
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	{
+</span></span><span style=display:flex><span>		<span style=color:#e6db74>&#34;s1n7ax/nvim-window-picker&#34;</span>,
+</span></span><span style=display:flex><span>		version <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;2.*&#34;</span>,
+</span></span><span style=display:flex><span>		config <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>			require(<span style=color:#e6db74>&#34;window-picker&#34;</span>).setup({
+</span></span><span style=display:flex><span>				autoselect_one <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>				filter_rules <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>					include_current_win <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>,
+</span></span><span style=display:flex><span>					bo <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>						filetype <span style=color:#f92672>=</span> { <span style=color:#e6db74>&#34;neo-tree&#34;</span>, <span style=color:#e6db74>&#34;neo-tree-popup&#34;</span>, <span style=color:#e6db74>&#34;notify&#34;</span> },
+</span></span><span style=display:flex><span>						buftype <span style=color:#f92672>=</span> { <span style=color:#e6db74>&#34;terminal&#34;</span>, <span style=color:#e6db74>&#34;quickfix&#34;</span> },
+</span></span><span style=display:flex><span>					},
+</span></span><span style=display:flex><span>				},
+</span></span><span style=display:flex><span>			})
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>	},
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></details><hr><h3 id=neovim-status-line--theme-setup-tokyo-night>Neovim Status Line & Theme Setup (Tokyo Night)<a hidden class=anchor aria-hidden=true href=#neovim-status-line--theme-setup-tokyo-night>#</a></h3><p>Give your editor a clean, modern look with the Tokyo Night theme and a custom status line.</p><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading=eager referrerpolicy=strict-origin-when-cross-origin src="https://www.youtube.com/embed/dC497QY4di0?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 title="YouTube video"></iframe></div><br><br><details><summary>statusline code</summary><blockquote><p>.config/nvim/lua/config/plugins/status_line.lua</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>return</span> {
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#34;echasnovski/mini.statusline&#34;</span>,
+</span></span><span style=display:flex><span>	version <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;*&#34;</span>,
+</span></span><span style=display:flex><span>	opts <span style=color:#f92672>=</span> {},
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></details><br><details><summary>themes code</summary><blockquote><p>.config/nvim/lua/config/plugins/themes.lua</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>local</span> M <span style=color:#f92672>=</span> {}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>-- 🔹 Theme selector: 1 = Tokyo Night, 2 = One Dark</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> theme_index <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>M[<span style=color:#ae81ff>1</span>] <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#34;folke/tokyonight.nvim&#34;</span>,
+</span></span><span style=display:flex><span>	enabled <span style=color:#f92672>=</span> theme_index <span style=color:#f92672>==</span> <span style=color:#ae81ff>1</span>,
+</span></span><span style=display:flex><span>	lazy <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>,
+</span></span><span style=display:flex><span>	priority <span style=color:#f92672>=</span> <span style=color:#ae81ff>1000</span>,
+</span></span><span style=display:flex><span>	opts <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>		style <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;storm&#34;</span>, <span style=color:#75715e>-- Theme variant: &#34;storm&#34;, &#34;night&#34;, &#34;moon&#34;, &#34;day&#34;</span>
+</span></span><span style=display:flex><span>		transparent <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>,
+</span></span><span style=display:flex><span>		styles <span style=color:#f92672>=</span> { sidebars <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;transparent&#34;</span>, floats <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;transparent&#34;</span> },
+</span></span><span style=display:flex><span>	},
+</span></span><span style=display:flex><span>	config <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>		vim.cmd(<span style=color:#e6db74>&#34;colorscheme tokyonight&#34;</span>)
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>M[<span style=color:#ae81ff>2</span>] <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#34;joshdick/onedark.vim&#34;</span>,
+</span></span><span style=display:flex><span>	enabled <span style=color:#f92672>=</span> theme_index <span style=color:#f92672>==</span> <span style=color:#ae81ff>2</span>,
+</span></span><span style=display:flex><span>	config <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>		vim.cmd(<span style=color:#e6db74>&#34;colorscheme onedark&#34;</span>)
+</span></span><span style=display:flex><span>		vim.g.onedark_style <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;dark&#34;</span>
+</span></span><span style=display:flex><span>		vim.g.onedark_terminal_italics <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>return</span> M
+</span></span></code></pre></div></details><hr><h3 id=toggleterm-floating-terminal>Toggleterm (Floating terminal)<a hidden class=anchor aria-hidden=true href=#toggleterm-floating-terminal>#</a></h3><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading=eager referrerpolicy=strict-origin-when-cross-origin src="https://www.youtube.com/embed/OkzeEMKvIGE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 title="YouTube video"></iframe></div><br><details><summary>Configure code</summary><blockquote><p>.config/nvim/lua/config/plugins/terminal.lua</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>return</span> {
+</span></span><span style=display:flex><span>	{
+</span></span><span style=display:flex><span>		<span style=color:#e6db74>&#34;akinsho/toggleterm.nvim&#34;</span>,
+</span></span><span style=display:flex><span>		version <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;*&#34;</span>,
+</span></span><span style=display:flex><span>		opts <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>			open_mapping <span style=color:#f92672>=</span> <span style=color:#e6db74>[[&lt;c-\&gt;]]</span>,
+</span></span><span style=display:flex><span>			direction <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;float&#34;</span>,
+</span></span><span style=display:flex><span>			shade_terminals <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>,
+</span></span><span style=display:flex><span>			shading_factor <span style=color:#f92672>=</span> <span style=color:#ae81ff>50</span>,
+</span></span><span style=display:flex><span>			float_opts <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>				border <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;rounded&#34;</span>,
+</span></span><span style=display:flex><span>				width <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>					<span style=color:#66d9ef>return</span> math.floor(vim.o.columns <span style=color:#f92672>*</span> <span style=color:#ae81ff>0.8</span>)
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>				height <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>					<span style=color:#66d9ef>return</span> math.floor(vim.o.lines <span style=color:#f92672>*</span> <span style=color:#ae81ff>0.8</span>)
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>			},
+</span></span><span style=display:flex><span>		},
+</span></span><span style=display:flex><span>	},
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></details><hr><h3 id=buffer>buffer<a hidden class=anchor aria-hidden=true href=#buffer>#</a></h3><p>Nvim Buffers Made Easy: Tabs, Open Files & Fast Switching</p><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading=eager referrerpolicy=strict-origin-when-cross-origin src="https://www.youtube.com/embed/FBRGJyBk-FI?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 title="YouTube video"></iframe></div><br><details><summary>config buffer.nvim</summary><blockquote><p>.config/nvim/lua/config/plugins/buffer.lua</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>return</span> {
+</span></span><span style=display:flex><span>  <span style=color:#e6db74>&#34;akinsho/bufferline.nvim&#34;</span>,
+</span></span><span style=display:flex><span>  opts <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>    options <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>      numbers <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;ordinal&#34;</span>, <span style=color:#75715e>-- Show buffer numbers (1, 2, 3, …)</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>  },
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><blockquote><p>.config/nvim/lua/config/keymap.lua</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#75715e>---  switch  to buffer</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>_G</span>.<span style=color:#a6e22e>goto_buffer</span>(n)
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>local</span> buffers <span style=color:#f92672>=</span> {}
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>for</span> _, buf <span style=color:#66d9ef>in</span> ipairs(vim.fn.getbufinfo({ buflisted <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span> })) <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>if</span> vim.api.nvim_buf_is_loaded(buf.bufnr) <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>			table.insert(buffers, buf.bufnr)
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>if</span> n <span style=color:#f92672>&lt;=</span> <span style=color:#f92672>#</span>buffers <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>		vim.api.nvim_set_current_buf(buffers[n])
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>-- mappings</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> i <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>9</span> <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span>	vim.api.nvim_set_keymap(
+</span></span><span style=display:flex><span>		<span style=color:#e6db74>&#34;n&#34;</span>,
+</span></span><span style=display:flex><span>		<span style=color:#e6db74>&#34;&lt;M-&#34;</span> <span style=color:#f92672>..</span> i <span style=color:#f92672>..</span> <span style=color:#e6db74>&#34;&gt;&#34;</span>,
+</span></span><span style=display:flex><span>		string.format(<span style=color:#e6db74>[[&lt;cmd&gt;lua _G.goto_buffer(%d)&lt;CR&gt;]]</span>, i),
+</span></span><span style=display:flex><span>		{ noremap <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>, silent <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span> }
+</span></span><span style=display:flex><span>	)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span></code></pre></div><blockquote><p>Also make sure to add on <code>init.lua</code></p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span>vim.g.maplocalleader <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34; &#34;</span>
+</span></span><span style=display:flex><span>vim.g.mapleader <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34; &#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>require(<span style=color:#e6db74>&#34;config.lazy&#34;</span>)
+</span></span><span style=display:flex><span>require(<span style=color:#e6db74>&#34;config.keymap&#34;</span>) <span style=color:#75715e>--this</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>vim.opt.clipboard:append(<span style=color:#e6db74>&#34;unnamedplus&#34;</span>)
+</span></span><span style=display:flex><span>vim.opt.numberwidth <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span>vim.opt.signcolumn <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;auto&#34;</span>
+</span></span><span style=display:flex><span>vim.o.number <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>vim.o.mouse <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;a&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>vim.opt.wrap <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>vim.opt.spell <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>vim.opt.spelllang <span style=color:#f92672>=</span> { <span style=color:#e6db74>&#34;en_us&#34;</span> }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>local</span> o <span style=color:#f92672>=</span> vim.o
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>o.expandtab <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span> <span style=color:#75715e>-- expand tab input with spaces characters</span>
+</span></span><span style=display:flex><span>o.smartindent <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span> <span style=color:#75715e>-- syntax aware indentations for newline inserts</span>
+</span></span><span style=display:flex><span>o.tabstop <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span> <span style=color:#75715e>-- num of space characters per tab</span>
+</span></span><span style=display:flex><span>o.shiftwidth <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span> <span style=color:#75715e>-- spaces per indentation level</span>
+</span></span></code></pre></div></details><hr><h3 id=fzfnvim>fzf.nvim<a hidden class=anchor aria-hidden=true href=#fzfnvim>#</a></h3><p>Fast fuzzy finder: Don&rsquo;t waste time.</p><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading=eager referrerpolicy=strict-origin-when-cross-origin src="https://www.youtube.com/embed/HZZVAPWm2HA?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 title="YouTube video"></iframe></div><br><details><summary>config</summary><blockquote><p>.config/nvim/lua/plugins/fzf.lua</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lua data-lang=lua><span style=display:flex><span><span style=color:#66d9ef>return</span> {
+</span></span><span style=display:flex><span>	<span style=color:#e6db74>&#34;ibhagwan/fzf-lua&#34;</span>,
+</span></span><span style=display:flex><span>	dependencies <span style=color:#f92672>=</span> { <span style=color:#e6db74>&#34;echasnovski/mini.icons&#34;</span> }, <span style=color:#75715e>-- or use your preferred icon plugin</span>
+</span></span><span style=display:flex><span>	opts <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>		files <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>			ignore <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>				<span style=color:#e6db74>&#34;.*/%.flutter%-plugins$&#34;</span>,
+</span></span><span style=display:flex><span>				<span style=color:#e6db74>&#34;.*/%.flutter%-plugins%-dependencies$&#34;</span>,
+</span></span><span style=display:flex><span>				<span style=color:#e6db74>&#34;.*/%.dart_tool/.*&#34;</span>,
+</span></span><span style=display:flex><span>				<span style=color:#e6db74>&#34;.*/build/.*&#34;</span>,
+</span></span><span style=display:flex><span>				<span style=color:#e6db74>&#34;.*/%.pub/.*&#34;</span>,
+</span></span><span style=display:flex><span>				<span style=color:#e6db74>&#34;.*/%.packages$&#34;</span>,
+</span></span><span style=display:flex><span>				<span style=color:#e6db74>&#34;*./example/*&#34;</span>,
+</span></span><span style=display:flex><span>			},
+</span></span><span style=display:flex><span>		},
+</span></span><span style=display:flex><span>	},
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	config <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>(_, opts)
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>local</span> fzf <span style=color:#f92672>=</span> require(<span style=color:#e6db74>&#34;fzf-lua&#34;</span>)
+</span></span><span style=display:flex><span>		fzf.setup(opts)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>		vim.api.nvim_create_autocmd(<span style=color:#e6db74>&#34;VimEnter&#34;</span>, {
+</span></span><span style=display:flex><span>			callback <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>				fzf.register_ui_select({ silent <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span> })
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>		})
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	keys <span style=color:#f92672>=</span> {
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#e6db74>&#34;&lt;leader&gt;ff&#34;</span>,
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>				require(<span style=color:#e6db74>&#34;fzf-lua&#34;</span>).files()
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>			desc <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Find Files in project directory&#34;</span>,
+</span></span><span style=display:flex><span>		},
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#e6db74>&#34;&lt;leader&gt;fg&#34;</span>,
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>				require(<span style=color:#e6db74>&#34;fzf-lua&#34;</span>).live_grep()
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>			desc <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Find by grepping in project directory&#34;</span>,
+</span></span><span style=display:flex><span>		},
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#e6db74>&#34;&lt;leader&gt;fc&#34;</span>,
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>				require(<span style=color:#e6db74>&#34;fzf-lua&#34;</span>).files({ cwd <span style=color:#f92672>=</span> vim.fn.stdpath(<span style=color:#e6db74>&#34;config&#34;</span>) })
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>			desc <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Find in neovim configuration&#34;</span>,
+</span></span><span style=display:flex><span>		},
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#e6db74>&#34;&lt;leader&gt;fh&#34;</span>,
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>				require(<span style=color:#e6db74>&#34;fzf-lua&#34;</span>).helptags()
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>			desc <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;[F]ind [H]elp&#34;</span>,
+</span></span><span style=display:flex><span>		},
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#e6db74>&#34;&lt;leader&gt;fk&#34;</span>,
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>				require(<span style=color:#e6db74>&#34;fzf-lua&#34;</span>).keymaps()
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>			desc <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;[F]ind [K]eymaps&#34;</span>,
+</span></span><span style=display:flex><span>		},
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#e6db74>&#34;&lt;leader&gt;fb&#34;</span>,
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>				require(<span style=color:#e6db74>&#34;fzf-lua&#34;</span>).builtin()
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>			desc <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;[F]ind [B]uiltin FZF&#34;</span>,
+</span></span><span style=display:flex><span>		},
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#e6db74>&#34;&lt;leader&gt;fw&#34;</span>,
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>local</span> mode <span style=color:#f92672>=</span> vim.fn.mode()
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>if</span> mode <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;v&#34;</span> <span style=color:#f92672>or</span> mode <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;V&#34;</span> <span style=color:#66d9ef>then</span>
+</span></span><span style=display:flex><span>					require(<span style=color:#e6db74>&#34;fzf-lua&#34;</span>).grep_visual()
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>					require(<span style=color:#e6db74>&#34;fzf-lua&#34;</span>).grep_cword()
+</span></span><span style=display:flex><span>				<span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>			desc <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;[F]ind current word or visual selection&#34;</span>,
+</span></span><span style=display:flex><span>		},
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#e6db74>&#34;&lt;leader&gt;fW&#34;</span>,
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>				require(<span style=color:#e6db74>&#34;fzf-lua&#34;</span>).grep_cWORD()
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>			desc <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;[F]ind current [W]ORD&#34;</span>,
+</span></span><span style=display:flex><span>		},
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#e6db74>&#34;&lt;leader&gt;fd&#34;</span>,
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>				require(<span style=color:#e6db74>&#34;fzf-lua&#34;</span>).diagnostics_document()
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>			desc <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;[F]ind [D]iagnostics&#34;</span>,
+</span></span><span style=display:flex><span>		},
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#e6db74>&#34;&lt;leader&gt;fr&#34;</span>,
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>				require(<span style=color:#e6db74>&#34;fzf-lua&#34;</span>).resume()
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>			desc <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;[F]ind [R]esume&#34;</span>,
+</span></span><span style=display:flex><span>		},
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#e6db74>&#34;&lt;leader&gt;fo&#34;</span>,
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>				require(<span style=color:#e6db74>&#34;fzf-lua&#34;</span>).oldfiles()
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>			desc <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;[F]ind [O]ld Files&#34;</span>,
+</span></span><span style=display:flex><span>		},
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#e6db74>&#34;&lt;leader&gt;&lt;leader&gt;&#34;</span>,
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>				require(<span style=color:#e6db74>&#34;fzf-lua&#34;</span>).buffers()
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>			desc <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;[,] Find existing buffers&#34;</span>,
+</span></span><span style=display:flex><span>		},
+</span></span><span style=display:flex><span>		{
+</span></span><span style=display:flex><span>			<span style=color:#e6db74>&#34;&lt;leader&gt;/&#34;</span>,
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>function</span>()
+</span></span><span style=display:flex><span>				require(<span style=color:#e6db74>&#34;fzf-lua&#34;</span>).lgrep_curbuf()
+</span></span><span style=display:flex><span>			<span style=color:#66d9ef>end</span>,
+</span></span><span style=display:flex><span>			desc <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;[/] Live grep the current buffer&#34;</span>,
+</span></span><span style=display:flex><span>		},
+</span></span><span style=display:flex><span>	},
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></details></div><footer class=post-footer><nav class=paginav><a class=prev href=https://yeasin50.github.io/yt/vim/01.2_installation_linux/><span class=title>Prev »</span><br><span>Neovim+Lazy (Linux)</span>
+</a><a class=next href=https://yeasin50.github.io/yt/vim/01.4_lsp_config/><span class=title>« Next</span><br><span>LSP config</span></a></nav><ul class=share-buttons><li><a target=_blank rel="noopener noreferrer" aria-label="share Essential Neovim Plugins on x" href="https://x.com/intent/tweet/?text=Essential%20Neovim%20Plugins&amp;url=https%3a%2f%2fyeasin50.github.io%2fyt%2fvim%2f01.3_basic_plugins%2f&amp;hashtags=vim%2cneovim%2cnvim-plugins"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M512 62.554V449.446C512 483.97 483.97 512 449.446 512H62.554C28.03 512 0 483.97.0 449.446V62.554C0 28.03 28.029.0 62.554.0H449.446C483.971.0 512 28.03 512 62.554zM269.951 190.75 182.567 75.216H56L207.216 272.95 63.9 436.783h61.366L235.9 310.383l96.667 126.4H456L298.367 228.367l134-153.151H371.033zM127.633 110h36.468l219.38 290.065H349.5z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Essential Neovim Plugins on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fyeasin50.github.io%2fyt%2fvim%2f01.3_basic_plugins%2f&amp;title=Essential%20Neovim%20Plugins&amp;summary=Essential%20Neovim%20Plugins&amp;source=https%3a%2f%2fyeasin50.github.io%2fyt%2fvim%2f01.3_basic_plugins%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Essential Neovim Plugins on reddit" href="https://reddit.com/submit?url=https%3a%2f%2fyeasin50.github.io%2fyt%2fvim%2f01.3_basic_plugins%2f&title=Essential%20Neovim%20Plugins"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.424-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.734 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-13.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.69c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-21.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 166.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493 14.564-6.47 24.735-21.034 24.735-38.001zM326.526 373.831c-20.27 20.241-59.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.995 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zM160.91 295.348c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Essential Neovim Plugins on facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fyeasin50.github.io%2fyt%2fvim%2f01.3_basic_plugins%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H342.978V319.085h66.6l12.672-82.621h-79.272v-53.617c0-22.603 11.073-44.636 46.58-44.636H425.6v-70.34s-32.71-5.582-63.982-5.582c-65.288.0-107.96 39.569-107.96 111.204v62.971h-72.573v82.621h72.573V512h-191.104c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Essential Neovim Plugins on whatsapp" href="https://api.whatsapp.com/send?text=Essential%20Neovim%20Plugins%20-%20https%3a%2f%2fyeasin50.github.io%2fyt%2fvim%2f01.3_basic_plugins%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zm-58.673 127.703c-33.842-33.881-78.847-52.548-126.798-52.568-98.799.0-179.21 80.405-179.249 179.234-.013 31.593 8.241 62.428 23.927 89.612l-25.429 92.884 95.021-24.925c26.181 14.28 55.659 21.807 85.658 21.816h.074c98.789.0 179.206-80.413 179.247-179.243.018-47.895-18.61-92.93-52.451-126.81zM263.976 403.485h-.06c-26.734-.01-52.954-7.193-75.828-20.767l-5.441-3.229-56.386 14.792 15.05-54.977-3.542-5.637c-14.913-23.72-22.791-51.136-22.779-79.287.033-82.142 66.867-148.971 149.046-148.971 39.793.014 77.199 15.531 105.329 43.692 28.128 28.16 43.609 65.592 43.594 105.4-.034 82.149-66.866 148.983-148.983 148.984zm81.721-111.581c-4.479-2.242-26.499-13.075-30.604-14.571-4.105-1.495-7.091-2.241-10.077 2.241-2.986 4.483-11.569 14.572-14.182 17.562-2.612 2.988-5.225 3.364-9.703 1.12-4.479-2.241-18.91-6.97-36.017-22.23C231.8 264.15 222.81 249.484 220.198 245s-.279-6.908 1.963-9.14c2.016-2.007 4.48-5.232 6.719-7.847 2.24-2.615 2.986-4.484 4.479-7.472 1.493-2.99.747-5.604-.374-7.846-1.119-2.241-10.077-24.288-13.809-33.256-3.635-8.733-7.327-7.55-10.077-7.688-2.609-.13-5.598-.158-8.583-.158-2.986.0-7.839 1.121-11.944 5.604-4.105 4.484-15.675 15.32-15.675 37.364.0 22.046 16.048 43.342 18.287 46.332 2.24 2.99 31.582 48.227 76.511 67.627 10.685 4.615 19.028 7.371 25.533 9.434 10.728 3.41 20.492 2.929 28.209 1.775 8.605-1.285 26.499-10.833 30.231-21.295 3.732-10.464 3.732-19.431 2.612-21.298-1.119-1.869-4.105-2.99-8.583-5.232z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Essential Neovim Plugins on telegram" href="https://telegram.me/share/url?text=Essential%20Neovim%20Plugins&amp;url=https%3a%2f%2fyeasin50.github.io%2fyt%2fvim%2f01.3_basic_plugins%2f"><svg viewBox="2 2 28 28" height="30" width="30" fill="currentColor"><path d="M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47 3.38 3.38.0 01-2.51 1.02zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 23.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 .06s-2.51 2.3-7.52 6.8z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Essential Neovim Plugins on ycombinator" href="https://news.ycombinator.com/submitlink?t=Essential%20Neovim%20Plugins&u=https%3a%2f%2fyeasin50.github.io%2fyt%2fvim%2f01.3_basic_plugins%2f"><svg width="30" height="30" viewBox="0 0 512 512" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554V449.446C512 483.97 483.97 512 449.446 512H62.554C28.03 512 0 483.97.0 449.446V62.554C0 28.03 28.029.0 62.554.0H449.446zM183.8767 87.9921h-62.034L230.6673 292.4508V424.0079h50.6655V292.4508L390.1575 87.9921H328.1233L256 238.2489z"/></svg></a></li></ul></footer></article></main><footer class="footer has-background-light has-text-centered"><p>&copy; 2026 Md. Yeasin Sheikh</p></footer></body></html>

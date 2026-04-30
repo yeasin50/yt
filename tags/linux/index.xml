@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Linux on @yt.yeasin50</title><link>https://yeasin50.github.io/yt/tags/linux/</link><description>Recent content in Linux on @yt.yeasin50</description><generator>Hugo -- 0.150.0</generator><language>en</language><lastBuildDate>Sat, 11 Apr 2026 06:00:22 +0800</lastBuildDate><atom:link href="https://yeasin50.github.io/yt/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>JAVA installation &amp; System Configure</title><link>https://yeasin50.github.io/yt/oop/01_installation/</link><pubDate>Wed, 01 Apr 2026 19:00:00 +0800</pubDate><guid>https://yeasin50.github.io/yt/oop/01_installation/</guid><description>Config editors to run your first java program</description></item><item><title>Linux Terminal Basics</title><link>https://yeasin50.github.io/yt/linux/03_terminal/01_terminal_intro/</link><pubDate>Sat, 06 Dec 2025 20:00:00 +0600</pubDate><guid>https://yeasin50.github.io/yt/linux/03_terminal/01_terminal_intro/</guid><description>&lt;p&gt;Linux terminal commands explained in a simple Bangla-friendly way.&lt;br&gt;
+Perfect for beginners coming from Windows or new to Linux Mint / Ubuntu.&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/QsWvEIm2qug?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h2 id="what-you-will-learn"&gt;What you will learn&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Understanding the Linux terminal (not Windows PowerShell)&lt;/li&gt;
+&lt;li&gt;Zooming and configuring the terminal&lt;/li&gt;
+&lt;li&gt;Fixing terminal fonts&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ls&lt;/code&gt; → list files and folders&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd&lt;/code&gt; → navigate directories&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;clear&lt;/code&gt; → clean the terminal&lt;/li&gt;
+&lt;li&gt;Create folders and files&lt;/li&gt;
+&lt;li&gt;Delete folders&lt;/li&gt;
+&lt;li&gt;Edit files using &lt;code&gt;nano&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;View file content using &lt;code&gt;cat&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Neovim+Lazy (Linux)</title><link>https://yeasin50.github.io/yt/vim/01.2_installation_linux/</link><pubDate>Sat, 11 Apr 2026 06:00:22 +0800</pubDate><guid>https://yeasin50.github.io/yt/vim/01.2_installation_linux/</guid><description>Install and configure Neovim in Linux</description></item><item><title>Installing Code::Blocks in Linux mint</title><link>https://yeasin50.github.io/yt/c/01_installation/02_install_codeblocks_linux/</link><pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate><guid>https://yeasin50.github.io/yt/c/01_installation/02_install_codeblocks_linux/</guid><description>&lt;p&gt;Learn how to install and set up Code::Blocks for C programming in Linux— perfect for beginners!&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/-jEYORqYXY8?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;p&gt;We’ll also cover how to fix the “GNU GCC Compiler Missing” problem and create your first C project.
+Clean visuals, smooth animations, and easy-to-follow explanations.&lt;/p&gt;</description></item></channel></rss>
