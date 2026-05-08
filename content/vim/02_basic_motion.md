@@ -1,6 +1,6 @@
 ---
 title: "Vim Motion"
-description: "Let's become keyboard wizard"
+description: "Think less. Move faster"
 date: 2026-04-05T06:00:22+08:00
 weight: 100
 draft: false
