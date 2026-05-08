@@ -1,6 +1,6 @@
 ---
-title: "Vim Motion 101"
-description: "Let's edit the file"
+title: "Vim Motion"
+description: "Think less. Move faster"
 date: 2026-04-05T06:00:22+08:00
 weight: 100
 draft: false
@@ -14,7 +14,7 @@ This guide helps anyone open a file in Vim, edit it, save, and exit.
 
 {{< youtube WUP844XxL74  >}}
 
-## Modes
+#### Modes
 
 Vim has 4 main modes:
 
@@ -23,7 +23,11 @@ Vim has 4 main modes:
 - **Visual** – select text
 - **Command** – type `:` commands like save or quit
 
-### Basic Commands
+<br>
+
+<details> <summary> checkout Commands </summary>
+
+#### Basic Commands
 
 - To edit a file, go to insert mode by pressing `i` or `a`, then start typing.
 - Once done typing, press `Esc` to go back to normal mode.
@@ -37,7 +41,7 @@ Vim has 4 main modes:
 
 <br>
 
-### Vim Commands Table (Logical Order)
+#### Vim Commands Table (Logical Order)
 
 | Keymap     | Mode    | What it does            |
 | ---------- | ------- | ----------------------- |
@@ -61,3 +65,23 @@ Vim has 4 main modes:
 | `:q`       | Command | Quit                    |
 | `:wq`      | Command | Save and quit           |
 | `:q!`      | Command | Quit without saving     |
+
+ </details>
+
+<br>
+
+### Fast Navigation
+
+{{< youtube u3lgRwTmb8o  >}}
+
+<br>
+
+### Horizontal Motion
+
+{{< youtube aCODpsMWdWA  >}}
+
+<br>
+
+### The Speed choice
+
+{{< youtube z0HRcarkeVU  >}}
