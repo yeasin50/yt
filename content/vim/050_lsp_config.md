@@ -2,7 +2,7 @@
 title: "LSP config"
 description: "Configure Your programing language"
 date: 2026-04-28T04:00:22+06:00
-weight: 4
+weight: 50
 draft: false
 tags: ["vim", "neovim", "nvim-plugins"]
 categories: ["vim"]
