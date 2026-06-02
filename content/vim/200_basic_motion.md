@@ -2,7 +2,7 @@
 title: "Vim Motion"
 description: "Think less. Move faster"
 date: 2026-04-05T06:00:22+08:00
-weight: 100
+weight: 200
 draft: false
 tags: ["vim", "neovim"]
 categories: ["vim"]

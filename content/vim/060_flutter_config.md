@@ -2,13 +2,13 @@
 title: "Nvim+Flutter"
 description: "Configure Flutter"
 date: 2026-05-08T04:00:22+06:00
-weight: 6
+weight: 60
 draft: false
 tags: ["vim", "neovim", "flutter"]
 categories: ["vim", "flutter"]
 ---
 
-> This is continue configuration from [Vim plugin](./01.5_conform.md), before diving into the setup!
+> **Tip:** I highly recommend checking out my first video, [Vim for Absolute Beginners](./200_basic_motion.md), before diving into the setup!
 
 We are going to config our Nvim for Flutter
 
