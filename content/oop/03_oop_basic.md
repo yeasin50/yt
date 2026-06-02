@@ -1,6 +1,6 @@
 ---
-title: "Hands on OOP"
-description: "Thinks you should know"
+title: "Hands-on"
+description: "Core OOP concepts with practical examples"
 date: 2026-05-26T19:00:00+08:00
 weight: 300
 draft: false
@@ -8,12 +8,12 @@ tags: ["OOP"]
 categories: ["OOP"]
 ---
 
-## Class, Objects & Encapsulations
+## Classes & Objects (Encapsulation)
 
 {{< youtube JyUfHjt78Sg >}}
 
-## Inheritance
+## Inheritance Basics
 
-UML, extends, super & Typecasting ...
+Includes UML, `extends`, `super`, and type casting
 
 {{< youtube 9TYkeRhDf9Y >}}
