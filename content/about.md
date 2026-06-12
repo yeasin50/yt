@@ -9,23 +9,24 @@ ShowPostNavLinks: false
 hideDate: true # hides the date in meta
 ---
 
-Md. Yeasin Sheikh – Flutter developer, open-source enthusiast, and content creator.
+Md. Yeasin Sheikh – Flutter developer with GoLang, open-source enthusiast, and .....
 As a software engineer, I have been working with **Flutter** since 2019 in remote positions.
 
-I am used to be a bug hunter in flutter, assisting others, and you can often find me on **Stack Overflow** answering Flutter-related questions.
+I am used to be a bug hunter in flutter, assisting others, and you can often find
+<a href="https://stackoverflow.com/users/10157127/md-yeasin-sheikh?tab=profile">me on Stack Overflow</a> answering Flutter-related questions.
 
 Since mid-2025, I've taken a career break to explore and share on my YouTube channel,
-**yt.yeasin50**, aiming to **learn and teach** in the era of AI.
+<a href="https://www.youtube.com/@yt.yeasin50">yt.yeasin50</a>, aiming to learn low level and teach in the era of AI slop.
 I love open-source contributions.
 
 If you're a **CSE student**, this channel can be beneficial.
-I provide **videos and materials** on programming, human bias,
-and more, with visuals and coding examples to make learning easier
+I provide videos and materials on programming, human bias,
+and more, with some visuals and coding examples to make learning easier
 — even for beginners.
 
 ---
 
-## 🔗 Connect with Me
+_Someplace I may roam..._
 
 <p>
   <a href="https://yeasin50.github.io/portfolio/" target="_blank" class="button is-dark">Portfolio</a>
