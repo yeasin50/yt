@@ -1,0 +1,64 @@
+{{- $skip := slice "bangla" "beginner" "intermediate"  "practice-code" "extra" -}}
+
+{{- with .Site.Taxonomies.tags -}}
+<ul class="tag-expanded">
+  {{- range $name, $taxonomy := . -}}
+    {{- if not (in $skip $name) -}}
+      {{- $count := len $taxonomy.Pages -}}
+      {{- if gt $count 0 -}}
+      <li>
+        <a href="{{ "/tags/" | relURL }}{{ $name | urlize }}/">
+          {{ $name }} <span class="tag-count">{{ $count }}</span>
+        </a>
+      </li>
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+</ul>
+
+<style>
+.tag-expanded {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-expanded li {
+  margin: 0;
+  padding: 0;
+}
+
+.tag-expanded a {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 4px 10px;
+  border-radius: 999px;
+
+  background: #1f1f1f;
+  color: #eaeaea;
+
+  text-decoration: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+
+  font-size: 14px;
+  line-height: 1;
+  transition: all 0.15s ease;
+}
+
+.tag-expanded a:hover {
+  background: #2e2e2e;
+}
+
+.tag-count {
+  margin-left: 6px;
+  font-size: 11px;
+  opacity: 0.4;
+}
+</style>
+{{- end -}}

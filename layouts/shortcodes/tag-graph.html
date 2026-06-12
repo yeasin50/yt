@@ -1,0 +1,29 @@
+<div id="search-tags-container" style="margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid var(--border);">
+    <h3 style="margin-bottom: 10px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: var(--secondary);">Browse by Tag</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+        {{- range $name, $taxonomy := .Site.Taxonomies.tags -}}
+        <a href="{{ "/tags/" | absURL }}{{ $name | urlize }}/" 
+           style="padding: 5px 12px; background: var(--code-bg); border: 1px solid var(--border); border-radius: var(--radius); font-size: 14px; color: var(--primary); text-decoration: none; transition: background 0.2s;">
+            #{{ $name }} <span style="font-size: 11px; opacity: 0.6;">({{ len $taxonomy }})</span>
+        </a>
+        {{- end -}}
+    </div>
+</div>
+
+<script>
+(function() {
+    // PaperMod Search Integration
+    const searchInput = document.getElementById('searchInput');
+    const tagsContainer = document.getElementById('search-tags-container');
+
+    if (searchInput && tagsContainer) {
+        searchInput.addEventListener('input', function() {
+            if (this.value.length > 0) {
+                tagsContainer.style.display = 'none';
+            } else {
+                tagsContainer.style.display = 'block';
+            }
+        });
+    }
+})();
+</script>

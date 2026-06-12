@@ -1,0 +1,30 @@
+{{- if .Site.Taxonomies.tags -}}
+<div id="search-tags-list" class="terms-tags" style="margin: 20px 0; text-align: center;">
+    <ul class="terms-tags" style="display: flex; flex-wrap: wrap; justify-content: center; list-style: none; padding: 0; gap: 8px;">
+        {{- range $name, $taxonomy := .Site.Taxonomies.tags -}}
+        <li>
+            <a href="{{ "/tags/" | absURL }}{{ $name | urlize }}/">
+                {{ $name }} <sup><strong><sup>{{ len $taxonomy }}</sup></strong></sup>
+            </a>
+        </li>
+        {{- end -}}
+    </ul>
+</div>
+
+<script>
+(function() {
+    // Logic to hide tags when user starts typing in PaperMod search
+    const checkSearch = setInterval(() => {
+        const searchInput = document.getElementById('searchInput');
+        const tagsBox = document.getElementById('search-tags-list');
+        
+        if (searchInput && tagsBox) {
+            clearInterval(checkSearch);
+            searchInput.addEventListener('input', function() {
+                tagsBox.style.display = (this.value.length > 0) ? 'none' : 'block';
+            });
+        }
+    }, 100);
+})();
+</script>
+{{- end -}}

@@ -9,14 +9,19 @@ en:
     link: "c/"
     upcoming: false
 
+  - title: "Git "
+    desc: "Git, GitHub, SSH, local servers. Beginner to advanced with self-hosting."
+    link: "git/"
+    upcoming: false
+
   - title: "Linux & Terminal"
     desc: "Easy & rational steps to become productive with Terminal & Linux tools."
     link: "linux/"
     upcoming: false
 
-  - title: "DSA"
-    desc: "(Coming soon) Master data structures and algorithms."
-    upcoming: true
+  # - title: "DSA"
+  #   desc: "(Coming soon) Master data structures and algorithms."
+  #   upcoming: true
 
   - title: "Flutter"
     desc: "Learn Flutter with Dart and cross-platform apps."

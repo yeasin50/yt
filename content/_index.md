@@ -36,6 +36,10 @@ LinkedIn
 
 {{< home_card_grid >}}
 
+<br>
+
+{{< tag-expanded >}}
+
 <style>
 pre.poetic {
     font-style: italic;

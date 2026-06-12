@@ -4,7 +4,7 @@ date: 2025-10-19T20:00:00+06:00
 weight: 1
 draft: false
 future: true
-tags: ["c", "pattern", "beginner", "bangla"]
+tags: ["c", "beginner", "bangla"]
 categories: ["C"]
 ---
 
