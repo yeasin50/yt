@@ -4,7 +4,7 @@ description: "How to create issues, add collaborators, and fork a GitHub reposit
 date: 2026-03-13T13:01:40+06:00
 weight: 15
 draft: false
-tags: ["git", "github","beginner"]
+tags: ["git", "github", "beginner"]
 ShowToc: false
 categories: ["git"]
 ---
@@ -24,3 +24,12 @@ categories: ["git"]
 ## How to Fork a GitHub Repository
 
 {{< youtube ItKfSzCBwkA >}}
+
+<br>
+
+## Checkout Remote Branch Locally
+
+Learn how to fetch remote branches and check them out locally for development.
+
+{{< youtube VaWSneHNKRQ >}}
+
