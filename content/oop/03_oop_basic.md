@@ -10,10 +10,18 @@ categories: ["OOP"]
 
 ## Classes & Objects (Encapsulation)
 
+Basic introduction to encapsulation using real examples.
+
 {{< youtube JyUfHjt78Sg >}}
 
 ## Inheritance Basics
 
-Includes UML, `extends`, `super`, and type casting
+Covers UML structure, `extends`, `super`, and type casting concepts.
+
+{{< youtube 9TYkeRhDf9Y >}}
+
+## Static & Dynamic Polymorphism
+
+Explains compile-time and runtime polymorphism with examples.
 
 {{< youtube 9TYkeRhDf9Y >}}
