@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Rofi on @yt.yeasin50</title><link>https://yeasin50.github.io/yt/tags/rofi/</link><description>Recent content in Rofi on @yt.yeasin50</description><generator>Hugo -- 0.150.0</generator><language>en</language><lastBuildDate>Sat, 31 May 2025 20:00:00 +0600</lastBuildDate><atom:link href="https://yeasin50.github.io/yt/tags/rofi/index.xml" rel="self" type="application/rss+xml"/><item><title>Rofi - App launcher</title><link>https://yeasin50.github.io/yt/linux/100_ricing/01_rofi/</link><pubDate>Sat, 31 May 2025 20:00:00 +0600</pubDate><guid>https://yeasin50.github.io/yt/linux/100_ricing/01_rofi/</guid><description>&lt;h2 id="rofi"&gt;Rofi&lt;/h2&gt;
+&lt;p&gt;X11 app launcher and switcher&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/N6W7j7rc8w0?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;Make sure to install the nerd fonts;
+You can checkout &lt;a href="https://yeasin50.github.io/yt/vim/01.0_installation_windows/"&gt;for windows&lt;/a&gt;
+and &lt;a href="https://yeasin50.github.io/yt/vim/01.2_installation_linux/"&gt;for linux&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Config&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Follow my github/codeberg for update dotfiles&lt;/p&gt;&lt;/blockquote&gt;
+&lt;pre tabindex="0"&gt;&lt;code class="language-rasi" data-lang="rasi"&gt;configuration {
+modi: &amp;#34;drun&amp;#34;;
+show-icons: true;
+display-drun: &amp;#34;&amp;#34;;
+drun-display-format: &amp;#34;{name}&amp;#34;;
+font: &amp;#34;JetBrains Mono Nerd Font 11&amp;#34;;
+}
+/* Tokyo Night / Bluish Theme Variables */
+* {
+bg-col: #1A1B26; /* Deep Tokyo Night background */
+bg-col-light: #24283B; /* Used only for the search bar now */
+border-col: #7AA2F7; /* Bright Tokyo Night blue */
+blue: #7AA2F7;
+fg-col: #C0CAF5; /* Main text color */
+fg-col-muted: #565F89; /* Muted text for placeholder */
+/* Base resets */
+background-color: transparent;
+text-color: @fg-col;
+margin: 0;
+padding: 0;
+}
+window {
+width: 35%;
+background-color: @bg-col;
+border: 2px solid;
+border-color: @border-col;
+border-radius: 10px;
+padding: 15px;
+}
+mainbox {
+background-color: transparent;
+spacing: 15px;
+}
+inputbar {
+children: [prompt, entry];
+background-color: @bg-col-light;
+border-radius: 8px;
+padding: 10px;
+}
+prompt {
+background-color: @blue;
+text-color: @bg-col;
+padding: 6px 12px;
+border-radius: 6px;
+margin: 0px 10px 0px 0px;
+font: &amp;#34;JetBrains Mono Nerd Font Bold 11&amp;#34;;
+}
+entry {
+padding: 6px 0px;
+background-color: transparent;
+text-color: @fg-col;
+placeholder: &amp;#34;Search applications...&amp;#34;;
+placeholder-color: @fg-col-muted;
+}
+listview {
+background-color: transparent;
+columns: 1;
+lines: 7;
+spacing: 6px;
+cycle: false;
+dynamic: true;
+scrollbar: false;
+}
+element {
+background-color: transparent; /* Melts perfectly into the main window */
+text-color: @fg-col;
+padding: 10px 12px;
+border-radius: 8px;
+spacing: 12px;
+orientation: horizontal;
+}
+element-icon {
+size: 24px;
+background-color: transparent;
+}
+element-text {
+background-color: transparent;
+text-color: inherit;
+vertical-align: 0.5;
+}
+element selected {
+background-color: transparent; /* No more clashing solid backgrounds */
+text-color: @blue; /* Changes the text to match your outline */
+border: 2px solid; /* Thicker outline for that neon/border vibe */
+border-color: @blue; /* The Tokyo Night blue outline you liked */
+}
+&lt;/code&gt;&lt;/pre&gt;</description></item></channel></rss>
