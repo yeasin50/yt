@@ -15,7 +15,7 @@ en:
     upcoming: false
 
   - title: "Linux & Terminal"
-    desc: "Easy & rational steps to become productive with Terminal & Linux tools."
+    desc: "Linux Mint, Terminal, Tmux, Ricing...Easy & rational steps to become productive."
     link: "linux/"
     upcoming: false
 
