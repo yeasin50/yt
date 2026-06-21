@@ -8,6 +8,9 @@ theme: "PaperMod"
 languages:
   en:
     languageName: "English"
+    taxonomies:
+      category: categories
+      tag: tags
     weight: 1
     menu:
       main:
@@ -70,8 +73,6 @@ menu:
       weight: 99
 
 
-taxonomies:
-  tag: tags
 
 # Theme params
 params:

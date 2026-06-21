@@ -7,7 +7,7 @@
       {{- $count := len $taxonomy.Pages -}}
       {{- if gt $count 0 -}}
       <li>
-        <a href="{{ "/tags/" | relURL }}{{ $name | urlize }}/">
+        <a href="{{ printf "tags/%s/" ($name | urlize) | relURL }}">
           {{ $name }} <span class="tag-count">{{ $count }}</span>
         </a>
       </li>
