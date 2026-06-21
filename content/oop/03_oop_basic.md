@@ -25,3 +25,7 @@ Covers UML structure, `extends`, `super`, and type casting concepts.
 Explains compile-time and runtime polymorphism with examples.
 
 {{< youtube 9TYkeRhDf9Y >}}
+
+## Abstract Class & Interface
+
+{{< youtube ifVnFr2S6L4 >}}
