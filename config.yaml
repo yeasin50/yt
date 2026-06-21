@@ -69,6 +69,10 @@ menu:
       url: "/about"
       weight: 99
 
+
+taxonomies:
+  tag: tags
+
 # Theme params
 params:
   # author: "Md. Yeasin Sheikh"
