@@ -3,7 +3,7 @@ title: "Rofi - App launcher"
 date: 2025-05-31T20:00:00+06:00
 weight: 1
 draft: false
-tags: ["rofi", "intermediate", "linux", "ricing"]
+tags: ["intermediate", "linux", "ricing"]
 categories: ["linux"]
 ---
 
