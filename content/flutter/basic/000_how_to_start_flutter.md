@@ -2,8 +2,7 @@
 title: "How to start flutter"
 date: 2025-09-27T19:00:00+08:00
 weight: 1
-draft: false
-tags: ["flutter","beginner"]
+tags: ["flutter", "beginner"]
 categories: ["Flutter"]
 ---
 
