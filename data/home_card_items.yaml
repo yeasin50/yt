@@ -9,6 +9,16 @@ en:
     link: "oop/"
     upcoming: false
 
+  - title: "Flutter"
+    desc: "Learn Flutter with Dart and cross-platform apps."
+    link: "flutter/"
+    upcoming: false
+
+  - title: "Linux & Terminal"
+    desc: "Easy & rational steps to become productive with Terminal & Linux tools."
+    link: "linux/"
+    upcoming: false
+
   - title: "C Programming"
     desc: "C fundamentals, loops, functions, and more."
     link: "c/"
@@ -19,22 +29,14 @@ en:
     link: "git/"
     upcoming: false
 
-  - title: "Linux & Terminal"
-    desc: "Easy & rational steps to become productive with Terminal & Linux tools."
-    link: "linux/"
-    upcoming: false
-
   # - title: "DSA"
   #   desc: "(Coming soon) Master data structures and algorithms."
   #   upcoming: true
 
-  # - title: "Flutter"
-  #   desc: "Learn Flutter with Dart and cross-platform apps."
-  #   link: "flutter/"
-  #   upcoming: false
+
   #
-  - title: "Productivity"
-    desc: "Improve daily life with README habits, CLI tools, and automation."
-    upcoming: false
-    link: "tools/"
+  # - title: "Productivity"
+  #   desc: "Improve daily life with README habits, CLI tools, and automation."
+  #   upcoming: false
+  #   link: "tools/"
 
