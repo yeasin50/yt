@@ -10,7 +10,16 @@ categories: ["Flutter"]
 
 {{< youtube rxzxDhgUvPQ >}}
 
-<details> <summary> main.dart </summary>
+<br>
+
+## Callbacks & `typedef`
+
+Parent ↔ Child Communication
+
+{{< youtube oLuHv-GJnEk >}}
+
+<details> <summary> code snippet </summary> 
+<br>
 
 ```dart
 import 'dart:math';
@@ -139,11 +148,11 @@ class _SectionViewState extends State<SectionView> {
 
 <br>
 
-## Callbacks & `typedef`
+## Why AlertDialog/BottomSheet UI doesn't update even with setState
 
-Parent ↔ Child Communication
+> Widget state 03
 
-{{< youtube oLuHv-GJnEk >}}
+{{< youtube KnUAo9hSgjo >}}
 
 <br>
 
@@ -220,7 +229,3 @@ class _MyHomePageState extends State<MyHomePage> {
 ```
 
 </details>
-
-<br>
-
-## Why Dialog UI doesn't update even with setState
