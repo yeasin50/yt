@@ -229,3 +229,15 @@ class _MyHomePageState extends State<MyHomePage> {
 ```
 
 </details>
+
+<br>
+
+## Frequently Asked Questions About State Updates
+
+- [Flutter NumberPicker in AlertDialog doesn't work properly](https://stackoverflow.com/a/69609194/10157127)
+- [setState() not working from inside AlertDialog](https://stackoverflow.com/a/70799802/10157127)
+- [How can I add items from an AlertDialog to a list?](https://stackoverflow.com/a/77282325/10157127)
+- [Flutter Switch doesn't work in ModalBottomSheet](https://stackoverflow.com/q/70567296/10157127)
+- [DropdownButton not showing the selected value in Flutter](https://stackoverflow.com/a/79954275/10157127)
+- [How can I use setState() outside of a StatefulWidget?](https://stackoverflow.com/a/75567733/10157127)
+- [Display the date in a Text widget when the date changes](https://stackoverflow.com/q/75528062/10157127)
