@@ -83,7 +83,7 @@ params:
   params.show_course_sidebar: true
 
   defaultTheme: "dark"
-  showThemeToggle: true
+  disableThemeToggle: true
   ShowCodeCopyButtons: true
   ShowShareButtons: true
   # Enable search

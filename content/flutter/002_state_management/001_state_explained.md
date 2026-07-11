@@ -10,7 +10,16 @@ categories: ["Flutter"]
 
 {{< youtube rxzxDhgUvPQ >}}
 
-<details> <summary> main.dart </summary>
+<br>
+
+## Callbacks & `typedef`
+
+Parent ↔ Child Communication
+
+{{< youtube oLuHv-GJnEk >}}
+
+<details> <summary> code snippet </summary> 
+<br>
 
 ```dart
 import 'dart:math';
@@ -139,6 +148,96 @@ class _SectionViewState extends State<SectionView> {
 
 <br>
 
-## Update parent UI from child
+## Why AlertDialog/BottomSheet UI doesn't update even with setState
 
-## Why Dialog UI doesn't update even with setState
+> Widget state 03
+
+{{< youtube KnUAo9hSgjo >}}
+
+<br>
+
+<details> <summary> main.dart </summary>
+
+```dart
+import 'dart:math';
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
+      home: const MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  void onTap() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return StatefulBuilder(
+          builder: (context, setStateSB) {
+            return AlertDialog(
+              content: Text(_counter.toString(), style: TextStyle(fontSize: 55)),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    _counter++;
+                    setStateSB(() {});
+                    setState(() { });
+                  },
+                  child: Icon(Icons.add),
+                ),
+              ],
+            );
+          }
+        );
+      },
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Align(
+      alignment: Alignment(0, -.5),
+        child: Text(_counter.toString(), style: TextStyle(fontSize: 55)),
+      ),
+      floatingActionButton: FloatingActionButton(onPressed: onTap),
+    );
+  }
+}
+
+```
+
+</details>
+
+<br>
+
+## Frequently Asked Questions About State Updates
+
+- [Flutter NumberPicker in AlertDialog doesn't work properly](https://stackoverflow.com/a/69609194/10157127)
+- [setState() not working from inside AlertDialog](https://stackoverflow.com/a/70799802/10157127)
+- [How can I add items from an AlertDialog to a list?](https://stackoverflow.com/a/77282325/10157127)
+- [Flutter Switch doesn't work in ModalBottomSheet](https://stackoverflow.com/q/70567296/10157127)
+- [DropdownButton not showing the selected value in Flutter](https://stackoverflow.com/a/79954275/10157127)
+- [How can I use setState() outside of a StatefulWidget?](https://stackoverflow.com/a/75567733/10157127)
+- [Display the date in a Text widget when the date changes](https://stackoverflow.com/q/75528062/10157127)
