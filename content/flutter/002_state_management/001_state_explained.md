@@ -241,3 +241,133 @@ class _MyHomePageState extends State<MyHomePage> {
 - [DropdownButton not showing the selected value in Flutter](https://stackoverflow.com/a/79954275/10157127)
 - [How can I use setState() outside of a StatefulWidget?](https://stackoverflow.com/a/75567733/10157127)
 - [Display the date in a Text widget when the date changes](https://stackoverflow.com/q/75528062/10157127)
+
+<br>
+
+## ValueNotifier & ValueListenableBuilder
+
+{{< youtube QDe8ecwjwmA >}}
+
+<details> <summary> main_value_notifier.dart </summary>
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() => runApp(
+  const MaterialApp(debugShowCheckedModeBanner: false, home: MyHomePage()),
+);
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  final ValueNotifier<List<int>> notifier = ValueNotifier([]);
+
+  @override
+  void initState() {
+    super.initState();
+    notifier.addListener(() {
+      setState(() {});
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Align(
+        child: ValueListenableBuilder(
+          valueListenable: notifier,
+          builder: (context, value, child) {
+            return Text(value.toString(), style: TextStyle(fontSize: 55));
+          },
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          notifier.value = [...notifier.value, 1];
+        },
+      ),
+    );
+  }
+}
+
+```
+
+</details>
+
+<br>
+
+## ChangeNotifier & ListenableBuilder
+
+{{< youtube U1Og7CL7WA8 >}}
+
+<details> <summary> main_change_notifier.dart </summary>
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() => runApp(
+  const MaterialApp(debugShowCheckedModeBanner: false, home: MyHomePage()),
+);
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class ItemsNotifier extends ChangeNotifier {
+  final List<int> _items = [];
+  List<int> get items => _items;
+
+  void add() {
+    _items.add(1);
+    notifyListeners();
+  }
+
+  void clear() {
+    _items.clear();
+    notifyListeners();
+  }
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  final ItemsNotifier notifier = ItemsNotifier()
+    ..addListener(() {
+      print("value has changed");
+    });
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Align(
+        child: ListenableBuilder(
+          listenable: notifier,
+          builder: (context, child) {
+            final value = notifier.items;
+            return Text(value.toString(), style: TextStyle(fontSize: 55));
+          },
+        ),
+      ),
+      floatingActionButton: Row(
+        spacing: 24,
+        mainAxisSize: .min,
+        children: [
+          FloatingActionButton(onPressed: () => notifier.add()),
+          FloatingActionButton(onPressed: () => notifier.clear()),
+        ],
+      ),
+    );
+  }
+}
+
+```
+
+</details>
+
+<br>
