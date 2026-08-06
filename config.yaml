@@ -48,10 +48,7 @@ languages:
 outputs:
   home: ["HTML", "JSON"]
 
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
+
 
 # Menu (top-level)
 menu:
@@ -136,4 +133,24 @@ params:
   # Optional features
   enableComments: true
   dateFormat: "Jan 2, 2006"
-  highlightStyle: "tokyonight-storm"
+  highlightStyle: "catppuccin-mocha"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+#
+#   highlight:
+#     anchorLineNos: false
+#     codeFences: true
+#     guessSyntax: false
+#     hl_Lines: ''
+#     hl_inline: false
+#     lineAnchors: ''
+#     lineNoStart: 1
+#     lineNos: false
+#     lineNumbersInTable: true
+#     noClasses: true
+#     style: monokai
+#     tabWidth: 4
+#     wrapperClass: highlight
