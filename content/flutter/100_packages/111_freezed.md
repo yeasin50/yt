@@ -9,7 +9,7 @@ categories: ["Flutter"]
 
 Flutter Freezed | Models, copyWith, JSON Serialization, Generics & Union Types
 
-> Make sure to watch [ json_seriliazble](./110_json_serializable.md) first.
+> Make sure to watch [json_seriliazble](./110_json_serializable.md) first.
 
 {{< youtube Gfv-Ee6dO0c >}}
 
