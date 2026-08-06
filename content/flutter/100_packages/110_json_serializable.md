@@ -10,7 +10,6 @@ categories: ["Flutter"]
 {{< youtube ggDk1BpYgb0 >}}
 
 <br>
-<br>
 
 **user.dart**
 
