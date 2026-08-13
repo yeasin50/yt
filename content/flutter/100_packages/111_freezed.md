@@ -15,43 +15,19 @@ Flutter Freezed | Models, copyWith, JSON Serialization, Generics & Union Types
 
 ### Freezed class
 
-<details> <summary> user.dart </summary>
-
-```dart
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'address.dart';
-
-part 'user.freezed.dart';
-part 'user.g.dart';
-
-@freezed
-abstract class Person with _$Person {
-  const factory Person({
-    required String name,
-    int? age,
-    @Default("Eath") String? address,
-    @Default([]) List<String> skills,
-
-    required Address presentAddress,
-    Address? permanentAddress,
-  }) = _Person;
-
-  factory Person.fromJson(Map<String, Object?> json) => _$PersonFromJson(json);
-
-  static const Person ui = Person(
-    name: "0",
-    age: 0,
-    skills: [],
-    presentAddress: Address.present,
-    permanentAddress: Address.permanent,
-  );
-}
-
-```
-
-</details>
-
 <details> <summary> address.dart </summary>
+
+```json
+{
+  "success": true,
+  "data": {
+    "street": "123 Main Street",
+    "district": "Dhaka",
+    "country": "Bangladesh"
+  },
+  "message": "Address fetched"
+}
+```
 
 ```dart
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -87,6 +63,65 @@ abstract class Address with _$Address {
 
 </details>
 
+<details> <summary> person.dart </summary>
+
+```json
+{
+  "success": true,
+  "data": {
+    "name": "John Doe",
+    "age": 25,
+    "address": "Earth",
+    "skills": ["Dart", "Flutter"],
+    "presentAddress": {
+      "street": "123 Main Street",
+      "district": "Dhaka",
+      "country": "Bangladesh"
+    },
+    "permanentAddress": {
+      "street": "45 Lake Road",
+      "district": "Chattogram",
+      "country": "Bangladesh"
+    }
+  },
+  "message": "Person fetched"
+}
+```
+
+```dart
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'address.dart';
+
+part 'user.freezed.dart';
+part 'user.g.dart';
+
+@freezed
+abstract class Person with _$Person {
+  const factory Person({
+    required String name,
+    int? age,
+    @Default("Eath") String? address,
+    @Default([]) List<String> skills,
+
+    required Address presentAddress,
+    Address? permanentAddress,
+  }) = _Person;
+
+  factory Person.fromJson(Map<String, Object?> json) => _$PersonFromJson(json);
+
+  static const Person ui = Person(
+    name: "0",
+    age: 0,
+    skills: [],
+    presentAddress: Address.present,
+    permanentAddress: Address.permanent,
+  );
+}
+
+```
+
+</details>
+
 ### Generic
 
 <details> <summary> api_response.dart </summary>
@@ -115,9 +150,13 @@ abstract class ApiResponse<T> with _$ApiResponse<T> {
 
 </details>
 
-#### Union
+### Union
 
-<details> <summary> response.dart </summary>
+<details> <summary> code-snippet </summary>
+
+> We are using `type` instead of `runtimetype`
+
+**code**
 
 ```dart
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -136,6 +175,44 @@ sealed class Response<T> with _$Response<T> {
   ) => _$ResponseFromJson(json, fromJsonT);
 }
 
+```
+
+**sample json**
+
+```dart
+final jsonUnionPerson = {
+  "type": "error",
+  "value": {
+    "name": "John Doe",
+    "age": 25,
+    "address": "Earth",
+    "skills": ["Dart", "Flutter"],
+    "presentAddress": {
+      "street": "123 Main Street",
+      "district": "Dhaka",
+      "country": "Bangladesh",
+    },
+    "permanentAddress": {
+      "street": "45 Lake Road",
+      "district": "Chattogram",
+      "country": "Bangladesh",
+    },
+  },
+};
+
+final jsonUnionAddress = {
+  "type": "error",
+  "value": {
+    "street": "123 Main Street",
+    "district": "Dhaka",
+    "country": "Bangladesh",
+  },
+};
+
+final personErrorJson = {
+  "type": "error",
+  "error": "Person not found",
+};
 ```
 
 </details>

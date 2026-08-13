@@ -14,7 +14,7 @@ Learn Async Data & avoid common mistakes.
 
 <br>
 
-<details> <summary> codeSnippet </summary>
+<details> <summary> future codeSnippet </summary>
 
 ```dart
 import 'dart:math';
@@ -84,7 +84,7 @@ stream error handling, single-subscription issue and event management with pract
 
 <br>
 
-<details> <summary> main_steam_builder.dart </summary>
+<details> <summary> stream snippet </summary>
 
 ```dart
 import 'dart:async';
