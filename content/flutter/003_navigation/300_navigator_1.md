@@ -12,9 +12,9 @@ Learn Flutter's `Navigator` API with practical examples of `push`, `pop`, `pushR
 
 <br>
 
-<details> <summary> main_navigator1.dart </summary>
+<details> <summary> main.dart </summary>
 
-```dart {style=monokai}
+```dart
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
