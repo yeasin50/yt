@@ -76,7 +76,6 @@ params:
   # author: "Md. Yeasin Sheikh"
   description: "A website showcasing my YouTube videos"
   favicon: "images/favicon.png"
-
   params.show_course_sidebar: true
 
   defaultTheme: "dark"
@@ -101,6 +100,7 @@ params:
   ShowRssButtonInSectionTermList: false
   ShowPageNums: true
   ShowToc: true
+  comments: true
 
   home_sections:
     - section: "posts"
@@ -148,3 +148,6 @@ markup:
     ShowCodeCopyButtons: true
     noClasses: false
     style: github-dark
+
+
+
