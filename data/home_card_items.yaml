@@ -1,4 +1,10 @@
 en:
+  - title: "Flutter"
+    desc: "Learn Flutter with Dart and cross-platform apps."
+    link: "flutter/"
+    upcoming: false
+
+
   - title: "Abyss"
     desc: "Overcoming noise and our own biases. Why awareness matters."
     upcoming: false
@@ -7,11 +13,6 @@ en:
   - title: "OOP"
     desc: "Think & organized like real-world objects. Java"
     link: "oop/"
-    upcoming: false
-
-  - title: "Flutter"
-    desc: "Learn Flutter with Dart and cross-platform apps."
-    link: "flutter/"
     upcoming: false
 
   - title: "Linux & Terminal"
@@ -29,14 +30,8 @@ en:
     link: "git/"
     upcoming: false
 
-  # - title: "DSA"
-  #   desc: "(Coming soon) Master data structures and algorithms."
-  #   upcoming: true
-
-
-  #
-  # - title: "Productivity"
-  #   desc: "Improve daily life with README habits, CLI tools, and automation."
-  #   upcoming: false
-  #   link: "tools/"
+  - title: "Writer's Toolkit"
+    desc: " Tools, workflows, and systems for writers and academics."
+    upcoming: false
+    link: "tools/"
 
