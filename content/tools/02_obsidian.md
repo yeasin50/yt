@@ -4,7 +4,7 @@ date: 2025-11-09T20:00:00+06:00
 description: "Note-Taking App Setup, Tags, Links & Graph View Explained"
 draft: false
 weight: 2
-tags: ["productivity", "tools", "markdown"]
+tags: ["productivity", "obsidian", "writing"]
 ---
 
 Discover how to take smarter, more connected notes with Obsidian — all in Bangla!

@@ -6,6 +6,10 @@ tags: ["dart", "intermediate", "flutter"]
 categories: ["Flutter"]
 ---
 
+{{< youtube dpn-srr99z0 >}}
+
+<br>
+
 I hope you've already checked the [Abstract & Generic](./020_abstract_generic_class.md).  
 We already know what abstract class is, and it can be extend from anywhere.
 

@@ -1,7 +1,7 @@
 ---
-title: "Dart/Flutter Bangla Course"
+title: "Dart Basic Course"
 date: 2026-07-09T19:00:00+08:00
-weight: 100
+weight: 1
 tags: ["dart", "flutter", "beginner"]
 categories: ["Flutter"]
 ---

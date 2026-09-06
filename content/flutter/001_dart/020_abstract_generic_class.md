@@ -6,6 +6,8 @@ tags: ["dart", "intermediate", "flutter"]
 categories: ["Flutter"]
 ---
 
+{{< youtube d_kWrsYaUZ0 >}}
+
 ## Abstract class
 
 You went to your local restaurant for breakfast.
@@ -96,6 +98,54 @@ void main() {
 }
 ```
 
+You can list of items as well, Here we are accepting only List of Dough
+
+```dart
+abstract class Dough {
+  void make();
+}
+
+class Ruti extends Dough {
+  @override
+  void make() {
+    print("Ruti is ready");
+  }
+}
+
+class Parata extends Dough {
+  @override
+  void make() {
+    print("Parata is ready");
+  }
+}
+
+class Naan extends Dough {
+  @override
+  void make() {
+    print("Naan is ready");
+  }
+}
+
+class RutiBox<T extends List<Dough>> {
+  const RutiBox(this.value);
+  final T value;
+
+  void show() {
+    print("###---BOX----###");
+    for (final d in value) d.make();
+    print("###---...----###");
+  }
+}
+
+
+
+void main() {
+  final doughs = [Ruti(), Parata(), Naan()];
+  RutiBox box = RutiBox<List<Dough>>(doughs);
+  box.show();
+}
+```
+
 You can use generics with functions, extensions, and classes.
 You can also define more than one generic type.
 
@@ -107,6 +157,16 @@ printDetails("Rahim", 25);     // T becomes String, U becomes int
 printDetails("Karim", "thirty"); // T becomes String, U becomes String (fully flexible!)
 ```
 
+```dart
+void printDetails<N, A extends int>(N name, A age) {
+  print("I am  $name and I am  $age years old.");
+}
+
+void main() {
+  printDetails("Yeasin", 12);
+}
+```
+
 You can check out Dart's `List` and `Map` data types, or see how a StatefulWidget's state class works.
 
 ---
@@ -114,7 +174,7 @@ You can check out Dart's `List` and `Map` data types, or see how a StatefulWidge
 {{< warning >}}
 
 **Warning:** This is an old idea from the script and might be removed or adjusted in the docs.
-
+Ney,, leave it :)
 {{< /warning >}}
 
 ```dart

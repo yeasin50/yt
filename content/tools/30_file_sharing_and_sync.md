@@ -3,7 +3,7 @@ title: "File Sharing & Sync with Apps"
 date: 2026-08-20T20:00:00+06:00
 description: "Share and sync files across devices with LocalSend and Syncthing."
 draft: false
-weight: 30
+weight: 0
 tags: ["productivity", "tools"]
 ---
 
