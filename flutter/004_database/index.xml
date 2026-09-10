@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Databse on @yt.yeasin50</title><link>https://yeasin50.github.io/yt/flutter/004_database/</link><description>Recent content in Databse on @yt.yeasin50</description><generator>Hugo -- 0.150.0</generator><language>en</language><lastBuildDate>Wed, 19 Aug 2026 19:00:00 +0800</lastBuildDate><atom:link href="https://yeasin50.github.io/yt/flutter/004_database/index.xml" rel="self" type="application/rss+xml"/><item><title>Saving key-value pair</title><link>https://yeasin50.github.io/yt/flutter/004_database/400_shared_preference/</link><pubDate>Wed, 19 Aug 2026 19:00:00 +0800</pubDate><guid>https://yeasin50.github.io/yt/flutter/004_database/400_shared_preference/</guid><description>&lt;h2 id="shared_preferences"&gt;Shared_preferences&lt;/h2&gt;
+&lt;p&gt;Persistent theme with Shared_preference.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;this is part of &lt;a href="https://yeasin50.github.io/yt/flutter/002_state_management/050_provider/"&gt;flutter_workshop provider&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/qi6Jpf6EmB8?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;a href="https://pub.dev/packages/shared_preferences"
+target="_blank"
+rel="noopener noreferrer"
+style="text-decoration:none!important;"&gt;
+shared_preferences on pub.dev&lt;span style="opacity:.5"&gt;↗&lt;/span&gt;
+&lt;/a&gt;
+&lt;br&gt;&lt;/p&gt;</description></item></channel></rss>
