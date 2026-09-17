@@ -1,0 +1,78 @@
+{{- $repo := .Get "repo" -}}
+{{- $path := .Get "path" -}}
+{{- $branch := .Get "branch" | default "main" -}}
+{{- $lang := .Get "lang" | default "text" -}}
+{{- $start := int (.Get "start" | default 1) -}}
+{{- $end := int (.Get "end" | default 0) -}}
+
+{{- /* Extract filename from path */ -}}
+{{- $fileName := index (last 1 (split $path "/")) 0 -}}
+
+{{- /* Generate GitHub URL */ -}}
+{{- $webUrl := printf "https://github.com/%s/blob/%s/%s#L%d" (trim $repo "/") (trim $branch "/") (trim $path "/") $start -}}
+{{- if gt $end 0 -}}
+  {{- $webUrl = printf "%s-L%d" $webUrl $end -}}
+{{- end -}}
+
+{{- /* Math Engine: Absolute to Relative Lines */ -}}
+{{- $hl_lines_input := .Get "hl_lines" | default "" -}}
+{{- $hl_relative_str := "" -}}
+{{- if $hl_lines_input -}}
+  {{- $hl_clean := replace (replace (replace $hl_lines_input "[" "") "]" "") "," " " -}}
+  {{- $hl_arr := slice -}}
+  {{- range (split $hl_clean " ") -}}
+    {{- $p := trim . " " -}}
+    {{- if $p -}}
+      {{- if in $p "-" -}}
+        {{- $range := split $p "-" -}}
+        {{- $r_start := add (sub (int (index $range 0)) $start) 1 -}}
+        {{- $r_end := add (sub (int (index $range 1)) $start) 1 -}}
+        {{- $hl_arr = $hl_arr | append (printf "%d-%d" $r_start $r_end) -}}
+      {{- else -}}
+        {{- $r := add (sub (int $p) $start) 1 -}}
+        {{- $hl_arr = $hl_arr | append (printf "%d" $r) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $hl_relative_str = delimit $hl_arr " " -}}
+{{- end -}}
+
+{{- /* Build strictly formatted string for transform.Highlight */ -}}
+{{- $finalOpts := printf "linenos=inline,linenostart=%d" $start -}}
+{{- if ne $hl_relative_str "" -}}
+  {{- $finalOpts = printf "%s,hl_lines=%s" $finalOpts $hl_relative_str -}}
+{{- end -}}
+
+{{- $url := printf "https://raw.githubusercontent.com/%s/%s/%s" (trim $repo "/") (trim $branch "/") (trim $path "/") -}}
+{{- $req := try (resources.GetRemote $url) -}}
+
+{{- if $req.Err -}}
+  {{- errorf "Error fetching code: %s" $req.Err -}}
+{{- else -}}
+  {{- $res := $req.Value -}}
+  {{- if $res -}}
+    {{- $lines := split $res.Content "\n" -}}
+    
+    {{- if gt $end 0 -}}
+      {{- $length := add (sub $end $start) 1 -}}
+      {{- $lines = first $length (after (sub $start 1) $lines) -}}
+    {{- else if gt $start 1 -}}
+      {{- $lines = after (sub $start 1) $lines -}}
+    {{- end -}}
+    
+    {{- $code := delimit $lines "\n" -}}
+    
+    <div class="github-code-header" style="display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 0.5rem; margin-top: 1rem;">
+      <h4 style="margin: 0;">{{ $fileName }}</h4>
+      <a href="{{ $webUrl }}" target="_blank" rel="noopener noreferrer" style="font-size: 0.85em; text-decoration: none; display: flex; align-items: center; gap: 4px; opacity: 0.8;">
+        <svg style="width:14px; height:14px; fill: currentColor;" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+        View on GitHub
+      </a>
+    </div>
+    
+    {{- transform.Highlight $code $lang $finalOpts -}}
+    
+  {{- else -}}
+    {{- errorf "Unable to get remote resource %q" $url -}}
+  {{- end -}}
+{{- end -}}
