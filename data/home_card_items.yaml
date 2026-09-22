@@ -4,6 +4,11 @@ en:
     link: "flutter/"
     upcoming: false
 
+  - title: "Writer's Toolkit"
+    desc: " Tools, workflows, and systems for writers and academics."
+    upcoming: false
+    link: "tools/"
+
 
   - title: "Abyss"
     desc: "Overcoming noise and our own biases. Why awareness matters."
@@ -29,9 +34,4 @@ en:
     desc: "Git, GitHub, SSH, local servers. Beginner to advanced with self-hosting."
     link: "git/"
     upcoming: false
-
-  - title: "Writer's Toolkit"
-    desc: " Tools, workflows, and systems for writers and academics."
-    upcoming: false
-    link: "tools/"
 
