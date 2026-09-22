@@ -21,11 +21,7 @@ Let's create a simple todo CRUD application with [sqlfite](https://pub.dev/packa
 
 ### Project setup
 
-Create a project
-
-```cmd
-flutter create sqlfite_example_yt
-```
+ You can create a new project or just [clone the repo](https://github.com/yeasin50/flutter_workshop/tree/sqlfite_start).
 
 I am using [freezed](../100_packages/111_freezed.md) to generate my classes.
 You can [explore my video on freezed](../100_packages/111_freezed.md) or
