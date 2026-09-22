@@ -1,6 +1,6 @@
 ---
 title: "Obsidian for Researchers"
-date: 2025-11-09T20:00:00+06:00
+date: 2025-11-22T20:00:00+06:00
 description: ""
 draft: false
 weight: 100
