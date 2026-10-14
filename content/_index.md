@@ -13,7 +13,7 @@ and share them with anyone ready to wander
 <br>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px;">
-  <iframe src="https://www.youtube.com/embed/jBlTmM8NfYU"
+  <iframe src="https://www.youtube.com/embed/{{ site.Params.homeVideo }}"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"
     frameborder="0" allowfullscreen>
   </iframe>
