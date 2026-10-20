@@ -1,6 +1,6 @@
 ---
 title: "Eisenhower Matrix"
-date: 2026-08-20T20:00:00+06:00
+date: 2026-10-14T20:00:00+06:00
 description: "Prioritize tasks based on urgency and importance using the Eisenhower Matrix."
 draft: false
 weight: 100
