@@ -1,5 +1,5 @@
 ---
-title: "Flutter GoRouter Setup"
+title: "Flutter Go-Router"
 date: 2026-10-20T19:00:00+06:00
 weight: 310
 tags: ["flutter", "intermediate", "navigation"]
