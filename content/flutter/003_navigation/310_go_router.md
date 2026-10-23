@@ -17,3 +17,7 @@ Old Navigator 2.0 repo: https://github.com/yeasin50/lisa_fischer
 ## Path Parameters, Query Parameters & Exit Dialog
 
 {{< youtube Te9alawrnPw >}}
+
+## Redirection & Async Redirects
+
+{{< youtube RRvugXGEPNE >}}
