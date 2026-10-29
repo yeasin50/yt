@@ -6,18 +6,30 @@ tags: ["flutter", "intermediate", "navigation"]
 categories: ["Flutter"]
 ---
 
-[Code](https://github.com/yeasin50/flutter_workshop/tree/go_router)
+## GoRouter in Flutter
 
-## Setup, Route Configuration & Sub-Routes
+{{< pub "go_router" >}}
+
+**[Source Code](https://github.com/yeasin50/flutter_workshop/tree/go_router)**
+
+### Setup, Route Configuration & Sub-Routes
 
 {{< youtube bo_aObojqJc >}}
 
-Old Navigator 2.0 repo: https://github.com/yeasin50/lisa_fischer
+_Previous Navigator 2.0 implementation:_ https://github.com/yeasin50/lisa_fischer
 
-## Path Parameters, Query Parameters & Exit Dialog
+### Path Parameters, Query Parameters & Exit Dialog
 
 {{< youtube Te9alawrnPw >}}
 
-## Redirection & Async Redirects
+### Redirection & Async Redirects
 
 {{< youtube RRvugXGEPNE >}}
+
+### ShellRoute — Shared Widgets Across Pages
+
+{{< youtube zj3z_efnvdc >}}
+
+### StatefulShellRoute
+
+{{< youtube Mzcy57xGz_I >}}
