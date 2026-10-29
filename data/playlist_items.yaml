@@ -1,4 +1,14 @@
 en:
+  - title: "Flutter"
+    description: "Learn Flutter to build cross-platform mobile and web applications using Dart. Covers widgets, state management, and UI design patterns."
+    url: "flutter"
+    tags: ["Flutter", "mobile"]
+
+  - title: "Writer's Toolkit"
+    description: " Tools, workflows, and systems for writers and academics."
+    url: "tools"
+    tags: ["productivity", "writing"]
+
   - title: "C Programming"
     description: "CSE 101: Learn the fundamentals of C programming, including syntax, variables, loops, and functions. Perfect for beginners starting their coding journey."
     url: "c"
@@ -29,15 +39,7 @@ en:
     url: "vim"
     tags: ["vim", "productivity"]
 
-  - title: "Flutter"
-    description: "Learn Flutter to build cross-platform mobile and web applications using Dart. Covers widgets, state management, and UI design patterns."
-    url: "flutter"
-    tags: ["Flutter", "mobile"]
 
-  - title: "Writer's Toolkit"
-    description: " Tools, workflows, and systems for writers and academics."
-    url: "tools"
-    tags: ["productivity", "writing"]
 
   - title: "Scratch Programming"
     description: "A beginner-friendly playlist teaching kids how to create games and animations in Scratch, covering coding basics, loops, events, and interactive projects."
