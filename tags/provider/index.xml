@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Provider on @yt.yeasin50</title><link>https://yeasin50.github.io/yt/tags/provider/</link><description>Recent content in Provider on @yt.yeasin50</description><generator>Hugo -- 0.150.0</generator><language>en</language><lastBuildDate>Thu, 13 Aug 2026 19:00:00 +0600</lastBuildDate><atom:link href="https://yeasin50.github.io/yt/tags/provider/index.xml" rel="self" type="application/rss+xml"/><item><title>App-State with Provider</title><link>https://yeasin50.github.io/yt/flutter/002_state_management/050_provider/</link><pubDate>Thu, 13 Aug 2026 19:00:00 +0600</pubDate><guid>https://yeasin50.github.io/yt/flutter/002_state_management/050_provider/</guid><description>&lt;p&gt;This video covers Provider in Flutter, including &lt;code&gt;ChangeNotifier&lt;/code&gt;, &lt;code&gt;ProxyProvider&lt;/code&gt;, &lt;code&gt;FutureProvider&lt;/code&gt;, &lt;code&gt;StreamProvider&lt;/code&gt;, DevTools, and common Provider mistakes.&lt;/p&gt;
+&lt;h3 id="code"&gt;Code&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://github.com/yeasin50/flutter_workshop"&gt;Clone the starter codebase&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Switch to the &lt;code&gt;provider-start&lt;/code&gt; branch&lt;/li&gt;
+&lt;li&gt;Continue from there&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Or just watch the video:&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/W5TSmnZcgcg?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h2 id="shared_preference"&gt;Shared_preference&lt;/h2&gt;
+&lt;p&gt;Persistent theme with Shared_preference.&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/qi6Jpf6EmB8?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description></item></channel></rss>

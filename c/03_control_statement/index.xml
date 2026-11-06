@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Control Statements on @yt.yeasin50</title><link>https://yeasin50.github.io/yt/c/03_control_statement/</link><description>Recent content in Control Statements on @yt.yeasin50</description><generator>Hugo -- 0.150.0</generator><language>en</language><lastBuildDate>Sat, 27 Sep 2025 19:00:00 +0800</lastBuildDate><atom:link href="https://yeasin50.github.io/yt/c/03_control_statement/index.xml" rel="self" type="application/rss+xml"/><item><title>Conditions</title><link>https://yeasin50.github.io/yt/c/03_control_statement/10_conditions/</link><pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate><guid>https://yeasin50.github.io/yt/c/03_control_statement/10_conditions/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;if, if-else, else-if &amp;amp; Nested Conditions, switch, break, continue&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;এই ভিডিওতে আমরা শেখব if, if-else, else-if এবং Nested if কীভাবে ব্যবহার করতে হয়।&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Yu2cvSkv44Q?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h4 id="ভডওত-থকছ"&gt;ভিডিওতে থাকছে:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Conditional statements দিয়ে decision making&lt;/li&gt;
+&lt;li&gt;Pass/Fail check করার জন্য logic তৈরি করা&lt;/li&gt;
+&lt;li&gt;A+ grade চেক করা এবং flow diagram অনুযায়ী program structure&lt;/li&gt;
+&lt;li&gt;Nested if এবং multiple condition কিভাবে handle করতে হয়&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="switch-case-condition"&gt;Switch Case condition&lt;/h2&gt;
+&lt;p&gt;কিভাবে একাধিক শর্ত পরীক্ষা করে কোড কার্যকর করা যায়, এবং প্রতিটি পরিস্থিতির জন্য আলাদা কোড ব্লক ব্যবহার করা যায় তা উদাহরণ, pseudocode, এবং flow-diagramের মাধ্যমে দেখানো হয়েছে।
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/6g9U9puq0vM?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;</description></item><item><title>Prefix Postfix</title><link>https://yeasin50.github.io/yt/c/03_control_statement/32_prefix_postfix/</link><pubDate>Sat, 27 Sep 2025 19:00:00 +0800</pubDate><guid>https://yeasin50.github.io/yt/c/03_control_statement/32_prefix_postfix/</guid><description>&lt;p&gt;Prefix &amp;amp; Postfix Operators in C | ++ &amp;amp; &amp;ndash; Explained&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/bIBic9GvLYg?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;a href="https://www.dii.uchile.cl/~daespino/files/Iso_C_1999_definition.pdf"&gt;Iso_C_1999_definition&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Loop, Break &amp; Continue Explained</title><link>https://yeasin50.github.io/yt/c/03_control_statement/11_loop/</link><pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate><guid>https://yeasin50.github.io/yt/c/03_control_statement/11_loop/</guid><description>&lt;p&gt;এই ভিডিওতে আমরা শিখব C Programming-এ লুপ (for, while, do-while) এর কাজ, এবং কীভাবে break ও continue স্টেটমেন্ট কাজ করে
+পুরো বিষয়টি animation দিয়ে ভিজ্যুয়ালি বোঝানো হয়েছে, যাতে সহজে মনে থাকে।&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/6XVDFe5Fdbc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h3 id="what-youll-learn-in-this-video"&gt;What you’ll learn in this video:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Basics of loops in C (for, while, do-while)&lt;/li&gt;
+&lt;li&gt;Detailed explanation of break &amp;amp; continue&lt;/li&gt;
+&lt;li&gt;Step-by-step Bangla explanation with animation&lt;/li&gt;
+&lt;li&gt;Easy visualization for beginners and students&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Print N &amp; sum of N number - loop Part(2,3)</title><link>https://yeasin50.github.io/yt/c/03_control_statement/12_loop_print_n_numbers/</link><pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate><guid>https://yeasin50.github.io/yt/c/03_control_statement/12_loop_print_n_numbers/</guid><description>&lt;p&gt;এই ভিডিওতে আমি প্রোগ্রামিংয়ে লুপের বেসিক বিষয়গুলো সহজ কোড উদাহরণসহ বুঝিয়েছি।&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/7v7lFYy4Dsw?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h3 id="আপন-শখবন"&gt;আপনি শিখবেন:&lt;/h3&gt;
+&lt;p&gt;✅ For Loop → ১ থেকে n পর্যন্ত সংখ্যা প্রিন্ট করা
+✅ Break &amp;amp; Continue → লুপের প্রবাহ নিয়ন্ত্রণ করা
+✅ Infinite Loop → লুপ এক্সপ্রেশন ছাড়া কিভাবে হ্যান্ডেল করতে হয়&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;এই ভিডিওতে আমি দেখিয়েছি কিভাবে একটি সহজ For Loop ব্যবহার করে N সংখ্যার যোগফল বের করতে হয়।&lt;/p&gt;</description></item><item><title>Factorial - loop Part 4</title><link>https://yeasin50.github.io/yt/c/03_control_statement/13_factorial/</link><pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate><guid>https://yeasin50.github.io/yt/c/03_control_statement/13_factorial/</guid><description>&lt;p&gt;এই ভিডিওতে আমি দেখাচ্ছি কিভাবে &lt;strong&gt;C প্রোগ্রামিং-এ For Loop ব্যবহার করে একটি সংখ্যার factorial (N!) বের করা যায়&lt;/strong&gt;।&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/DY1gj31iviw?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h3 id="আপন-শখবন"&gt;আপনি শিখবেন:&lt;/h3&gt;
+&lt;p&gt;✅ Factorial কি এবং এটি কিভাবে কাজ করে&lt;br&gt;
+✅ ধাপে ধাপে C কোডের ব্যাখ্যা&lt;br&gt;
+✅ For Loop ব্যবহার করে 1 থেকে N পর্যন্ত সংখ্যা গুণ করা&lt;/p&gt;</description></item><item><title>Prime number - loop part 5,6,7</title><link>https://yeasin50.github.io/yt/c/03_control_statement/14_prime_number/</link><pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate><guid>https://yeasin50.github.io/yt/c/03_control_statement/14_prime_number/</guid><description>&lt;p&gt;এই ভিডিওতে আমি দেখাচ্ছি কিভাবে &lt;strong&gt;C প্রোগ্রামিং-এ For Loop ব্যবহার করে একটি সংখ্যা প্রাইম কিনা তা চেক করা যায়&lt;/strong&gt;।&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/nTl272FxngQ?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h3 id="আপন-শখবন"&gt;আপনি শিখবেন:&lt;/h3&gt;
+&lt;p&gt;✅ প্রাইম সংখ্যা কি&lt;br&gt;
+✅ ধাপে ধাপে সংখ্যা চেক করার লজিক&lt;br&gt;
+✅ For Loop দিয়ে চেক করার সহজ পদ্ধতি&lt;br&gt;
+✅ সাধারণ ভুল এড়ানোর টিপস&lt;/p&gt;</description></item><item><title>Do While - loop part 8</title><link>https://yeasin50.github.io/yt/c/03_control_statement/15_do_while_loop/</link><pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate><guid>https://yeasin50.github.io/yt/c/03_control_statement/15_do_while_loop/</guid><description>&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/o_lT5c8nju0?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h3 id="ভডওত-আপন-শখবন"&gt;ভিডিওতে আপনি শিখবেন:&lt;/h3&gt;
+&lt;p&gt;✅ Do-While Loop এর syntax এবং কাজের ধারা&lt;br&gt;
+✅ Step-by-step উদাহরণ সহ কোড ব্যাখ্যা&lt;br&gt;
+✅ For Loop এবং While Loop এর সাথে পার্থক্য&lt;br&gt;
+✅ সাধারণ ভুল এড়ানোর টিপস&lt;/p&gt;</description></item></channel></rss>
